@@ -56,10 +56,8 @@
 		B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liftr2UITests.swift; sourceTree = "<group>"; };
 		B3481CCB202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B37B2D02202F74580083E745 /* StarAvenue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StarAvenue.ttf; sourceTree = "<group>"; };
 		B37B2D09202F7FD30083E745 /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		B37B2D0B202F81A10083E745 /* Liftr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liftr.png; sourceTree = "<group>"; };
-		B37B2D0C202F81A40083E745 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,8 +95,6 @@
 				B3481CBD202AF0CA0097101C /* Liftr2Tests */,
 				B3481CC8202AF0CA0097101C /* Liftr2UITests */,
 				B3481CA4202AF0C90097101C /* Products */,
-				B37B2D02202F74580083E745 /* StarAvenue.ttf */,
-				B37B2D0C202F81A40083E745 /* Button.png */,
 				B37B2D0B202F81A10083E745 /* Liftr.png */,
 				B37B2D09202F7FD30083E745 /* Video.mp4 */,
 				B3BCB51C202DB95100A0BA73 /* Images */,
