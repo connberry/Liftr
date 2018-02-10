@@ -24,10 +24,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Start of hide keyboard
+        self.FirstNameTextField.delegate = self
         
-    //Start of hide keyboard
-    self.FirstNameTextField.delegate = self
-
+        
+        let URL = Bundle.main.url(forResource: "Video", withExtension: "mp4")
+        
+        Player = AVPlayer.init(url: URL!)
+        
+        PlayerLayer = AVPlayerLayer(player: Player)
+        PlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        PlayerLayer.frame = view.layer.frame
+        
+        Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        
+        Player.play()
+        view.layer.insertSublayer(PlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.Player.currentItem, queue: .main) { _ in
+            self.Player?.seek(to: kCMTimeZero)
+            self.Player?.play()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,23 +73,5 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func SignUpButtonTapped(_ sender: Any) {
         print("Sign Up Button Tapped")
-        
-        let URL = Bundle.main.url(forResource: "Video", withExtension: "mp4")
-        
-        Player = AVPlayer.init(url: URL!)
-        
-        PlayerLayer = AVPlayerLayer(player: Player)
-        PlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        PlayerLayer.frame = view.layer.frame
-        
-        Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-        
-        Player.play()
-        view.layer.insertSublayer(PlayerLayer, at: 0)
-        
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.Player.currentItem, queue: .main) { _ in
-            self.Player?.seek(to: kCMTimeZero)
-            self.Player?.play()
     }
-}
 }
