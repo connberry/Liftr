@@ -7,14 +7,37 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
+    
+    var Player: AVPlayer!
+    var PlayerLayer: AVPlayerLayer!
     
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let URL = Bundle.main.url(forResource: "Video", withExtension: "mp4")
+        
+        Player = AVPlayer.init(url: URL!)
+        
+        PlayerLayer = AVPlayerLayer(player: Player)
+        PlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        PlayerLayer.frame = view.layer.frame
+       
+        Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        
+        Player.play()
+        view.layer.insertSublayer(PlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.Player.currentItem, queue: .main) { _ in
+            self.Player?.seek(to: kCMTimeZero)
+            self.Player?.play()
+        }
     
         //Start of hide keyboard
         self.EmailAddressTextField.delegate = self
