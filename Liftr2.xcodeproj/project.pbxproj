@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
+		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
 		B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA6202AF0C90097101C /* AppDelegate.swift */; };
-		B3481CA9202AF0CA0097101C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA8202AF0CA0097101C /* ViewController.swift */; };
 		B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3481CAA202AF0CA0097101C /* Main.storyboard */; };
 		B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */; };
 		B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3481CB0202AF0CA0097101C /* Assets.xcassets */; };
 		B3481CB4202AF0CA0097101C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3481CB2202AF0CA0097101C /* LaunchScreen.storyboard */; };
 		B3481CBF202AF0CA0097101C /* Liftr2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CBE202AF0CA0097101C /* Liftr2Tests.swift */; };
 		B3481CCA202AF0CA0097101C /* Liftr2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */; };
+		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
+		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B3481CA3202AF0C90097101C /* Liftr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CA6202AF0C90097101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3481CA8202AF0CA0097101C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B3481CAB202AF0CA0097101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3481CAE202AF0CA0097101C /* Liftr2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Liftr2.xcdatamodel; sourceTree = "<group>"; };
 		B3481CB0202AF0CA0097101C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		B3481CC5202AF0CA0097101C /* Liftr2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Liftr2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liftr2UITests.swift; sourceTree = "<group>"; };
 		B3481CCB202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 				B3481CBD202AF0CA0097101C /* Liftr2Tests */,
 				B3481CC8202AF0CA0097101C /* Liftr2UITests */,
 				B3481CA4202AF0C90097101C /* Products */,
+				B3BCB51C202DB95100A0BA73 /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +106,13 @@
 		B3481CA5202AF0C90097101C /* Liftr2 */ = {
 			isa = PBXGroup;
 			children = (
-				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
-				B3481CA8202AF0CA0097101C /* ViewController.swift */,
 				B3481CAA202AF0CA0097101C /* Main.storyboard */,
-				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
 				B3481CB2202AF0CA0097101C /* LaunchScreen.storyboard */,
+				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
+				B3A96393202E1FCF00FC9292 /* SignInViewController.swift */,
+				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
+				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
+				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
 				B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */,
 			);
@@ -235,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB4202AF0CA0097101C /* LaunchScreen.storyboard in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
@@ -262,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3481CA9202AF0CA0097101C /* ViewController.swift in Sources */,
+				B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
+				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
+				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
