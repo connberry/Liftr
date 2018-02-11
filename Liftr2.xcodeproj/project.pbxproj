@@ -17,7 +17,9 @@
 		B3481CBF202AF0CA0097101C /* Liftr2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CBE202AF0CA0097101C /* Liftr2Tests.swift */; };
 		B3481CCA202AF0CA0097101C /* Liftr2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */; };
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
-		B37B2D0A202F7FD80083E745 /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B37B2D09202F7FD30083E745 /* Video.mp4 */; };
+		B3A138062030728B00B35A6D /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3A138052030728600B35A6D /* Video.mp4 */; };
+		B3A13808203074FD00B35A6D /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A13807203074FC00B35A6D /* Button.png */; };
+		B3A1380A2030772400B35A6D /* Liftr Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A138092030772400B35A6D /* Liftr Grey.png */; };
 		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 /* End PBXBuildFile section */
@@ -56,8 +58,10 @@
 		B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liftr2UITests.swift; sourceTree = "<group>"; };
 		B3481CCB202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B37B2D09202F7FD30083E745 /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		B37B2D0B202F81A10083E745 /* Liftr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liftr.png; sourceTree = "<group>"; };
+		B3A138052030728600B35A6D /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
+		B3A13807203074FC00B35A6D /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		B3A138092030772400B35A6D /* Liftr Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liftr Grey.png"; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +100,9 @@
 				B3481CC8202AF0CA0097101C /* Liftr2UITests */,
 				B3481CA4202AF0C90097101C /* Products */,
 				B37B2D0B202F81A10083E745 /* Liftr.png */,
-				B37B2D09202F7FD30083E745 /* Video.mp4 */,
+				B3A138092030772400B35A6D /* Liftr Grey.png */,
+				B3A138052030728600B35A6D /* Video.mp4 */,
+				B3A13807203074FC00B35A6D /* Button.png */,
 				B3BCB51C202DB95100A0BA73 /* Images */,
 				B3692DA6202F6A7E00408D27 /* Frameworks */,
 			);
@@ -261,11 +267,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A138062030728B00B35A6D /* Video.mp4 in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB4202AF0CA0097101C /* LaunchScreen.storyboard in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
-				B37B2D0A202F7FD80083E745 /* Video.mp4 in Resources */,
+				B3A13808203074FD00B35A6D /* Button.png in Resources */,
+				B3A1380A2030772400B35A6D /* Liftr Grey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
