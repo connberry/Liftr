@@ -9,10 +9,20 @@
 import UIKit
 import AVFoundation
 
-class SignUpViewController: UIViewController, UITextFieldDelegate {
+class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    @IBOutlet var ExperienceTextField: UITextField!
     
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
+    
+    var data = ["Beginner", "Sort of Know What I'm Doing", "Expert"]
+    var picker = UIPickerView()
 
     //Link text fields to this code
     @IBOutlet weak var FirstNameTextField: UITextField!
@@ -21,13 +31,34 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var RepeatPasswordTextField: UITextField!
     
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
         
-        //Start of hide keyboard
-        self.FirstNameTextField.delegate = self
+    picker.delegate = self
+    picker.dataSource = self
+        ExperienceTextField.inputView = picker
+        
+    //Start of hide keyboard
+    self.FirstNameTextField.delegate = self
     }
-
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return data.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        ExperienceTextField.text = data[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return data[row]
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
