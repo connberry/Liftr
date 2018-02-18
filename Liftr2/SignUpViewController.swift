@@ -8,13 +8,13 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     
     @IBOutlet var ExperienceTextField: UITextField!
     
@@ -29,9 +29,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var LastNameTextField: UITextField!
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
-    @IBOutlet weak var RepeatPasswordTextField: UITextField!
-    
-    
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -85,4 +82,5 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func SignUpButtonTapped(_ sender: Any) {
         print("Sign Up Button Tapped")
     }
+    
 }

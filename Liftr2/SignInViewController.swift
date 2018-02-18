@@ -65,12 +65,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func SignUpButtonTapped(_ sender: Any) {
         print("Register Account Button Tapped")
-        
-        let SignUpViewController =
-            self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        
-        self.present(SignUpViewController, animated: true)
-    }
     
     /*
     // MARK: - Navigation
@@ -82,4 +76,5 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+    }
 }
