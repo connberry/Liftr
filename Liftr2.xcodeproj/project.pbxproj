@@ -20,11 +20,13 @@
 		B3481CCA202AF0CA0097101C /* Liftr2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */; };
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
 		B36E29AB2031F67E006E7F96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */; };
+		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B3A138062030728B00B35A6D /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3A138052030728600B35A6D /* Video.mp4 */; };
 		B3A13808203074FD00B35A6D /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A13807203074FC00B35A6D /* Button.png */; };
 		B3A1380A2030772400B35A6D /* Liftr Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A138092030772400B35A6D /* Liftr Grey.png */; };
 		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
+		B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */; };
 		F0DD00D4D671D6B91EC315C5 /* Pods_Liftr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,11 +73,13 @@
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B37B2D0B202F81A10083E745 /* Liftr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liftr.png; sourceTree = "<group>"; };
+		B384594B203A23C200787335 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		B3A138052030728600B35A6D /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		B3A13807203074FC00B35A6D /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		B3A138092030772400B35A6D /* Liftr Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liftr Grey.png"; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises2ViewController.swift; sourceTree = "<group>"; };
 		DC25E6E89DC1A28D77016DB6 /* Pods-Liftr2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +149,8 @@
 				B3A96393202E1FCF00FC9292 /* SignInViewController.swift */,
 				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
 				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
+				B384594B203A23C200787335 /* ExercisesViewController.swift */,
+				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
 				B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */,
@@ -499,6 +505,8 @@
 			files = (
 				B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
+				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
+				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,
