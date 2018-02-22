@@ -21,7 +21,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
     
-    var data = ["Beginner", "Sort of Know What I'm Doing", "Expert"]
+    var data = ["Total Beginner", "Sort of Know What I'm Doing", "Super Expert"]
     var picker = UIPickerView()
 
     //Link text fields to this code
@@ -30,12 +30,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
+    
     override func viewDidLoad() {
     super.viewDidLoad()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [UIColor(red: 156/255.5, green: 102/255.5, blue: 211/255.5, alpha: 1.0).cgColor, UIColor(red: 249/255.5, green: 122/255.5, blue: 225/255.5, alpha: 1.0).cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint (x: 0.5, y: 1.0)
+        gradientLayer.endPoint = CGPoint (x: 1.0, y: 0.5)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
         
     picker.delegate = self
     picker.dataSource = self
         ExperienceTextField.inputView = picker
+        
         
     //Start of hide keyboard
     self.FirstNameTextField.delegate = self
@@ -56,6 +66,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[row]
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
@@ -82,5 +93,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func SignUpButtonTapped(_ sender: Any) {
         print("Sign Up Button Tapped")
     }
+    
+    
     
 }

@@ -10,14 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    // Do any additional setup after loading the view.
+        
+}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be recreated.
+        
     }
     @IBAction func SignOutButtonTapped(_ sender: Any) {
         print("Sign Out Button Tapped" )

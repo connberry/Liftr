@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pods_Liftr2
 
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

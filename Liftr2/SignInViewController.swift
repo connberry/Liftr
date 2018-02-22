@@ -20,7 +20,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let URL = Bundle.main.url(forResource: "Video", withExtension: "mp4")
         
         Player = AVPlayer.init(url: URL!)
