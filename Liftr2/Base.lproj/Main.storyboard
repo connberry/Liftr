@@ -34,7 +34,7 @@
                                 <rect key="frame" x="70" y="665" width="251" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <state key="normal" image="Button.png">
+                                <state key="normal" image="Button">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -52,11 +52,11 @@
                                 <rect key="frame" x="84" y="123" width="208" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text Field 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kiU-SP-FNw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text Field 2" translatesAutoresizingMaskIntoConstraints="NO" id="kiU-SP-FNw">
                                 <rect key="frame" x="27" y="342" width="333" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text Field 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-IS-BHb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text Field 2" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-IS-BHb">
                                 <rect key="frame" x="27" y="393" width="333" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -140,14 +140,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pl9-5l-Rhx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="08U-u7-ncp">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="t1b-g5-lEI">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="aLM-Wb-MQz" kind="show" id="Wuv-JG-c7W"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Profile" id="08U-u7-ncp"/>
                     <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ie7-KQ-rEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s60-z2-PKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="-1937"/>
+            <point key="canvasLocation" x="655" y="1838"/>
         </scene>
         <!--Exercises-->
         <scene sceneID="qS6-xj-V01">
@@ -267,7 +260,7 @@
             </objects>
             <point key="canvasLocation" x="657" y="-635"/>
         </scene>
-        <!--Title-->
+        <!--Exercises2 View Controller-->
         <scene sceneID="RpY-Ml-XFL">
             <objects>
                 <viewController id="8Zd-Xf-dFs" customClass="Exercises2ViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
@@ -277,7 +270,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RR9-7a-0rb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="kpG-kW-Q40"/>
+                    <navigationItem key="navigationItem" id="kpG-kW-Q40"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="Exercises" destination="kpG-kW-Q40" id="05P-uf-Q52"/>
@@ -431,7 +424,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Experience?" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="V2o-Hn-07d">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Experience?" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="V2o-Hn-07d">
                                 <rect key="frame" x="25" y="545" width="316" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -464,95 +457,68 @@
             </objects>
             <point key="canvasLocation" x="-4474.3999999999996" y="890.39408866995075"/>
         </scene>
-        <!--Start-->
+        <!--Workouts-->
         <scene sceneID="CSa-do-A9x">
             <objects>
                 <viewController id="lzc-BH-Kjq" customClass="StartViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Ug7-Lp-49k">
+                    <view key="view" contentMode="scaleToFill" id="Ug7-Lp-49k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQH-r4-TkH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xc7-dV-7DA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1h-BX-zy9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X8-g3-fgI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="U8C-lF-Qet"/>
+                                            <constraint firstAttribute="height" constant="1000" id="0x7-7h-bLS"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1000" id="DgN-bc-9Hs"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="o1h-BX-zy9" secondAttribute="trailing" id="17f-6B-GOB"/>
-                                    <constraint firstItem="o1h-BX-zy9" firstAttribute="width" secondItem="GQH-r4-TkH" secondAttribute="width" id="Hv6-Xh-f2M"/>
-                                    <constraint firstAttribute="height" constant="1000" id="drS-EX-yPk"/>
-                                    <constraint firstAttribute="bottom" secondItem="o1h-BX-zy9" secondAttribute="bottom" id="gOH-Q6-Pxa"/>
-                                    <constraint firstItem="o1h-BX-zy9" firstAttribute="leading" secondItem="GQH-r4-TkH" secondAttribute="leading" id="jYB-JC-gDl"/>
-                                    <constraint firstItem="o1h-BX-zy9" firstAttribute="top" secondItem="GQH-r4-TkH" secondAttribute="top" id="jyZ-MW-gcq"/>
+                                    <constraint firstAttribute="trailing" secondItem="1X8-g3-fgI" secondAttribute="trailing" id="34l-eP-Tht"/>
+                                    <constraint firstItem="1X8-g3-fgI" firstAttribute="width" secondItem="Xc7-dV-7DA" secondAttribute="width" id="3Vo-YV-nX9"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1000" id="6Wb-uY-bnl"/>
+                                    <constraint firstItem="1X8-g3-fgI" firstAttribute="top" secondItem="Xc7-dV-7DA" secondAttribute="top" id="G9m-2L-szx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1000" id="Ij1-m7-9wB"/>
+                                    <constraint firstAttribute="bottom" secondItem="1X8-g3-fgI" secondAttribute="bottom" id="OQH-Cq-tyw"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1000" id="WJG-hD-mdN"/>
+                                    <constraint firstAttribute="height" constant="1000" id="dU5-vL-mHu"/>
+                                    <constraint firstItem="1X8-g3-fgI" firstAttribute="leading" secondItem="Xc7-dV-7DA" secondAttribute="leading" id="hSh-Mj-sQY"/>
+                                    <constraint firstAttribute="bottom" secondItem="1X8-g3-fgI" secondAttribute="bottom" id="hnO-Di-qEL"/>
+                                    <constraint firstItem="1X8-g3-fgI" firstAttribute="top" secondItem="Xc7-dV-7DA" secondAttribute="top" id="wDG-ux-jN1"/>
+                                    <constraint firstAttribute="trailing" secondItem="1X8-g3-fgI" secondAttribute="trailing" id="y7a-n4-ujN"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZtA-eU-rds" firstAttribute="trailing" secondItem="GQH-r4-TkH" secondAttribute="trailing" id="552-Y5-F4X"/>
-                            <constraint firstItem="GQH-r4-TkH" firstAttribute="top" secondItem="ZtA-eU-rds" secondAttribute="top" id="YSp-zZ-LMO"/>
-                            <constraint firstItem="GQH-r4-TkH" firstAttribute="leading" secondItem="ZtA-eU-rds" secondAttribute="leading" id="arj-hX-4tG"/>
-                            <constraint firstItem="ZtA-eU-rds" firstAttribute="bottom" secondItem="GQH-r4-TkH" secondAttribute="bottom" id="b24-BP-Xow"/>
+                            <constraint firstAttribute="trailing" secondItem="Xc7-dV-7DA" secondAttribute="trailing" id="2qS-CJ-A0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="Xc7-dV-7DA" secondAttribute="bottom" id="3Rk-Os-DEh"/>
+                            <constraint firstItem="ZtA-eU-rds" firstAttribute="trailing" secondItem="Xc7-dV-7DA" secondAttribute="trailing" id="3zd-hw-8mY"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="top" secondItem="ZtA-eU-rds" secondAttribute="top" id="5Bt-Ce-fW7"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="leading" secondItem="Ug7-Lp-49k" secondAttribute="leading" id="Gv4-8T-9Bb"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="leading" secondItem="Ug7-Lp-49k" secondAttribute="leading" id="HSK-fx-yJz"/>
+                            <constraint firstAttribute="bottom" secondItem="Xc7-dV-7DA" secondAttribute="bottom" id="MQQ-za-tKK"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="trailing" secondItem="ZtA-eU-rds" secondAttribute="trailing" id="MtB-mD-0f1"/>
+                            <constraint firstAttribute="trailing" secondItem="Xc7-dV-7DA" secondAttribute="trailing" id="QlV-Ao-9ir"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="leading" secondItem="ZtA-eU-rds" secondAttribute="leading" id="jcI-yZ-dZg"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="leading" secondItem="ZtA-eU-rds" secondAttribute="leading" id="lt5-B1-PEj"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="top" secondItem="ZtA-eU-rds" secondAttribute="top" id="rek-hH-OIU"/>
+                            <constraint firstAttribute="bottom" secondItem="Xc7-dV-7DA" secondAttribute="bottom" id="sbC-db-7Zz"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="top" secondItem="ZtA-eU-rds" secondAttribute="top" id="vcr-Yy-C24"/>
+                            <constraint firstItem="Xc7-dV-7DA" firstAttribute="top" secondItem="ZtA-eU-rds" secondAttribute="top" id="xoQ-Hm-aUe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZtA-eU-rds"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Start" id="fcU-tf-BdH"/>
+                    <navigationItem key="navigationItem" title="Workouts" id="fcU-tf-BdH"/>
                     <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epT-ml-baO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="573"/>
-        </scene>
-        <!--Workouts-->
-        <scene sceneID="SAc-Kb-7EF">
-            <objects>
-                <viewController id="7wz-3f-vde" customClass="WorkoutsViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Hy5-bS-6YA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6n2-Rv-qCY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-Yi-5f1">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="Kja-AH-dTw"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="qIr-Yi-5f1" firstAttribute="width" secondItem="6n2-Rv-qCY" secondAttribute="width" id="0c8-Id-7uu"/>
-                                    <constraint firstAttribute="height" constant="1000" id="Fx2-Zy-Vhm"/>
-                                    <constraint firstItem="qIr-Yi-5f1" firstAttribute="top" secondItem="6n2-Rv-qCY" secondAttribute="top" id="Vn7-aN-IiL"/>
-                                    <constraint firstItem="qIr-Yi-5f1" firstAttribute="leading" secondItem="6n2-Rv-qCY" secondAttribute="leading" id="XqF-W5-1sv"/>
-                                    <constraint firstAttribute="bottom" secondItem="qIr-Yi-5f1" secondAttribute="bottom" id="gu3-je-ZIa"/>
-                                    <constraint firstAttribute="trailing" secondItem="qIr-Yi-5f1" secondAttribute="trailing" id="thE-vq-9vi"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="1r3-0S-IXy" firstAttribute="bottom" secondItem="6n2-Rv-qCY" secondAttribute="bottom" id="5JE-N3-xzU"/>
-                            <constraint firstItem="6n2-Rv-qCY" firstAttribute="leading" secondItem="1r3-0S-IXy" secondAttribute="leading" id="Kjd-3p-K0n"/>
-                            <constraint firstItem="6n2-Rv-qCY" firstAttribute="top" secondItem="1r3-0S-IXy" secondAttribute="top" id="bEm-iV-oUG"/>
-                            <constraint firstItem="1r3-0S-IXy" firstAttribute="trailing" secondItem="6n2-Rv-qCY" secondAttribute="trailing" id="hND-tq-CZj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="1r3-0S-IXy"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Workouts" id="pBc-Pv-g27"/>
-                    <size key="freeformSize" width="375" height="1000"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KgR-Ej-5hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="657" y="2141"/>
+            <point key="canvasLocation" x="655.20000000000005" y="571.92118226600985"/>
         </scene>
         <!--Profile Navigation-->
         <scene sceneID="Ctm-aE-zm1">
@@ -588,7 +554,7 @@
         <scene sceneID="w82-cX-PqM">
             <objects>
                 <navigationController storyboardIdentifier="Start Navigation" title="Start Navigation" automaticallyAdjustsScrollViewInsets="NO" id="h3J-mj-W5X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Start" image="Start" id="pfh-vh-kF8"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="Workouts" selectedImage="Workouts" id="pfh-vh-kF8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="a5B-rq-rwZ">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -610,11 +576,11 @@
             </objects>
             <point key="canvasLocation" x="-1063" y="137"/>
         </scene>
-        <!--Workouts Navigation-->
+        <!--Settings Navigation-->
         <scene sceneID="pic-YP-Y8t">
             <objects>
-                <navigationController storyboardIdentifier="Workouts Navigation" title="Workouts Navigation" automaticallyAdjustsScrollViewInsets="NO" id="YNN-fs-hsy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workouts" image="Workouts" id="9LB-QS-1kO"/>
+                <navigationController storyboardIdentifier="Workouts Navigation" title="Settings Navigation" automaticallyAdjustsScrollViewInsets="NO" id="YNN-fs-hsy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" selectedImage="Settings" id="9LB-QS-1kO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="bYH-LZ-hZu">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -629,7 +595,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7wz-3f-vde" kind="relationship" relationship="rootViewController" id="Vt0-e5-Mm7"/>
+                        <segue destination="aLM-Wb-MQz" kind="relationship" relationship="rootViewController" id="9mb-z6-tLM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-Gd-31q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -664,17 +630,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button.png" width="219" height="66"/>
+        <image name="Button" width="219" height="66"/>
         <image name="Exercises" width="25" height="25"/>
         <image name="Liftr Text" width="501" height="157"/>
         <image name="Liftr Text 2" width="501" height="157"/>
         <image name="Profile" width="25" height="25"/>
-        <image name="Start" width="25" height="25"/>
+        <image name="Settings" width="25" height="25"/>
+        <image name="Text Field 2" width="1119" height="159"/>
         <image name="Text Field 2.png" width="1119" height="159"/>
         <image name="Workouts" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dQS-ut-RqG"/>
+        <segue reference="hT4-rx-P9e"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
