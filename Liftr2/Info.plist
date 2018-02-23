@@ -22,14 +22,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Image Privacy</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera Privacy</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Image Privacy</string>
+	<key>UILaunchStoryboardName</key>
+	<string>Main</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

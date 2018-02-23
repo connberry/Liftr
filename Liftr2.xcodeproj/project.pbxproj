@@ -22,15 +22,20 @@
 		B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B363D738203F407700E2A137 /* QuartzCore.framework */; };
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
 		B36E29AB2031F67E006E7F96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */; };
-		B3789CC2203F61AD000A7273 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3789CC1203F61AD000A7273 /* NavigationViewController.swift */; };
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
+		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
 		B3984045203C1260003B0BD1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3984044203C1260003B0BD1 /* SettingsViewController.swift */; };
 		B3A138062030728B00B35A6D /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3A138052030728600B35A6D /* Video.mp4 */; };
+		B3A844A42040274A003E9CD6 /* Navigation Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A844A32040274A003E9CD6 /* Navigation Bar.png */; };
+		B3A844A620402AE1003E9CD6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A520402AE1003E9CD6 /* StartViewController.swift */; };
+		B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */; };
+		B3A844AA20402C28003E9CD6 /* Text Field.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A844A920402C28003E9CD6 /* Text Field.png */; };
+		B3A844AC20402F57003E9CD6 /* Text Field 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A844AB20402F4E003E9CD6 /* Text Field 2.png */; };
 		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 		B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */; };
 		B3E7B8DF203F23D6004333C7 /* Liftr Text 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E7B8DE203F23D6004333C7 /* Liftr Text 2.png */; };
-		F0DD00D4D671D6B91EC315C5 /* Pods_Liftr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */; };
+		CBB276DB219A2902BDC81727 /* Pods_Liftr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,14 +82,24 @@
 		B363D738203F407700E2A137 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B3789CC1203F61AD000A7273 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		B37B2D0B202F81A10083E745 /* Liftr Text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liftr Text.png"; sourceTree = "<group>"; };
 		B384594B203A23C200787335 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
+		B387D9DB20401C650003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3984044203C1260003B0BD1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B3A138052030728600B35A6D /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
+		B3A844A32040274A003E9CD6 /* Navigation Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation Bar.png"; sourceTree = "<group>"; };
+		B3A844A520402AE1003E9CD6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		B3A844A920402C28003E9CD6 /* Text Field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Text Field.png"; sourceTree = "<group>"; };
+		B3A844AB20402F4E003E9CD6 /* Text Field 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Text Field 2.png"; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B3B330D120401EEA00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B330D320401F1C00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises2ViewController.swift; sourceTree = "<group>"; };
+		B3CA6E8620401A0D00471698 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B8DE203F23D6004333C7 /* Liftr Text 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liftr Text 2.png"; sourceTree = "<group>"; };
 		DC25E6E89DC1A28D77016DB6 /* Pods-Liftr2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,9 +110,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */,
 				B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */,
 				B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */,
-				F0DD00D4D671D6B91EC315C5 /* Pods_Liftr2.framework in Frameworks */,
+				CBB276DB219A2902BDC81727 /* Pods_Liftr2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,10 +143,13 @@
 				B3481CBD202AF0CA0097101C /* Liftr2Tests */,
 				B3481CC8202AF0CA0097101C /* Liftr2UITests */,
 				B3481CA4202AF0C90097101C /* Products */,
+				B3A844A920402C28003E9CD6 /* Text Field.png */,
+				B3A844AB20402F4E003E9CD6 /* Text Field 2.png */,
 				B37B2D0B202F81A10083E745 /* Liftr Text.png */,
 				B3E7B8DE203F23D6004333C7 /* Liftr Text 2.png */,
 				B363D732203F3AB400E2A137 /* Button.png */,
 				B3A138052030728600B35A6D /* Video.mp4 */,
+				B3A844A32040274A003E9CD6 /* Navigation Bar.png */,
 				B3BCB51C202DB95100A0BA73 /* Images */,
 				B3692DA6202F6A7E00408D27 /* Frameworks */,
 				FB5F5D8A0798E4D5C8A4126F /* Pods */,
@@ -156,10 +175,11 @@
 				B3A96393202E1FCF00FC9292 /* SignInViewController.swift */,
 				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
 				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
-				B3789CC1203F61AD000A7273 /* NavigationViewController.swift */,
 				B3984044203C1260003B0BD1 /* SettingsViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
+				B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */,
+				B3A844A520402AE1003E9CD6 /* StartViewController.swift */,
 				B363D73E203F417E00E2A137 /* Extensions */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
@@ -197,6 +217,12 @@
 		B3692DA6202F6A7E00408D27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3B330D320401F1C00E4349F /* ChameleonFramework.framework */,
+				B3B330D120401EEA00E4349F /* ChameleonFramework.framework */,
+				B387D9DF20401D320003EC01 /* ChameleonFramework.framework */,
+				B387D9DD20401C770003EC01 /* CoreGraphics.framework */,
+				B387D9DB20401C650003EC01 /* ChameleonFramework.framework */,
+				B3CA6E8620401A0D00471698 /* ChameleonFramework.framework */,
 				B363D738203F407700E2A137 /* QuartzCore.framework */,
 				B3692DA7202F6A7E00408D27 /* AVFoundation.framework */,
 				586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */,
@@ -335,12 +361,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A844AC20402F57003E9CD6 /* Text Field 2.png in Resources */,
 				B3A138062030728B00B35A6D /* Video.mp4 in Resources */,
 				B363D733203F3AB500E2A137 /* Button.png in Resources */,
+				B3A844A42040274A003E9CD6 /* Navigation Bar.png in Resources */,
 				B36E29AB2031F67E006E7F96 /* GoogleService-Info.plist in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3E7B8DF203F23D6004333C7 /* Liftr Text 2.png in Resources */,
+				B3A844AA20402C28003E9CD6 /* Text Field.png in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,10 +554,11 @@
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */,
+				B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */,
+				B3A844A620402AE1003E9CD6 /* StartViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,
-				B3789CC2203F61AD000A7273 /* NavigationViewController.swift in Sources */,
 				B3984045203C1260003B0BD1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,9 @@ class Exercises2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let img = UIImage(named: "Navigation Bar.png")
+        navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
+        
         Exercises.title = heading
         // Do any additional setup after loading the view.
     }

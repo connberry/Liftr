@@ -1,32 +1,29 @@
 //
-//  ProfileViewController.swift
+//  StartViewController.swift
 //  Liftr2
 //
-//  Created by Connor Berry on 10/02/2018.
+//  Created by Connor Berry on 23/02/2018.
 //  Copyright © 2018 Connor Berry. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-    
-    
+class StartViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    // Do any additional setup after loading the view.
         
         let img = UIImage(named: "Navigation Bar.png")
         navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
+
+        // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-        
+        // Dispose of any resources that can be recreated.
     }
-    @IBAction func SignOutButtonTapped(_ sender: Any) {
-        print("Sign Out Button Tapped" )
-    }
+    
 
     /*
     // MARK: - Navigation
