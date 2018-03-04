@@ -22,7 +22,7 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let img = UIImage(named: "Navigation Bar.png")
+        let img = UIImage(named: "Navigation.png")
         navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
         
         TableView.delegate = self

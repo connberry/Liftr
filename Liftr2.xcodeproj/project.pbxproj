@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42A08C7F1EF63C27FCA0E47D /* Pods_Liftr2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */; };
 		48FED7F5206517A389D0EDA2 /* Pods_Liftr2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */; };
+		B313239D204C1E9A0086B810 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313239C204C1E9A0086B810 /* DataService.swift */; };
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
 		B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA6202AF0C90097101C /* AppDelegate.swift */; };
@@ -20,16 +21,18 @@
 		B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B363D736203F3E9A00E2A137 /* TabBarViewController.swift */; };
 		B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B363D738203F407700E2A137 /* QuartzCore.framework */; };
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
-		B36E29AB2031F67E006E7F96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */; };
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
 		B3984045203C1260003B0BD1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3984044203C1260003B0BD1 /* SettingsViewController.swift */; };
+		B39E7367204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
+		B39E7368204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
+		B39E7369204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
 		B3A138062030728B00B35A6D /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3A138052030728600B35A6D /* Video.mp4 */; };
-		B3A844A620402AE1003E9CD6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A520402AE1003E9CD6 /* StartViewController.swift */; };
 		B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */; };
 		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 		B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */; };
+		B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C88EE92041708B000943D8 /* Launch Screen.storyboard */; };
 		CBB276DB219A2902BDC81727 /* Pods_Liftr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,7 @@
 		6B3ACACF529E3BAC57CD50DB /* Pods-Liftr2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968C48DAB6DF32E71A2058F9 /* Pods-Liftr2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2.debug.xcconfig"; sourceTree = "<group>"; };
+		B313239C204C1E9A0086B810 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B3481CA3202AF0C90097101C /* Liftr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,20 +79,20 @@
 		B363D736203F3E9A00E2A137 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B363D738203F407700E2A137 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B384594B203A23C200787335 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		B387D9DB20401C650003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3984044203C1260003B0BD1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B39E7366204BF3790036B3DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3A138052030728600B35A6D /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
-		B3A844A520402AE1003E9CD6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3B330D120401EEA00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B330D320401F1C00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises2ViewController.swift; sourceTree = "<group>"; };
+		B3C88EE92041708B000943D8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B3CA6E8620401A0D00471698 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC25E6E89DC1A28D77016DB6 /* Pods-Liftr2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +156,7 @@
 		B3481CA5202AF0C90097101C /* Liftr2 */ = {
 			isa = PBXGroup;
 			children = (
+				B3C88EE92041708B000943D8 /* Launch Screen.storyboard */,
 				B3481CAA202AF0CA0097101C /* Main.storyboard */,
 				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
 				B363D736203F3E9A00E2A137 /* TabBarViewController.swift */,
@@ -161,11 +166,11 @@
 				B3984044203C1260003B0BD1 /* SettingsViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
-				B3A844A520402AE1003E9CD6 /* StartViewController.swift */,
 				B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */,
+				B313239C204C1E9A0086B810 /* DataService.swift */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
+				B39E7366204BF3790036B3DA /* GoogleService-Info.plist */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
-				B36E29AA2031F67D006E7F96 /* GoogleService-Info.plist */,
 				B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */,
 			);
 			path = Liftr2;
@@ -336,11 +341,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */,
 				B3A138062030728B00B35A6D /* Video.mp4 in Resources */,
-				B36E29AB2031F67E006E7F96 /* GoogleService-Info.plist in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
+				B39E7367204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39E7368204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39E7369204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,12 +492,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,8 +536,8 @@
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */,
+				B313239D204C1E9A0086B810 /* DataService.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */,
-				B3A844A620402AE1003E9CD6 /* StartViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,

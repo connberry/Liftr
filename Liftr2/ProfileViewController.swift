@@ -15,8 +15,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
     // Do any additional setup after loading the view.
         
-        let img = UIImage(named: "Navigation Bar.png")
-        navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
+    
     }
     
     override func didReceiveMemoryWarning() {

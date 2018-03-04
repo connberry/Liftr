@@ -13,7 +13,7 @@ class WorkoutsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let img = UIImage(named: "Navigation Bar.png")
+        let img = UIImage(named: "Navigation.png")
         navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
 
         // Do any additional setup after loading the view.

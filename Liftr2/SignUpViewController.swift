@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 import Firebase
+import FirebaseDatabase
+import KeychainSwift
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -20,8 +22,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
-    
-    var data = ["Total Beginner", "Sort of Know What I'm Doing", "Super Expert"]
+
+    var data = ["I know nothing 🤷‍♂️", "I know something 👀", "I know everything 💪"]
     var picker = UIPickerView()
 
     //Link text fields to this code
@@ -30,9 +32,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
+    let Keychain = DataService().Keychain
     
     override func viewDidLoad() {
     super.viewDidLoad()
+        
+        FirstNameTextField.delegate = self
+        LastNameTextField.delegate = self
+        EmailAddressTextField.delegate = self
+        PasswordTextField.delegate = self
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.frame
@@ -44,9 +52,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         
     picker.delegate = self
     picker.dataSource = self
-        ExperienceTextField.inputView = picker
+    ExperienceTextField.inputView = picker
         
-        
+    
     //Start of hide keyboard
     self.FirstNameTextField.delegate = self
     }
@@ -65,6 +73,40 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[row]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if Keychain.get("uid") != nil {
+            _ = DataService().Keychain
+            performSegue(withIdentifier: "SignUpSegue", sender: nil)
+        }
+    }
+    
+    func CompleteSignUp(id: String) {
+        
+        Keychain.set(id, forKey: "uid")
+    }
+    
+    @IBAction func SignUpButton(_ sender: Any) {
+        if let email = EmailAddressTextField.text, let password = PasswordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                if error == nil {
+                    self.CompleteSignUp(id: user!.uid)
+                    self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                        if error != nil {
+                            print ("Can't sign in user")
+                        } else {
+                            self.CompleteSignUp(id: user!.uid)
+                            self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,11 +131,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //Return to Sign In page
     self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func SignUpButtonTapped(_ sender: Any) {
-        print("Sign Up Button Tapped")
-    }
-    
     
     
 }
