@@ -13,6 +13,7 @@ import FirebaseDatabase
 import KeychainSwift
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -53,7 +54,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     picker.delegate = self
     picker.dataSource = self
     ExperienceTextField.inputView = picker
-        
     
     //Start of hide keyboard
     self.FirstNameTextField.delegate = self
@@ -89,6 +89,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     }
     
     @IBAction func SignUpButton(_ sender: Any) {
+        if EmailAddressTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+            
+        }
+            
+        if PasswordTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+        }
+    
+            
         if let email = EmailAddressTextField.text, let password = PasswordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil {
@@ -101,17 +117,23 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
                         } else {
                             self.CompleteSignUp(id: user!.uid)
                             self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
+                            if error == nil {
+                                print("You have successfully signed up")
+                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                            self.present(vc!, animated: true, completion: nil)
+                        } else {
+                            let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                             
+                            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                            alertController.addAction(defaultAction)
+                            
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                        }
                         }
                     }
                 }
-            }
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
     }
     
     //Hide keyboard when user touches outside keyboard
@@ -131,6 +153,4 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //Return to Sign In page
     self.dismiss(animated: true, completion: nil)
     }
-    
-    
 }
