@@ -94,7 +94,7 @@
         <!--Profile-->
         <scene sceneID="ROy-bX-h5x">
             <objects>
-                <viewController id="utS-ji-NKN" customClass="ProfileViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Profile" storyboardIdentifier="Profile" title="Profile" id="utS-ji-NKN" customClass="ProfileViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hS8-Jq-sKy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +441,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignUpButton:" destination="oDd-eA-SK4" eventType="touchUpInside" id="CVH-sh-0T8"/>
+                                    <action selector="SignUpButton:" destination="oDd-eA-SK4" eventType="touchUpInside" id="CeP-OZ-ySg"/>
                                     <segue destination="ew0-hp-tt4" kind="show" identifier="SignUpSegue" id="hT4-rx-P9e"/>
                                 </connections>
                             </button>
@@ -453,8 +453,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="CancelButtonTapped:" destination="oDd-eA-SK4" eventType="touchUpInside" id="yTa-Nn-amF"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="GFp-J3-0aW"/>
+                                    <action selector="WhatisLiftr:" destination="oDd-eA-SK4" eventType="touchUpInside" id="ElS-uI-8wb"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="UyB-cl-ZMA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Weightlifting Assistant for Women" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-Am-bz7">

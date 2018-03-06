@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		42A08C7F1EF63C27FCA0E47D /* Pods_Liftr2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */; };
 		48FED7F5206517A389D0EDA2 /* Pods_Liftr2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */; };
-		B313239D204C1E9A0086B810 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313239C204C1E9A0086B810 /* DataService.swift */; };
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
 		B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA6202AF0C90097101C /* AppDelegate.swift */; };
@@ -18,6 +17,7 @@
 		B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3481CB0202AF0CA0097101C /* Assets.xcassets */; };
 		B3481CBF202AF0CA0097101C /* Liftr2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CBE202AF0CA0097101C /* Liftr2Tests.swift */; };
 		B3481CCA202AF0CA0097101C /* Liftr2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */; };
+		B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B35A2181204F1DBC00759F23 /* Video.mp4 */; };
 		B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B363D736203F3E9A00E2A137 /* TabBarViewController.swift */; };
 		B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B363D738203F407700E2A137 /* QuartzCore.framework */; };
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
@@ -27,7 +27,6 @@
 		B39E7367204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
 		B39E7368204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
 		B39E7369204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
-		B3A138062030728B00B35A6D /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3A138052030728600B35A6D /* Video.mp4 */; };
 		B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */; };
 		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
@@ -61,7 +60,6 @@
 		6B3ACACF529E3BAC57CD50DB /* Pods-Liftr2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968C48DAB6DF32E71A2058F9 /* Pods-Liftr2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2.debug.xcconfig"; sourceTree = "<group>"; };
-		B313239C204C1E9A0086B810 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B3481CA3202AF0C90097101C /* Liftr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +74,7 @@
 		B3481CC5202AF0CA0097101C /* Liftr2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Liftr2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liftr2UITests.swift; sourceTree = "<group>"; };
 		B3481CCB202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35A2181204F1DBC00759F23 /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		B363D736203F3E9A00E2A137 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B363D738203F407700E2A137 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -85,7 +84,6 @@
 		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3984044203C1260003B0BD1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B39E7366204BF3790036B3DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B3A138052030728600B35A6D /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3B330D120401EEA00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +134,7 @@
 				B3481CBD202AF0CA0097101C /* Liftr2Tests */,
 				B3481CC8202AF0CA0097101C /* Liftr2UITests */,
 				B3481CA4202AF0C90097101C /* Products */,
-				B3A138052030728600B35A6D /* Video.mp4 */,
+				B35A2181204F1DBC00759F23 /* Video.mp4 */,
 				B3BCB51C202DB95100A0BA73 /* Images */,
 				B3692DA6202F6A7E00408D27 /* Frameworks */,
 				FB5F5D8A0798E4D5C8A4126F /* Pods */,
@@ -163,11 +161,10 @@
 				B3A96393202E1FCF00FC9292 /* SignInViewController.swift */,
 				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
 				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
-				B3984044203C1260003B0BD1 /* SettingsViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
 				B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */,
-				B313239C204C1E9A0086B810 /* DataService.swift */,
+				B3984044203C1260003B0BD1 /* SettingsViewController.swift */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
 				B39E7366204BF3790036B3DA /* GoogleService-Info.plist */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
@@ -317,7 +314,7 @@
 				};
 			};
 			buildConfigurationList = B3481C9E202AF0C90097101C /* Build configuration list for PBXProject "Liftr2" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -342,11 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */,
-				B3A138062030728B00B35A6D /* Video.mp4 in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
 				B39E7367204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
+				B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,8 +489,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -501,8 +496,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -538,7 +531,6 @@
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */,
-				B313239D204C1E9A0086B810 /* DataService.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
@@ -645,6 +637,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -696,7 +689,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
