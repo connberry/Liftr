@@ -23,12 +23,11 @@
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
+		B38D2B8720502E650073052C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B38D2B8620502E650073052C /* GoogleService-Info.plist */; };
 		B3984045203C1260003B0BD1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3984044203C1260003B0BD1 /* SettingsViewController.swift */; };
-		B39E7367204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
-		B39E7368204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
-		B39E7369204BF3790036B3DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39E7366204BF3790036B3DA /* GoogleService-Info.plist */; };
+		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
 		B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */; };
-		B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* SignInViewController.swift */; };
+		B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 		B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */; };
 		B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C88EE92041708B000943D8 /* Launch Screen.storyboard */; };
@@ -82,10 +81,11 @@
 		B387D9DB20401C650003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38D2B8620502E650073052C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3984044203C1260003B0BD1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		B39E7366204BF3790036B3DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
-		B3A96393202E1FCF00FC9292 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B3B330D120401EEA00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B330D320401F1C00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -156,9 +156,10 @@
 			children = (
 				B3C88EE92041708B000943D8 /* Launch Screen.storyboard */,
 				B3481CAA202AF0CA0097101C /* Main.storyboard */,
+				B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */,
 				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
 				B363D736203F3E9A00E2A137 /* TabBarViewController.swift */,
-				B3A96393202E1FCF00FC9292 /* SignInViewController.swift */,
+				B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */,
 				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
 				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
@@ -166,7 +167,7 @@
 				B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */,
 				B3984044203C1260003B0BD1 /* SettingsViewController.swift */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
-				B39E7366204BF3790036B3DA /* GoogleService-Info.plist */,
+				B38D2B8620502E650073052C /* GoogleService-Info.plist */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
 				B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */,
 			);
@@ -342,8 +343,8 @@
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
-				B39E7367204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
 				B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */,
+				B38D2B8720502E650073052C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39E7368204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +359,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39E7369204BF3790036B3DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +525,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A96394202E1FCF00FC9292 /* SignInViewController.swift in Sources */,
+				B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */,
+				B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
@@ -715,7 +715,10 @@
 				);
 				INFOPLIST_FILE = Liftr2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -743,7 +746,10 @@
 				);
 				INFOPLIST_FILE = Liftr2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -760,7 +766,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -778,7 +788,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -795,7 +809,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -812,7 +830,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

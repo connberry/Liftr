@@ -1,91 +1,65 @@
 //  SignInViewController.swift
 //  Liftr2
-//  Created by Connor Berry on 09/02/2018.
+//  Created by Connor Berry on 07/03/2018.
 //  Copyright © 2018 Connor Berry. All rights reserved.
 
+import Foundation
 import UIKit
-import AVFoundation
 import Firebase
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
-    // Storyboard connections
-    @IBOutlet weak var LiftrLogo: UIImageView!
-    @IBOutlet weak var LogInImage: UIImageView!
-    @IBOutlet weak var Sentence1: UILabel!
-    @IBOutlet weak var Sentence2: UILabel!
-    @IBOutlet weak var Sentence3: UILabel!
-    @IBOutlet weak var Sentence4: UILabel!
-    @IBOutlet weak var SignInButton: UIButton!
-    @IBOutlet weak var SignInText: UILabel!
     
-    // Video background declaration
-    var Player: AVPlayer!
-    var PlayerLayer: AVPlayerLayer!
+    @IBOutlet weak var EmailAddressTextField: UITextField!
+    @IBOutlet weak var PasswordTextField: UITextField!
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    // Makes storyboard items invisible for animations
-    LiftrLogo.alpha = 0
-    LogInImage.alpha = 0
-    Sentence1.alpha = 0
-    Sentence2.alpha = 0
-    Sentence3.alpha = 0
-    Sentence4.alpha = 0
-    SignInButton.alpha = 0
-    SignInText.alpha = 0
+        // Background gradient colour, direction and frame
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [UIColor(red: 156/255.5, green: 102/255.5, blue: 211/255.5, alpha: 1.0).cgColor, UIColor(red: 249/255.5, green: 122/255.5, blue: 225/255.5, alpha: 1.0).cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint (x: 0.5, y: 1.0)
+        gradientLayer.endPoint = CGPoint (x: 1.0, y: 0.5)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-    let URL = Bundle.main.url(forResource: "Video", withExtension: "mp4")
-    Player = AVPlayer.init(url: URL!)
-    PlayerLayer = AVPlayerLayer(player: Player)
-    PlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-    PlayerLayer.frame = view.layer.frame
-    Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-    Player.play()
-    view.layer.insertSublayer(PlayerLayer, at: 0)
-    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.Player.currentItem, queue: .main) { _ in
-    self.Player?.seek(to: kCMTimeZero)
-    self.Player?.play()
+        EmailAddressTextField.delegate = self
+        PasswordTextField.delegate = self
+        
+        // Start of hide keyboard
+        self.EmailAddressTextField.delegate = self
     }
-}
-    // Do additional tasks associated with presenting the view
+    
     override func viewDidAppear(_ animated: Bool) {
-        super .viewDidAppear(animated)
-        
-    // Nested animation of storyboard items
-    // Liftr Logo
-    UIView.animate(withDuration: 1, animations: {
-    self.LiftrLogo.alpha = 1 }) { (true) in self.showLogIn() }
+        super.viewDidAppear(animated)
+    }
+    
+    @IBAction func LogInButton(_ sender: Any) {
+    if (EmailAddressTextField.text != "" && PasswordTextField.text != ""){
+        Auth.auth().signIn(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!) { user, error in
+        if error == nil {
+        let alert = UIAlertController(title: "YAY!", message: "You've signed in! 👏🏻 Press continue...", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil) }
+            DispatchQueue.main.async{
+        let alert = UIAlertController(title: "Oh dear...", message: "You've not got your details right 🤦‍♀️", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+        self.present(alert, animated: true, completion: nil) }
 }
-    // Log In Box
-    func showLogIn() {
-    UIView.animate(withDuration: 1, animations: { self.LogInImage.alpha = 1 }, completion: { (true) in self.sent1() })
 }
-    // Sentence 1
-    func sent1() {
-    UIView.animate(withDuration: 1, animations: { self.Sentence1.alpha = 1 }, completion: { (true) in self.sent2() })
 }
-    // Sentence 2
-    func sent2() {
-    UIView.animate(withDuration: 1, animations: { self.Sentence2.alpha = 1 }, completion: { (true) in self.sent3() })
-}
-    // Sentence 3
-    func sent3() {
-    UIView.animate(withDuration: 1, animations: { self.Sentence3.alpha = 1 }, completion: { (true) in self.sent4() })
-}
-    // Sentence 4
-    func sent4() {
-    UIView.animate(withDuration: 1, animations: { self.Sentence4.alpha = 1 }, completion: { (true) in self.LogButton() })
-}
-    // Log In Button
-    func LogButton() {
-    UIView.animate(withDuration: 1, animations: { self.SignInButton.alpha = 1 }, completion: { (true) in self.LogText() })
-}
-    // Log In Text
-    func LogText() {
-    UIView.animate(withDuration: 1, animations: { self.SignInText.alpha = 1 }, completion: { (true) in })
-}
-
+    // End of hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    //Presses return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        EmailAddressTextField.resignFirstResponder()
+        return true
+    }
 }

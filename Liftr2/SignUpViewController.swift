@@ -20,9 +20,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet var ExperienceTextField: UITextField!
-    
     @IBAction func WhatisLiftr(_ sender: Any) {
-    }
+}
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
@@ -46,12 +45,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     gradientLayer.startPoint = CGPoint (x: 0.5, y: 1.0)
     gradientLayer.endPoint = CGPoint (x: 1.0, y: 0.5)
     self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
     
     // Start of hide keyboard
     self.FirstNameTextField.delegate = self
 }
-    
     // Gym picker view selection
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int { return 1 }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { return data.count }
@@ -68,9 +65,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 }
     // Create user and import to Firebase
     @IBAction func SignUpButton(_ sender: Any) {
-    Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!) { (user: User?, error: Error?) in
-    if error == nil {
-    return }
+        Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!) { (user: User?, error: Error?) in
+            if error == nil {
+                return }
 }
     // Email validation - text needs to be evident
     if EmailAddressTextField.text == "" {
