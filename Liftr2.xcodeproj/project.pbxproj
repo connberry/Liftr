@@ -17,15 +17,13 @@
 		B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3481CB0202AF0CA0097101C /* Assets.xcassets */; };
 		B3481CBF202AF0CA0097101C /* Liftr2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CBE202AF0CA0097101C /* Liftr2Tests.swift */; };
 		B3481CCA202AF0CA0097101C /* Liftr2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */; };
-		B3565E10205094320061DE6C /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3565E0F205094320061DE6C /* WeightViewController.swift */; };
-		B3565E122050948A0061DE6C /* WeightLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3565E112050948A0061DE6C /* WeightLogTableViewController.swift */; };
+		B3485E3E20518DCE0097AB4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3485E3D20518DCE0097AB4C /* GoogleService-Info.plist */; };
 		B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B35A2181204F1DBC00759F23 /* Video.mp4 */; };
 		B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B363D736203F3E9A00E2A137 /* TabBarViewController.swift */; };
 		B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B363D738203F407700E2A137 /* QuartzCore.framework */; };
 		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
-		B38D2B8720502E650073052C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B38D2B8620502E650073052C /* GoogleService-Info.plist */; };
 		B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */; };
 		B396F339205143C200B0340F /* AddExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F338205143C200B0340F /* AddExercise.swift */; };
 		B396F33B2051477E00B0340F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33A2051477E00B0340F /* DatabaseService.swift */; };
@@ -79,8 +77,7 @@
 		B3481CC5202AF0CA0097101C /* Liftr2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Liftr2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liftr2UITests.swift; sourceTree = "<group>"; };
 		B3481CCB202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3565E0F205094320061DE6C /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
-		B3565E112050948A0061DE6C /* WeightLogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLogTableViewController.swift; sourceTree = "<group>"; };
+		B3485E3D20518DCE0097AB4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B35A2181204F1DBC00759F23 /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		B363D736203F3E9A00E2A137 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B363D738203F407700E2A137 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -89,7 +86,6 @@
 		B387D9DB20401C650003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38D2B8620502E650073052C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotes1ViewController.swift; sourceTree = "<group>"; };
 		B396F338205143C200B0340F /* AddExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercise.swift; sourceTree = "<group>"; };
 		B396F33A2051477E00B0340F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -173,19 +169,17 @@
 				B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */,
 				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
 				B363D736203F3E9A00E2A137 /* TabBarViewController.swift */,
-				B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */,
 				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
 				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
 				B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */,
 				B3984044203C1260003B0BD1 /* SettingsViewController.swift */,
-				B3565E112050948A0061DE6C /* WeightLogTableViewController.swift */,
-				B3565E0F205094320061DE6C /* WeightViewController.swift */,
 				B396F33A2051477E00B0340F /* DatabaseService.swift */,
 				B396F33C205150E800B0340F /* ExerciseSnapshot.swift */,
+				B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
-				B38D2B8620502E650073052C /* GoogleService-Info.plist */,
+				B3485E3D20518DCE0097AB4C /* GoogleService-Info.plist */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
 				B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */,
 			);
@@ -362,7 +356,7 @@
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
 				B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */,
-				B38D2B8720502E650073052C /* GoogleService-Info.plist in Resources */,
+				B3485E3E20518DCE0097AB4C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,11 +538,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B396F339205143C200B0340F /* AddExercise.swift in Sources */,
-				B3565E10205094320061DE6C /* WeightViewController.swift in Sources */,
 				B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */,
 				B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */,
 				B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */,
-				B3565E122050948A0061DE6C /* WeightLogTableViewController.swift in Sources */,
 				B396F33B2051477E00B0340F /* DatabaseService.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
 				B396F33D205150E800B0340F /* ExerciseSnapshot.swift in Sources */,

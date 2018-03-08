@@ -5,6 +5,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
