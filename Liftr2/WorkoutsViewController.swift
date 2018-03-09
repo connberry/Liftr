@@ -5,7 +5,7 @@
 
 import UIKit
 
-class WorkoutsViewController: UIViewController {
+class MeasurementsViewController: UIViewController {
 
     // Do any additional setup after loading the view.
     override func viewDidLoad() {

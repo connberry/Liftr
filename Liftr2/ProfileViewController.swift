@@ -4,6 +4,7 @@
 //  Copyright © 2018 Connor Berry. All rights reserved.
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
     
@@ -15,6 +16,14 @@ class ProfileViewController: UIViewController {
     let img = UIImage(named: "Navigation.png")
     navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
 }
+    
+    // Sign user out of firebase
+    @IBAction func SignOutButton(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do { try firebaseAuth.signOut() } catch let signOutError as NSError { print ("Error signing out: %@", signOutError) }
+        dismiss(animated: true, completion: nil)
+    }
+    
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

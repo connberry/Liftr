@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class WorkoutNotes1ViewController: UIViewController {
+class WorkoutNotesViewController: UIViewController {
     
     
     var addExer = [AddExer]()
@@ -57,7 +57,7 @@ class WorkoutNotes1ViewController: UIViewController {
     }
 }
 
-extension WorkoutNotes1ViewController: UITableViewDataSource {
+extension WorkoutNotesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addExer.count
     }
