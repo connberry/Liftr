@@ -25,11 +25,8 @@
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
 		B396F33720513C2800B0340F /* WorkoutNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33620513C2800B0340F /* WorkoutNotesViewController.swift */; };
-		B396F339205143C200B0340F /* AddExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F338205143C200B0340F /* AddExercise.swift */; };
-		B396F33B2051477E00B0340F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33A2051477E00B0340F /* DatabaseService.swift */; };
-		B396F33D205150E800B0340F /* ExerciseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33C205150E800B0340F /* ExerciseSnapshot.swift */; };
 		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
-		B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */; };
+		B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */; };
 		B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 		B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */; };
@@ -91,11 +88,8 @@
 		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B396F33620513C2800B0340F /* WorkoutNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotesViewController.swift; sourceTree = "<group>"; };
-		B396F338205143C200B0340F /* AddExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercise.swift; sourceTree = "<group>"; };
-		B396F33A2051477E00B0340F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
-		B396F33C205150E800B0340F /* ExerciseSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSnapshot.swift; sourceTree = "<group>"; };
 		B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsViewController.swift; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B3B330D120401EEA00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B330D320401F1C00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,16 +176,13 @@
 				B396F33620513C2800B0340F /* WorkoutNotesViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
-				B3A844A720402AF6003E9CD6 /* WorkoutsViewController.swift */,
+				B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */,
 				B3E4A812205274EC000C650E /* PedometerViewController.swift */,
 				B3481CB0202AF0CA0097101C /* Assets.xcassets */,
 				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
 				B363D736203F3E9A00E2A137 /* TabBarViewController.swift */,
 				B3485E3D20518DCE0097AB4C /* GoogleService-Info.plist */,
 				B3481CB5202AF0CA0097101C /* Info.plist */,
-				B396F33A2051477E00B0340F /* DatabaseService.swift */,
-				B396F338205143C200B0340F /* AddExercise.swift */,
-				B396F33C205150E800B0340F /* ExerciseSnapshot.swift */,
 				B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */,
 				B3E4A80D2052704B000C650E /* Liftr2.entitlements */,
 			);
@@ -569,17 +560,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B396F339205143C200B0340F /* AddExercise.swift in Sources */,
 				B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */,
 				B396F33720513C2800B0340F /* WorkoutNotesViewController.swift in Sources */,
 				B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */,
-				B396F33B2051477E00B0340F /* DatabaseService.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
-				B396F33D205150E800B0340F /* ExerciseSnapshot.swift in Sources */,
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */,
-				B3A844A820402AF6003E9CD6 /* WorkoutsViewController.swift in Sources */,
+				B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,

@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         do { try firebaseAuth.signOut() } catch let signOutError as NSError { print ("Error signing out: %@", signOutError) }
         dismiss(animated: true, completion: nil)
     }
-    
+
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

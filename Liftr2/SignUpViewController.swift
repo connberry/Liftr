@@ -5,7 +5,6 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -27,7 +26,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        
     // Storyboard delegates and datasources
     FirstNameTextField.delegate = self
     LastNameTextField.delegate = self
@@ -66,10 +66,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 }
     // Create user and import to Firebase
     @IBAction func SignUpButton(_ sender: Any) {
-        Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!) { (user: User?, error: Error?) in
-            if error == nil {
-                return }
-}
+        Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!, completion: { (user: User?, error: Error?) in
+            if error != nil {
+                return
+            }
+            let ref = Database.database().reference()
+            let usersReference = ref.child("users")
+            // print(usersReference.description()) : https://iosliftr.firebaseio.com/users
+            let uid = user?.uid
+            let newUserRef = usersReference.child(uid!)
+            newUserRef.setValue(["email": self.EmailAddressTextField.text!, "firstname": self.FirstNameTextField.text!, "lastname": self.LastNameTextField.text!])
+            print("description \(newUserRef.description())")
+})
     // Email validation - text needs to be evident
     if EmailAddressTextField.text == "" {
     let alertController = UIAlertController(title: "Oh dear...", message: "Come on! Your email is wrong 🙄", preferredStyle: .alert)
