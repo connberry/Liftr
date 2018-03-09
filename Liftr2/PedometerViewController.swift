@@ -131,4 +131,7 @@ extension PedometerViewController {
             }
         }
     }
+    
+    @IBAction func WhyImportantPressed(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.nhs.uk/Livewell/getting-started-guides/Pages/getting-started-walking.aspx")! as URL, options: [:], completionHandler: nil)
+}
 }

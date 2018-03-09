@@ -36,6 +36,9 @@
 		B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C88EE92041708B000943D8 /* Launch Screen.storyboard */; };
 		B3E4A80F2052704B000C650E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E4A80E2052704B000C650E /* HealthKit.framework */; };
 		B3E4A813205274EC000C650E /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4A812205274EC000C650E /* PedometerViewController.swift */; };
+		B3E4A82320529D81000C650E /* Squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3E4A82020529D80000C650E /* Squat.jpg */; };
+		B3E4A82420529D81000C650E /* Press Up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3E4A82120529D80000C650E /* Press Up.jpg */; };
+		B3E4A82520529D81000C650E /* Chin Up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3E4A82220529D80000C650E /* Chin Up.jpg */; };
 		CBB276DB219A2902BDC81727 /* Pods_Liftr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +106,9 @@
 		B3E4A80D2052704B000C650E /* Liftr2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Liftr2.entitlements; sourceTree = "<group>"; };
 		B3E4A80E2052704B000C650E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B3E4A812205274EC000C650E /* PedometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PedometerViewController.swift; path = /Users/Connor/Documents/Liftr/Liftr2/Liftr2/PedometerViewController.swift; sourceTree = "<absolute>"; };
+		B3E4A82020529D80000C650E /* Squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Squat.jpg; sourceTree = "<group>"; };
+		B3E4A82120529D80000C650E /* Press Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Press Up.jpg"; sourceTree = "<group>"; };
+		B3E4A82220529D80000C650E /* Chin Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chin Up.jpg"; sourceTree = "<group>"; };
 		DC25E6E89DC1A28D77016DB6 /* Pods-Liftr2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +153,7 @@
 				B3481CC8202AF0CA0097101C /* Liftr2UITests */,
 				B3481CA4202AF0C90097101C /* Products */,
 				B35A2181204F1DBC00759F23 /* Video.mp4 */,
+				B3E4A81B20529C11000C650E /* Exercises */,
 				B3BCB51C202DB95100A0BA73 /* Images */,
 				B3692DA6202F6A7E00408D27 /* Frameworks */,
 				FB5F5D8A0798E4D5C8A4126F /* Pods */,
@@ -226,6 +233,17 @@
 				EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3E4A81B20529C11000C650E /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				B3E4A82020529D80000C650E /* Squat.jpg */,
+				B3E4A82120529D80000C650E /* Press Up.jpg */,
+				B3E4A82220529D80000C650E /* Chin Up.jpg */,
+			);
+			name = Exercises;
+			path = Liftr2;
 			sourceTree = "<group>";
 		};
 		FB5F5D8A0798E4D5C8A4126F /* Pods */ = {
@@ -363,9 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */,
+				B3E4A82520529D81000C650E /* Chin Up.jpg in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
+				B3E4A82320529D81000C650E /* Squat.jpg in Resources */,
 				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
+				B3E4A82420529D81000C650E /* Press Up.jpg in Resources */,
 				B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */,
 				B3485E3E20518DCE0097AB4C /* GoogleService-Info.plist in Resources */,
 			);
