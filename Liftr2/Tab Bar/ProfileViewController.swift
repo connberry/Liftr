@@ -13,6 +13,15 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if Auth.auth().currentUser?.uid != nil {
+            Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    self.navigationItem.title = dict["firstname"] as? String
+                
+                }
+            })
+        }
         
     // Navigation bar gradient image
     let img = UIImage(named: "Navigation.png")

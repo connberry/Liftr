@@ -4,17 +4,16 @@
 ////
 ////  Created by Connor Berry on 08/03/2018.
 ////  Copyright © 2018 Connor Berry. All rights reserved.
-////
-//
+
 import UIKit
 import Firebase
 
-class WorkoutNotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     var addExer:[String] = []
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
-    
+    var keyArray: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exerView: UITextField!
@@ -22,7 +21,7 @@ class WorkoutNotesViewController: UIViewController, UITableViewDataSource, UITab
         
     if exerView.text != ""
     {
-        ref?.child("users").child(Auth.auth().currentUser!.uid).child("notes").childByAutoId().setValue(exerView.text)
+        ref?.child("users").child(Auth.auth().currentUser!.uid).child("notes1").childByAutoId().setValue(exerView.text)
             exerView.text = ""
         }
     else
@@ -47,12 +46,14 @@ class WorkoutNotesViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.allowsMultipleSelectionDuringEditing = true
+        
         // Start of hide keyboard
         self.exerView.delegate = self
         
         ref = Database.database().reference()
         
-    handle = ref?.child("users").child(Auth.auth().currentUser!.uid).child("notes").observe(.childAdded, with: { (snapshot) in
+    handle = ref?.child("users").child(Auth.auth().currentUser!.uid).child("notes1").observe(.childAdded, with: { (snapshot) in
         if let item = snapshot.value as? String
         {
             self.addExer.append(item)
@@ -61,6 +62,36 @@ class WorkoutNotesViewController: UIViewController, UITableViewDataSource, UITab
         })
         
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        if editingStyle == .delete {
+            GetAllKeys()
+            let when = DispatchTime.now() + 1
+            DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                self.ref?.child("users").child(Auth.auth().currentUser!.uid).child("notes1").child(self.keyArray[indexPath.row]).removeValue()
+
+                self.addExer.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.keyArray = []
+            })
+        }
+        
+    }
+    
+    func GetAllKeys() {
+        ref?.child("users").child(Auth.auth().currentUser!.uid).child("notes1").observeSingleEvent(of: .value, with: { (snapshot) in
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                let key = snap.key
+                self.keyArray.append(key)
+            }
+        })
+}
     // End of hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -70,4 +101,12 @@ class WorkoutNotesViewController: UIViewController, UITableViewDataSource, UITab
         exerView.resignFirstResponder()
         return true
 }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+    }
 }

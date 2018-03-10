@@ -16,6 +16,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Start of hide keyboard
+        self.EmailAddressTextField.delegate = self
+        
         // Background gradient colour, direction and frame
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.frame
@@ -46,5 +49,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    // End of hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    //Presses return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        EmailAddressTextField.resignFirstResponder()
+        return true
     }
 }

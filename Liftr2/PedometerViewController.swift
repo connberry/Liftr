@@ -109,13 +109,13 @@ extension PedometerViewController {
             guard let activity = activity else { return }
             DispatchQueue.main.async {
                 if activity.walking {
-                    self?.activityTypeLabel.text = "Walking"
+                    self?.activityTypeLabel.text = "You're walking, go faster! 🚶‍♀️"
                 } else if activity.stationary {
-                    self?.activityTypeLabel.text = "Stationary"
+                    self?.activityTypeLabel.text = "You're still, stop being lazy 😴"
                 } else if activity.running {
-                    self?.activityTypeLabel.text = "Running"
+                    self?.activityTypeLabel.text = "You're running, nice one! 🏃‍♀️"
                 } else if activity.automotive {
-                    self?.activityTypeLabel.text = "Automotive"
+                    self?.activityTypeLabel.text = "Driving doesnt count... 🚗"
                 }
             }
         }
