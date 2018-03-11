@@ -8,9 +8,12 @@ import UIKit
 class Exercises2ViewController: UIViewController {
     
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var Imp: UILabel!
     @IBOutlet weak var exerciseImage: UIImageView!
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var No1: UILabel!
+    @IBOutlet weak var No2: UILabel!
+    @IBOutlet weak var No3: UILabel!
+    @IBOutlet weak var muscles: UILabel!
     
     // Declaration to change heading to specific exercise
     @IBOutlet weak var Exercises: UINavigationItem!
@@ -20,8 +23,11 @@ class Exercises2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = exercises[myIndex]
-        descLabel.text = step1[myIndex]
+        Imp.text = why[myIndex]
+        No1.text = step1[myIndex]
+        No2.text = step2[myIndex]
+        No3.text = step3[myIndex]
+        muscles.text = muscleUsed[myIndex]
         exerciseImage.image = UIImage(named: exercises[myIndex] + ".jpg")
      
     // Navigation bar gradient image

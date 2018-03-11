@@ -70,6 +70,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             if error != nil {
                 return
             }
+                let email = self.EmailAddressTextField.text
+                Auth.auth().currentUser?.sendEmailVerification { error in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        print("Email verification sent")
+                    }
+            }
             let ref = Database.database().reference()
             let usersReference = ref.child("users")
             // print(usersReference.description()) : https://iosliftr.firebaseio.com/users

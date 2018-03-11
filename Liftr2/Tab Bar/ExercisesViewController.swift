@@ -5,8 +5,28 @@
 
 import UIKit
 
-var exercises = ["Chin Up", "Press Up", "Squat"]
-var step1 = ["1. Bar", "1. Lay on Ground", "1. Feet Apart"]
+var exercises = ["Chin Up",
+                 "Press Up",
+                 "Squat"]
+var why = ["This challenging body-weight exercise strengthens a number of muscle groups, but the benefits you reap from dedication to chin-ups aren't just visual.",
+           "Example example Example example Example example Example example ",
+           "Example example Example example Example example Example example Example example"]
+
+var step1 = ["1. Put your hands on the bar with your palms facing your body.",
+             "1. Example example Example example Example example Example example ",
+             "1. Example example Example example Example example Example example "]
+
+var step2 = ["2. Raise your body until your chin is above the bar.",
+             "2. Example example Example example Example example Example example",
+             "2. Example example Example example Example example Example example"]
+
+var step3 = ["3. Lower yourself back down. Using a slow, controlled motion, lower yourself until your arms are straight.",
+             "3. Example example Example example Example example Example example",
+             "3. Example example Example example Example example Example example"]
+
+var muscleUsed = ["Muscles Used: Biceps, Shoulders, Latissimus Dorsi",
+                  "Muscles Used: Example example Example example Example example",
+                  "Muscles Used: Example example Example example Example example"]
 var myIndex = 0
 
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
