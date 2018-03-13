@@ -13,20 +13,17 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Auth.auth().currentUser?.uid != nil {
-            Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                
-                if let dict = snapshot.value as? [String: AnyObject] {
-                    self.navigationItem.title = dict["firstname"] as? String
+    // Fetches users first name from Firebase to display as heading
+    if Auth.auth().currentUser?.uid != nil {
+    Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+    if let dict = snapshot.value as? [String: AnyObject] {
+    self.navigationItem.title = dict["first name"] as? String
                 
                 }
             })
-        }
-        
-    // Navigation bar gradient image
-    let img = UIImage(named: "Navigation.png")
-    navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
 }
+        
+    }
     
     // Sign user out of firebase
     @IBAction func SignOutButton(_ sender: Any) {
@@ -39,35 +36,28 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 }
+    // When email button is pressed user taken to preset email to Liftr
     @IBAction func EmailPressed(_ sender: Any) {
         let mailComposeViewContorller = configureMailController()
         if MFMailComposeViewController.canSendMail() {
             self.present(mailComposeViewContorller, animated: true, completion: nil)
         } else {
-            showMailError()
-        }
-}
+            showMailError() }}
     func configureMailController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients(["liftr@mail.com"])
         mailComposerVC.setSubject("Liftr Feedback")
         mailComposerVC.setMessageBody("Hey Liftr team...", isHTML: false)
-    
-        return mailComposerVC
-    }
-    
+        return mailComposerVC }
     func showMailError() {
         let sendMailErrorAlert = UIAlertController(title: "Can't Send", message: "Device doesn't send email", preferredStyle: .alert)
         let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
         sendMailErrorAlert.addAction(dismiss)
-        self.present(sendMailErrorAlert, animated: true, completion: nil)
-    }
-    
+        self.present(sendMailErrorAlert, animated: true, completion: nil) }
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
-    }
-    
+}
     // Facebook link
     @IBAction func FacebookPressed(_ sender: Any) {
         UIApplication.shared.open(URL(string: "https://www.facebook.com/theliftrapp/")! as URL, options: [:], completionHandler: nil)

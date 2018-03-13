@@ -7,7 +7,7 @@ import UIKit
 
 class Exercises2ViewController: UIViewController {
     
-    
+    // Storyboard connections
     @IBOutlet weak var Imp: UILabel!
     @IBOutlet weak var exerciseImage: UIImageView!
     @IBOutlet weak var No1: UILabel!
@@ -22,13 +22,14 @@ class Exercises2ViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Imp.text = why[myIndex]
-        No1.text = step1[myIndex]
-        No2.text = step2[myIndex]
-        No3.text = step3[myIndex]
-        muscles.text = muscleUsed[myIndex]
-        exerciseImage.image = UIImage(named: exercises[myIndex] + ".jpg")
+    
+    // Index connections along the passing of data from view controllers
+    Imp.text = why[myIndex]
+    No1.text = step1[myIndex]
+    No2.text = step2[myIndex]
+    No3.text = step3[myIndex]
+    muscles.text = muscleUsed[myIndex]
+    exerciseImage.image = UIImage(named: exercises[myIndex] + ".jpg")
      
     // Navigation bar gradient image
     let img = UIImage(named: "Navigation.png")

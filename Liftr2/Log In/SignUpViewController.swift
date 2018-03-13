@@ -26,8 +26,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
     // Storyboard delegates and datasources
     FirstNameTextField.delegate = self
     LastNameTextField.delegate = self
@@ -68,23 +67,20 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func SignUpButton(_ sender: Any) {
         Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!, completion: { (user: User?, error: Error?) in
             if error != nil {
-                return
-            }
-                let email = self.EmailAddressTextField.text
-                Auth.auth().currentUser?.sendEmailVerification { error in
-                    if let error = error {
-                        print(error)
-                    } else {
-                        print("Email verification sent")
-                    }
-            }
-            let ref = Database.database().reference()
-            let usersReference = ref.child("users")
-            // print(usersReference.description()) : https://iosliftr.firebaseio.com/users
-            let uid = user?.uid
-            let newUserRef = usersReference.child(uid!)
-            newUserRef.setValue(["email": self.EmailAddressTextField.text!, "firstname": self.FirstNameTextField.text!, "lastname": self.LastNameTextField.text!])
-            print("description \(newUserRef.description())")
+                return }
+            let email = self.EmailAddressTextField.text
+            Auth.auth().currentUser?.sendEmailVerification { error in
+            if let error = error { print(error)
+            } else {
+            print("Email verification sent") }
+}
+    let ref = Database.database().reference()
+    let usersReference = ref.child("user")
+    // print(usersReference.description()) : https://iosliftr.firebaseio.com/users
+    let uid = user?.uid
+    let newUserRef = usersReference.child(uid!)
+    newUserRef.setValue(["email": self.EmailAddressTextField.text!, "first name": self.FirstNameTextField.text!, "last name": self.LastNameTextField.text!])
+    print("description \(newUserRef.description())")
 })
     // Email validation - text needs to be evident
     if EmailAddressTextField.text == "" {
@@ -94,8 +90,29 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     present(alertController, animated: true, completion: nil)
 }
     // Password validation - text needs to be evident
-    if PasswordTextField.text == "" {
+    if PasswordTextField.text == ""  {
     let alertController = UIAlertController(title: "Oh dear...", message: "You need to add a password 🤐", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    alertController.addAction(defaultAction)
+    present(alertController, animated: true, completion: nil)
+}
+    // Password validation - text must be longer than 6 characters
+    if PasswordTextField.text!.count < 6 {
+    let alertController = UIAlertController(title: "Oh dear...", message: "Your password isn't long enough, make it 6 characters 📏", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    alertController.addAction(defaultAction)
+    present(alertController, animated: true, completion: nil)
+}
+    // Firstname validation - text needs to be evident
+    if FirstNameTextField.text == "" {
+    let alertController = UIAlertController(title: "Oh dear...", message: "You have a name surely? 🧐", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+    present(alertController, animated: true, completion: nil)
+}
+        // Lastname validation - text needs to be evident
+    if LastNameTextField.text == "" {
+    let alertController = UIAlertController(title: "Oh dear...", message: "You have a name surely? 🧐", preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
     alertController.addAction(defaultAction)
     present(alertController, animated: true, completion: nil)
@@ -110,7 +127,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
     if results.count == 0
     { returnValue = false }
-    
     } catch let error as NSError { print("invalid regex: \(error.localizedDescription)")
     returnValue = false }
     return  returnValue }

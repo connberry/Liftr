@@ -36,7 +36,8 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     Sentence4.alpha = 0
     SignInButton.alpha = 0
     SignInText.alpha = 0
-        
+     
+    // Allows video to be played in the background named Video
     let URL = Bundle.main.url(forResource: "Video", withExtension: "mp4")
     Player = AVPlayer.init(url: URL!)
     PlayerLayer = AVPlayerLayer(player: Player)
@@ -53,7 +54,6 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     // Do additional tasks associated with presenting the view
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-        
             
     // Once signed in user goes straight to Profile
     if Auth.auth().currentUser != nil {

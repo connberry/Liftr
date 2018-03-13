@@ -5,6 +5,7 @@
 
 import UIKit
 
+// Variables for preloaded exercise information
 var exercises = ["Chin Up",
                  "Press Up",
                  "Squat"]
@@ -29,29 +30,47 @@ var muscleUsed = ["Muscles Used: Biceps, Shoulders, Latissimus Dorsi",
                   "Muscles Used: Example example Example example Example example"]
 var myIndex = 0
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // Return number of exercises
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exercises.count
     }
     
+    // Cell properties including exercise name
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = exercises[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         print(indexPath.row)
-        cell.textLabel?.text = exercises[indexPath.row]
         return cell
     }
     
+    // When user selects row, segue to appropriate view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        performSegue(withIdentifier: "ExercisesSegue", sender: exercises[indexPath.row])
+    myIndex = indexPath.row
+    performSegue(withIdentifier: "ExercisesSegue", sender: exercises[indexPath.row])
     }
+    // Let the heading be that of the name of the exercise selected
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) { let guest = segue.destination as! Exercises2ViewController
         guest.heading = sender as! String
     }
-    
     
     // Table declaration
     @IBOutlet weak var TableView: UITableView!
