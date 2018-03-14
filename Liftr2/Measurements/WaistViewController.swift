@@ -14,6 +14,8 @@ class WaistViewController: UIViewController, UITableViewDataSource, UITableViewD
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
+    let date = Date()
+    let formatter = DateFormatter()
     
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
@@ -40,15 +42,21 @@ class WaistViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+        let result = formatter.string(from: date)
+        formatter.dateFormat = "dd-MM-yyyy"
         cell.textLabel?.text = addMes[indexPath.row]
-        cell.detailTextLabel?.text = "Centimetres (CM)"
+        cell.detailTextLabel?.text = result
         return cell
     }
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Adds target to add measurement type
+        mesView.delegate = self
+        mesView.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
         
         tableView.allowsMultipleSelectionDuringEditing = true
         
@@ -67,6 +75,16 @@ class WaistViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         })
         
+    }
+    
+    // Adds measurement
+    @objc func textFieldDidChange(textfield: UITextField) {
+        
+        var text = mesView.text?.replacingOccurrences(of: "cm", with: "")
+        text = text! + "cm"
+        mesView.text = text
+        
+        print("Text changed")
     }
     // Allows editing of cell
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

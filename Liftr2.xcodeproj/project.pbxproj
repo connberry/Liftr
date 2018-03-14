@@ -298,8 +298,8 @@
 		B3CEEF11205477BB00F1921B /* Measurements */ = {
 			isa = PBXGroup;
 			children = (
-				B3CEEF0C2054546300F1921B /* HeightViewController.swift */,
 				B3CEEF18205479BB00F1921B /* WeightViewController.swift */,
+				B3CEEF0C2054546300F1921B /* HeightViewController.swift */,
 				B3CEEF1A205479C700F1921B /* WaistViewController.swift */,
 				B3CEEF1C205479D400F1921B /* ChestViewController.swift */,
 				B3CEEF2220547A0400F1921B /* HipsViewController.swift */,

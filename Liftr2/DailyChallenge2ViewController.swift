@@ -82,10 +82,10 @@ class Challange2ViewController: UIViewController {
             if self.newLastDate != "Date Invalid" { //This is used to be able to test if there is a valid date
                 print(self.lastDate)
                 if (self.newLastDate == self.currentDate) {
-                    print("Day has not moved on.")
+                    print("It's not the next day")
                     completion(false)
                 } else {
-                    print("Day has moved on!")
+                    print("It's the next day reset to start")
                     completion(true)
                 }
             } else { //If there is an error, set the current data to the database
@@ -109,39 +109,39 @@ class Challange2ViewController: UIViewController {
         
         //Check the amount of situps
         print(self.situpNumberVule)
-        if (self.situpNumberVule >= 25) && (self.situpNumberVule < 50) { // if between 25 .. 50
+        if (self.situpNumberVule >= 30) && (self.situpNumberVule < 60) { // if between 25 .. 50
             giveBronze += 1
-        } else if (self.situpNumberVule >= 50) && (self.situpNumberVule < 75) { // if between 50 .. 75
+        } else if (self.situpNumberVule >= 60) && (self.situpNumberVule < 90) { // if between 50 .. 75
             giveSilver += 1
-        } else if (self.situpNumberVule >= 75) && (self.situpNumberVule <= 100) {// if between 75 .. 100
+        } else if (self.situpNumberVule >= 90) && (self.situpNumberVule <= 100) {// if between 75 .. 100
             giveGold += 1
         } else { // if between 0 .. 25
-            print("score too low to give a medal.")
+            print("Rewards not avaliable under 30.")
         }
         
         //Check the amount of pressups
-        if (self.squatNumberVule >= 25) && (self.squatNumberVule < 50) {
+        if (self.squatNumberVule >= 30) && (self.squatNumberVule < 60) {
             giveBronze += 1
-        } else if (self.squatNumberVule >= 50) && (self.squatNumberVule < 75) {
+        } else if (self.squatNumberVule >= 60) && (self.squatNumberVule < 90) {
             giveSilver += 1
-        } else if (self.squatNumberVule >= 75) && (self.squatNumberVule <= 100) {
+        } else if (self.squatNumberVule >= 90) && (self.squatNumberVule <= 100) {
             giveGold += 1
         } else {
-            print("score too low to give a medal.")
+            print("Rewards not avaliable under 30.")
         }
         
         //Check the amount of star jumps
-        if (self.lungeNumberVule >= 25) && (self.lungeNumberVule < 50) {
+        if (self.lungeNumberVule >= 30) && (self.lungeNumberVule < 60) {
             giveBronze += 1
-        } else if (self.lungeNumberVule >= 50) && (self.lungeNumberVule < 75) {
+        } else if (self.lungeNumberVule >= 60) && (self.lungeNumberVule < 90) {
             giveSilver += 1
-        } else if (self.lungeNumberVule >= 75) && (self.lungeNumberVule <= 100) {
+        } else if (self.lungeNumberVule >= 90) && (self.lungeNumberVule <= 100) {
             giveGold += 1
         } else {
-            print("score too low to give a medal.")
+            print("Rewards not avaliable under 30.")
         }
         
-        savedChangesText.text = "Restart to complete your challenge 👏🏻"
+        savedChangesText.text = "Go back to Progression to complete your challenge, press restart and return to progression. Well done! 👏🏻"
         
         let currentAmounts = getCurrentReward()
         print("Bronze: \(self.bronze)")
@@ -175,7 +175,7 @@ class Challange2ViewController: UIViewController {
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
         ref.child("user/\(user)/dates/lastSaveDate").setValue("1/1/1970")
-        savedChangesText.text = "You've reset today, press restart to get going!💨"
+        savedChangesText.text = "You've submitted, go to progression then press restart!💨"
     }
     
     func saveCurrentDate() {
