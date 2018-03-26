@@ -1,9 +1,7 @@
-////
-////  Workout1ViewController.swift
-////  Liftr2
-////
-////  Created by Connor Berry on 08/03/2018.
-////  Copyright © 2018 Connor Berry. All rights reserved.
+//  Workout1ViewController.swift
+//  Liftr2
+//  Created by Connor Berry on 07/03/2018.
+//  Copyright © 2018 Connor Berry. All rights reserved.
 
 import UIKit
 import Firebase
@@ -109,11 +107,12 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         return true
 }
     // Adds checkmark functionality
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
-    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
+        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        } else {
+        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark }
+        }
 }

@@ -8,9 +8,15 @@ import UIKit
 // Variables for preloaded exercise information
 var exercises = ["Chin Up",
                  "Press Up",
-                 "Squat"]
-var why = ["This challenging body-weight exercise strengthens a number of muscle groups, but the benefits you reap from dedication to chin-ups aren't just visual.",
-           "Example example Example example Example example Example example ",
+                 "Squat",
+                 "Ab Roller",
+                 "Bulgarian Split Squat",
+                 "Crunch",
+                 "Chest Press",
+                 "Chest Press (Dumbbell)",
+                 "Good Morning"]
+var why = ["This challenging exercise strengthens a number of muscle groups, but the benefits aren't just visual.",
+           "Example example Example example Example example Example example",
            "Example example Example example Example example Example example Example example"]
 
 var step1 = ["1. Put your hands on the bar with your palms facing your body.",
@@ -64,6 +70,7 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // When user selects row, segue to appropriate view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     myIndex = indexPath.row
     performSegue(withIdentifier: "ExercisesSegue", sender: exercises[indexPath.row])
     }
@@ -79,10 +86,6 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    // Navigation bar gradient image
-    let img = UIImage(named: "Navigation.png")
-    navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
         
     // Storyboard delegates and datasources
     TableView.delegate = self

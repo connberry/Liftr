@@ -2,7 +2,6 @@
 //  Liftr2
 //  Created by Connor Berry on 10/03/2018.
 //  Copyright © 2018 Connor Berry. All rights reserved.
-//
 
 import UIKit
 import Firebase
@@ -125,12 +124,8 @@ class ChestViewController: UIViewController, UITableViewDataSource, UITableViewD
         mesView.resignFirstResponder()
         return true
     }
-    // Adds checkmark functionality
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
 }

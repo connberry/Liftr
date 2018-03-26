@@ -10,10 +10,6 @@ class MeasurementsViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    // Navigation bar gradient image
-    let img = UIImage(named: "Navigation.png")
-    navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
 
     }
     // Dispose of any resources that can be recreated.

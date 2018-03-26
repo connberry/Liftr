@@ -1,0 +1,240 @@
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "08U-u7-ncp"; */
+"08U-u7-ncp.title" = "Profile";
+
+/* Class = "UILabel"; text = "What movement are you doing?"; ObjectID = "0jj-eh-PKa"; */
+"0jj-eh-PKa.text" = "What movement are you doing?";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "3vA-dp-gcB"; */
+"3vA-dp-gcB.text" = "Weight";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "4FS-TG-xKu"; */
+"4FS-TG-xKu.normalTitle" = "-";
+
+/* Class = "UIViewController"; title = "Notes 3"; ObjectID = "4V0-ZE-YmL"; */
+"4V0-ZE-YmL.title" = "Notes 3";
+
+/* Class = "UILabel"; text = "Chest"; ObjectID = "4eh-wH-o0x"; */
+"4eh-wH-o0x.text" = "Chest";
+
+/* Class = "UIButton"; normalTitle = "Save 👊"; ObjectID = "5w5-bI-5SM"; */
+"5w5-bI-5SM.normalTitle" = "Save 👊";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "65r-jP-OTl"; */
+"65r-jP-OTl.normalTitle" = "Submit";
+
+/* Class = "UITabBarItem"; title = "Exercises"; ObjectID = "6Sc-l7-dqa"; */
+"6Sc-l7-dqa.title" = "Exercises";
+
+/* Class = "UIViewController"; title = "Exercises 2"; ObjectID = "8Zd-Xf-dFs"; */
+"8Zd-Xf-dFs.title" = "Exercises 2";
+
+/* Class = "UITabBarItem"; title = "Challenge"; ObjectID = "8fj-U2-QyL"; */
+"8fj-U2-QyL.title" = "Challenge";
+
+/* Class = "UITabBarItem"; title = "Pedometer"; ObjectID = "9LB-QS-1kO"; */
+"9LB-QS-1kO.title" = "Pedometer";
+
+/* Class = "UILabel"; text = "Thigh"; ObjectID = "ABg-Qm-mm2"; */
+"ABg-Qm-mm2.text" = "Thigh";
+
+/* Class = "UIViewController"; title = "Notes 2"; ObjectID = "As4-SR-p9e"; */
+"As4-SR-p9e.title" = "Notes 2";
+
+/* Class = "UINavigationItem"; title = "Exercises"; ObjectID = "CDc-hx-IIt"; */
+"CDc-hx-IIt.title" = "Exercises";
+
+/* Class = "UITextField"; placeholder = "Exercise, Reps x Sets"; ObjectID = "Cwj-El-vTW"; */
+"Cwj-El-vTW.placeholder" = "Exercise, Reps x Sets";
+
+/* Class = "UILabel"; text = "Waist"; ObjectID = "DGL-nW-doJ"; */
+"DGL-nW-doJ.text" = "Waist";
+
+/* Class = "UIButton"; normalTitle = "Save 👊"; ObjectID = "DKW-Eq-8kn"; */
+"DKW-Eq-8kn.normalTitle" = "Save 👊";
+
+/* Class = "UILabel"; text = "Steps:"; ObjectID = "EeM-YF-7tO"; */
+"EeM-YF-7tO.text" = "Steps:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GKI-VM-BCi"; */
+"GKI-VM-BCi.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Why is it so important? Find out more here..."; ObjectID = "GXj-Mw-ewO"; */
+"GXj-Mw-ewO.normalTitle" = "Why is it so important? Find out more here...";
+
+/* Class = "UILabel"; text = "It's not all about being in the Gym..."; ObjectID = "HlZ-5b-LMc"; */
+"HlZ-5b-LMc.text" = "It's not all about being in the Gym...";
+
+/* Class = "UILabel"; text = "0 today, start moving!"; ObjectID = "I6c-nC-NuA"; */
+"I6c-nC-NuA.text" = "0 today, start moving!";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "IdF-LS-GnK"; */
+"IdF-LS-GnK.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JV0-Te-TqW"; */
+"JV0-Te-TqW.text" = "Label";
+
+/* Class = "UILabel"; text = "Bronze 🥉"; ObjectID = "Jg4-QC-cnA"; */
+"Jg4-QC-cnA.text" = "Bronze 🥉";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Kuf-mX-GZV"; */
+"Kuf-mX-GZV.text" = "0";
+
+/* Class = "UILabel"; text = "Movement:"; ObjectID = "LAc-Yn-Aib"; */
+"LAc-Yn-Aib.text" = "Movement:";
+
+/* Class = "UILabel"; text = "Workout Notes 3"; ObjectID = "LLV-jA-q0W"; */
+"LLV-jA-q0W.text" = "Workout Notes 3";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Mdo-6q-8il"; */
+"Mdo-6q-8il.text" = "Label";
+
+/* Class = "UILabel"; text = "50%"; ObjectID = "Mez-ab-e3h"; */
+"Mez-ab-e3h.text" = "50%";
+
+/* Class = "UIButton"; normalTitle = "Restart"; ObjectID = "NEn-H4-8xE"; */
+"NEn-H4-8xE.normalTitle" = "Restart";
+
+/* Class = "UILabel"; text = "There are undeniable benefits from increasing you step count, so stop reading and start moving!"; ObjectID = "NT9-2B-Byk"; */
+"NT9-2B-Byk.text" = "There are undeniable benefits from increasing you step count, so stop reading and start moving!";
+
+/* Class = "UINavigationItem"; title = "Rewards"; ObjectID = "Phj-Lu-N51"; */
+"Phj-Lu-N51.title" = "Rewards";
+
+/* Class = "UINavigationItem"; title = "Notes 1"; ObjectID = "R5b-PP-RjW"; */
+"R5b-PP-RjW.title" = "Notes 1";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "RHN-vN-hVc"; */
+"RHN-vN-hVc.text" = "Height";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "S4q-vR-jXZ"; */
+"S4q-vR-jXZ.text" = "0";
+
+/* Class = "UILabel"; text = "Bicep"; ObjectID = "S6R-Dt-wY5"; */
+"S6R-Dt-wY5.text" = "Bicep";
+
+/* Class = "UINavigationItem"; title = "Pedometer"; ObjectID = "U4K-rk-fPt"; */
+"U4K-rk-fPt.title" = "Pedometer";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "UrZ-2P-2Uk"; */
+"UrZ-2P-2Uk.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Squats"; ObjectID = "VIL-jf-zUN"; */
+"VIL-jf-zUN.text" = "Squats";
+
+/* Class = "UILabel"; text = "Workout Notes 2"; ObjectID = "VIo-id-wPC"; */
+"VIo-id-wPC.text" = "Workout Notes 2";
+
+/* Class = "UINavigationController"; title = "Profile Navigation"; ObjectID = "Wcx-7N-hrD"; */
+"Wcx-7N-hrD.title" = "Profile Navigation";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "WkV-YN-SLW"; */
+"WkV-YN-SLW.text" = "0";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "X7M-Vm-MQU"; */
+"X7M-Vm-MQU.title" = "Profile";
+
+/* Class = "UIBarButtonItem"; title = "Start"; ObjectID = "XAg-LO-Qmi"; */
+"XAg-LO-Qmi.title" = "Start";
+
+/* Class = "UILabel"; text = "It's not all about being in the gym..."; ObjectID = "Xcw-ff-Eqh"; */
+"Xcw-ff-Eqh.text" = "It's not all about being in the gym...";
+
+/* Class = "UINavigationController"; title = "Pedometer Navigation"; ObjectID = "YNN-fs-hsy"; */
+"YNN-fs-hsy.title" = "Pedometer Navigation";
+
+/* Class = "UIBarButtonItem"; title = "Sign Out"; ObjectID = "Ze2-WB-okq"; */
+"Ze2-WB-okq.title" = "Sign Out";
+
+/* Class = "UIButton"; normalTitle = "Save Steps "; ObjectID = "bF5-rz-9bJ"; */
+"bF5-rz-9bJ.normalTitle" = "Save Steps ";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "cdg-wQ-sim"; */
+"cdg-wQ-sim.normalTitle" = "+";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "cig-un-kBP"; */
+"cig-un-kBP.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eKg-Wf-TTR"; */
+"eKg-Wf-TTR.text" = "Label";
+
+/* Class = "UILabel"; text = "Shoulders"; ObjectID = "elB-yp-guS"; */
+"elB-yp-guS.text" = "Shoulders";
+
+/* Class = "UITabBarController"; title = "Tab Bar Navigation"; ObjectID = "ew0-hp-tt4"; */
+"ew0-hp-tt4.title" = "Tab Bar Navigation";
+
+/* Class = "UINavigationItem"; title = "Progression"; ObjectID = "exL-4m-Tbq"; */
+"exL-4m-Tbq.title" = "Progression";
+
+/* Class = "UINavigationItem"; title = "Measurements"; ObjectID = "fcU-tf-BdH"; */
+"fcU-tf-BdH.title" = "Measurements";
+
+/* Class = "UILabel"; text = "Sit Ups"; ObjectID = "g2x-FI-49k"; */
+"g2x-FI-49k.text" = "Sit Ups";
+
+/* Class = "UILabel"; text = "Go!"; ObjectID = "gAV-cb-OYO"; */
+"gAV-cb-OYO.text" = "Go!";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "gGY-EP-sLw"; */
+"gGY-EP-sLw.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Workout Notes 1"; ObjectID = "gdr-jG-L7K"; */
+"gdr-jG-L7K.text" = "Workout Notes 1";
+
+/* Class = "UINavigationController"; title = "Measurements Navigation"; ObjectID = "h3J-mj-W5X"; */
+"h3J-mj-W5X.title" = "Measurements Navigation";
+
+/* Class = "UILabel"; text = "Glutes"; ObjectID = "ion-BO-E88"; */
+"ion-BO-E88.text" = "Glutes";
+
+/* Class = "UILabel"; text = "Hips"; ObjectID = "is5-Gw-82l"; */
+"is5-Gw-82l.text" = "Hips";
+
+/* Class = "UIBarButtonItem"; title = "Challenge"; ObjectID = "jnf-iz-vlW"; */
+"jnf-iz-vlW.title" = "Challenge";
+
+/* Class = "UITextField"; placeholder = "Exercise, Reps x Sets"; ObjectID = "l4p-X9-epq"; */
+"l4p-X9-epq.placeholder" = "Exercise, Reps x Sets";
+
+/* Class = "UILabel"; text = "Lunges"; ObjectID = "lBm-q5-30s"; */
+"lBm-q5-30s.text" = "Lunges";
+
+/* Class = "UILabel"; text = "Silver 🥈"; ObjectID = "llr-IB-9SL"; */
+"llr-IB-9SL.text" = "Silver 🥈";
+
+/* Class = "UILabel"; text = "Gold 🥇"; ObjectID = "mfM-lE-5xc"; */
+"mfM-lE-5xc.text" = "Gold 🥇";
+
+/* Class = "UINavigationController"; title = "Exercises Navigation"; ObjectID = "nLV-mu-SQ8"; */
+"nLV-mu-SQ8.title" = "Exercises Navigation";
+
+/* Class = "UITabBarItem"; title = "Measurements"; ObjectID = "pfh-vh-kF8"; */
+"pfh-vh-kF8.title" = "Measurements";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qM3-Wo-MXF"; */
+"qM3-Wo-MXF.text" = "Label";
+
+/* Class = "UILabel"; text = "Complete your ring to earn rewards! Once completed submit to see your daily rewards..."; ObjectID = "trg-Z2-BnI"; */
+"trg-Z2-BnI.text" = "Complete your ring to earn rewards! Once completed submit to see your daily rewards...";
+
+/* Class = "UILabel"; text = "Total 🏆"; ObjectID = "ujb-AO-HgI"; */
+"ujb-AO-HgI.text" = "Total 🏆";
+
+/* Class = "UIViewController"; title = "Profile"; ObjectID = "utS-ji-NKN"; */
+"utS-ji-NKN.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Challenge"; ObjectID = "vWn-Cj-rbx"; */
+"vWn-Cj-rbx.title" = "Challenge";
+
+/* Class = "UIButton"; normalTitle = "Save 👊"; ObjectID = "wq2-b1-25A"; */
+"wq2-b1-25A.normalTitle" = "Save 👊";
+
+/* Class = "UITextField"; placeholder = "Exercise, Reps x Sets"; ObjectID = "xHZ-Or-omV"; */
+"xHZ-Or-omV.placeholder" = "Exercise, Reps x Sets";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "zLx-nK-Rf5"; */
+"zLx-nK-Rf5.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Calf"; ObjectID = "zgy-JU-gpi"; */
+"zgy-JU-gpi.text" = "Calf";

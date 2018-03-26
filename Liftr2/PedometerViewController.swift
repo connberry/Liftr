@@ -1,9 +1,7 @@
-//
 //  PedometerViewController.swift
-//  
-//
-//  Created by Connor Berry on 09/03/2018.
-//
+//  Liftr2
+//  Created by Connor Berry on 07/03/2018.
+//  Copyright © 2018 Connor Berry. All rights reserved.
 
 import UIKit
 import CoreMotion
@@ -17,19 +15,25 @@ class PedometerViewController: UIViewController {
     private let pedometer = CMPedometer()
     private var shouldStartUpdating: Bool = false
     private var startDate: Date? = nil
-    var stepNumberVule: Int = 0 // Practice code
+    var stepNumberVule: Int = 0 // FIREBASE CODE
     
     // Storyboard connections
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stepsCountLabel: UILabel!
     @IBOutlet weak var activityTypeLabel: UILabel!
+    
+    
+    private func updateStepCounterValue(_ numberOfSteps: NSNumber) {
+        stepNumberVule = numberOfSteps.intValue
+        stepsCountLabel.text = numberOfSteps.stringValue
+    }
    
-    // Practice code start
+    // FIREBASE CODE - I WANT TO WORK - ADD STEPS TO FIREBASE DATABASE
     func getPedValue() {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        ref.child("user").child(userID!).child("daily").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("user").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
     let value = snapshot.value as? NSDictionary
     let ped:Int = value?["pedometer"] as? Int ?? 0
      self.stepNumberVule = ped
@@ -43,21 +47,17 @@ class PedometerViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        let key = ref.child("user").child(user).child("daily")
+        let key = ref.child("user").child(user)
         ref.child("user/\(user)/pedometer").setValue(self.stepNumberVule)
         
     }
-    //Practice code end
+    // END OF FIREBASE CODE
     
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.addTarget(self, action: #selector(didTapStartButton), for: .touchUpInside)
-   
-    // Navigation bar gradient image
-    let img = UIImage(named: "Navigation.png")
-    navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
 }
     // Do additional tasks associated with presenting the view
     override func viewWillAppear(_ animated: Bool) {
@@ -129,7 +129,7 @@ extension PedometerViewController {
                 self?.on(error: error)
             } else if let pedometerData = pedometerData {
                 DispatchQueue.main.async {
-                    self?.stepsCountLabel.text = String(describing: pedometerData.numberOfSteps)
+                    self?.updateStepCounterValue(pedometerData.numberOfSteps)
                 }
             }
         }
@@ -159,7 +159,7 @@ extension PedometerViewController {
             guard let pedometerData = pedometerData, error == nil else { return }
             
             DispatchQueue.main.async {
-                self?.stepsCountLabel.text = pedometerData.numberOfSteps.stringValue
+        self?.updateStepCounterValue(pedometerData.numberOfSteps)
             }
         }
     }

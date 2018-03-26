@@ -14,7 +14,18 @@ class Exercises2ViewController: UIViewController {
     @IBOutlet weak var No2: UILabel!
     @IBOutlet weak var No3: UILabel!
     @IBOutlet weak var muscles: UILabel!
-    
+   @IBAction func addWorkout(_ sender: Any) {
+    let alert = UIAlertController(title: "Which Workout?", message: "Choose a workout to add this exercise!", preferredStyle: .actionSheet)
+    let work1 = UIAlertAction(title: "Notes 1", style: .default, handler: { action in self.performSegue(withIdentifier: "note1", sender: self)})
+    alert.addAction(work1)
+    let work2 = UIAlertAction(title: "Notes 2", style: .default, handler: { action in self.performSegue(withIdentifier: "note2", sender: self)})
+    alert.addAction(work2)
+    let work3 = UIAlertAction(title: "Notes 3", style: .default, handler: { action in self.performSegue(withIdentifier: "note3", sender: self)})
+    alert.addAction(work3)
+        let Canaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(Canaction)
+        self.present(alert, animated: true, completion: nil)
+    }
     // Declaration to change heading to specific exercise
     @IBOutlet weak var Exercises: UINavigationItem!
     var heading = ""
@@ -30,10 +41,6 @@ class Exercises2ViewController: UIViewController {
     No3.text = step3[myIndex]
     muscles.text = muscleUsed[myIndex]
     exerciseImage.image = UIImage(named: exercises[myIndex] + ".jpg")
-     
-    // Navigation bar gradient image
-    let img = UIImage(named: "Navigation.png")
-    navigationController?.navigationBar.barTintColor = UIColor(patternImage: img!)
     
     // Title of view controller equals exercise selection
     Exercises.title = heading

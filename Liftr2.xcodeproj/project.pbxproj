@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		42A08C7F1EF63C27FCA0E47D /* Pods_Liftr2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */; };
 		48FED7F5206517A389D0EDA2 /* Pods_Liftr2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */; };
-		B306E53F20567F0E006C1E77 /* DailyChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E53E20567F0E006C1E77 /* DailyChallengeViewController.swift */; };
-		B306E54120568113006C1E77 /* DailyChallenge2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E54020568113006C1E77 /* DailyChallenge2ViewController.swift */; };
+		B306E53F20567F0E006C1E77 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E53E20567F0E006C1E77 /* ChallengeViewController.swift */; };
+		B306E54120568113006C1E77 /* Challenge2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E54020568113006C1E77 /* Challenge2ViewController.swift */; };
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
 		B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA6202AF0C90097101C /* AppDelegate.swift */; };
-		B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3481CAA202AF0CA0097101C /* Main.storyboard */; };
+		B3481CAC202AF0CA0097101C /* Tab Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3481CAA202AF0CA0097101C /* Tab Bar.storyboard */; };
 		B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */; };
 		B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3481CB0202AF0CA0097101C /* Assets.xcassets */; };
 		B3481CBF202AF0CA0097101C /* Liftr2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CBE202AF0CA0097101C /* Liftr2Tests.swift */; };
@@ -42,16 +42,17 @@
 		B3CEEF19205479BB00F1921B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF18205479BB00F1921B /* WeightViewController.swift */; };
 		B3CEEF1B205479C700F1921B /* WaistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF1A205479C700F1921B /* WaistViewController.swift */; };
 		B3CEEF1D205479D400F1921B /* ChestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF1C205479D400F1921B /* ChestViewController.swift */; };
-		B3CEEF1F205479EC00F1921B /* RBicepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF1E205479EC00F1921B /* RBicepViewController.swift */; };
-		B3CEEF21205479F900F1921B /* LBicepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF20205479F900F1921B /* LBicepViewController.swift */; };
+		B3CEEF1F205479EC00F1921B /* BicepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF1E205479EC00F1921B /* BicepViewController.swift */; };
+		B3CEEF21205479F900F1921B /* ShouldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF20205479F900F1921B /* ShouldersViewController.swift */; };
 		B3CEEF2320547A0400F1921B /* HipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2220547A0400F1921B /* HipsViewController.swift */; };
 		B3CEEF2520547A1500F1921B /* GlutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2420547A1500F1921B /* GlutesViewController.swift */; };
-		B3CEEF2720547A2500F1921B /* RThighViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2620547A2500F1921B /* RThighViewController.swift */; };
-		B3CEEF2920547A3300F1921B /* LThighViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2820547A3300F1921B /* LThighViewController.swift */; };
-		B3CEEF2B20547A4500F1921B /* RCalfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2A20547A4500F1921B /* RCalfViewController.swift */; };
-		B3CEEF2D20547A5E00F1921B /* LCalfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2C20547A5E00F1921B /* LCalfViewController.swift */; };
+		B3CEEF2720547A2500F1921B /* ThighViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2620547A2500F1921B /* ThighViewController.swift */; };
+		B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2A20547A4500F1921B /* CalfViewController.swift */; };
 		B3CEEF2F20548ABC00F1921B /* ForgottenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2E20548ABC00F1921B /* ForgottenViewController.swift */; };
-		B3DB13422057D1A800330BEC /* DailyRewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB13412057D1A800330BEC /* DailyRewardsViewController.swift */; };
+		B3D8A1AD205FFA71008B4FC5 /* Measurements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */; };
+		B3D8A1B020600172008B4FC5 /* Challange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8A1AA205FFA51008B4FC5 /* Challange.storyboard */; };
+		B3D8A1B12060032C008B4FC5 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */; };
+		B3DB13422057D1A800330BEC /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB13412057D1A800330BEC /* RewardsViewController.swift */; };
 		B3E4A813205274EC000C650E /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4A812205274EC000C650E /* PedometerViewController.swift */; };
 		CBB276DB219A2902BDC81727 /* Pods_Liftr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */; };
 /* End PBXBuildFile section */
@@ -81,13 +82,13 @@
 		6B3ACACF529E3BAC57CD50DB /* Pods-Liftr2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968C48DAB6DF32E71A2058F9 /* Pods-Liftr2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2.debug.xcconfig"; sourceTree = "<group>"; };
-		B306E53E20567F0E006C1E77 /* DailyChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeViewController.swift; sourceTree = "<group>"; };
-		B306E54020568113006C1E77 /* DailyChallenge2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallenge2ViewController.swift; sourceTree = "<group>"; };
+		B306E53E20567F0E006C1E77 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		B306E54020568113006C1E77 /* Challenge2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2ViewController.swift; sourceTree = "<group>"; };
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B3481CA3202AF0C90097101C /* Liftr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CA6202AF0C90097101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3481CAB202AF0CA0097101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3481CAB202AF0CA0097101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Tab Bar.storyboard"; sourceTree = "<group>"; };
 		B3481CAE202AF0CA0097101C /* Liftr2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Liftr2.xcdatamodel; sourceTree = "<group>"; };
 		B3481CB0202AF0CA0097101C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3481CB5202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,16 +126,17 @@
 		B3CEEF18205479BB00F1921B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		B3CEEF1A205479C700F1921B /* WaistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaistViewController.swift; sourceTree = "<group>"; };
 		B3CEEF1C205479D400F1921B /* ChestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestViewController.swift; sourceTree = "<group>"; };
-		B3CEEF1E205479EC00F1921B /* RBicepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBicepViewController.swift; sourceTree = "<group>"; };
-		B3CEEF20205479F900F1921B /* LBicepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBicepViewController.swift; sourceTree = "<group>"; };
+		B3CEEF1E205479EC00F1921B /* BicepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepViewController.swift; sourceTree = "<group>"; };
+		B3CEEF20205479F900F1921B /* ShouldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouldersViewController.swift; sourceTree = "<group>"; };
 		B3CEEF2220547A0400F1921B /* HipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipsViewController.swift; sourceTree = "<group>"; };
 		B3CEEF2420547A1500F1921B /* GlutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlutesViewController.swift; sourceTree = "<group>"; };
-		B3CEEF2620547A2500F1921B /* RThighViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RThighViewController.swift; sourceTree = "<group>"; };
-		B3CEEF2820547A3300F1921B /* LThighViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LThighViewController.swift; sourceTree = "<group>"; };
-		B3CEEF2A20547A4500F1921B /* RCalfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCalfViewController.swift; sourceTree = "<group>"; };
-		B3CEEF2C20547A5E00F1921B /* LCalfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCalfViewController.swift; sourceTree = "<group>"; };
+		B3CEEF2620547A2500F1921B /* ThighViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThighViewController.swift; sourceTree = "<group>"; };
+		B3CEEF2A20547A4500F1921B /* CalfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalfViewController.swift; sourceTree = "<group>"; };
 		B3CEEF2E20548ABC00F1921B /* ForgottenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenViewController.swift; sourceTree = "<group>"; };
-		B3DB13412057D1A800330BEC /* DailyRewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRewardsViewController.swift; sourceTree = "<group>"; };
+		B3D8A1AA205FFA51008B4FC5 /* Challange.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Challange.storyboard; sourceTree = "<group>"; };
+		B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Measurements.storyboard; sourceTree = "<group>"; };
+		B3DB13412057D1A800330BEC /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		B3E4A812205274EC000C650E /* PedometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PedometerViewController.swift; path = /Users/Connor/Documents/Liftr/Liftr2/Liftr2/PedometerViewController.swift; sourceTree = "<absolute>"; };
 		DC25E6E89DC1A28D77016DB6 /* Pods-Liftr2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,10 +201,10 @@
 		B3481CA5202AF0C90097101C /* Liftr2 */ = {
 			isa = PBXGroup;
 			children = (
-				B3C88EE92041708B000943D8 /* Launch Screen.storyboard */,
-				B3481CAA202AF0CA0097101C /* Main.storyboard */,
 				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
-				B3CEEF0E205476E800F1921B /* Log In */,
+				B3C88EE92041708B000943D8 /* Launch Screen.storyboard */,
+				B3481CAA202AF0CA0097101C /* Tab Bar.storyboard */,
+				B3CEEF0E205476E800F1921B /* Sign In */,
 				B3CEEF0F2054772200F1921B /* Tab Bar */,
 				B3CEEF102054777300F1921B /* Notes */,
 				B3ACF45E205826BD00FA5281 /* Challange */,
@@ -254,14 +256,15 @@
 		B3ACF45E205826BD00FA5281 /* Challange */ = {
 			isa = PBXGroup;
 			children = (
-				B306E53E20567F0E006C1E77 /* DailyChallengeViewController.swift */,
-				B306E54020568113006C1E77 /* DailyChallenge2ViewController.swift */,
-				B3DB13412057D1A800330BEC /* DailyRewardsViewController.swift */,
+				B3D8A1AA205FFA51008B4FC5 /* Challange.storyboard */,
+				B306E53E20567F0E006C1E77 /* ChallengeViewController.swift */,
+				B306E54020568113006C1E77 /* Challenge2ViewController.swift */,
+				B3DB13412057D1A800330BEC /* RewardsViewController.swift */,
 			);
 			name = Challange;
 			sourceTree = "<group>";
 		};
-		B3CEEF0E205476E800F1921B /* Log In */ = {
+		B3CEEF0E205476E800F1921B /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
 				B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */,
@@ -269,7 +272,7 @@
 				B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */,
 				B3CEEF2E20548ABC00F1921B /* ForgottenViewController.swift */,
 			);
-			path = "Log In";
+			path = "Sign In";
 			sourceTree = "<group>";
 		};
 		B3CEEF0F2054772200F1921B /* Tab Bar */ = {
@@ -288,6 +291,7 @@
 		B3CEEF102054777300F1921B /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */,
 				B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */,
 				B3CEEF122054793F00F1921B /* WorkoutNotes2ViewController.swift */,
 				B3CEEF142054798500F1921B /* WorkoutNotes3ViewController.swift */,
@@ -298,18 +302,17 @@
 		B3CEEF11205477BB00F1921B /* Measurements */ = {
 			isa = PBXGroup;
 			children = (
+				B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */,
 				B3CEEF18205479BB00F1921B /* WeightViewController.swift */,
 				B3CEEF0C2054546300F1921B /* HeightViewController.swift */,
 				B3CEEF1A205479C700F1921B /* WaistViewController.swift */,
 				B3CEEF1C205479D400F1921B /* ChestViewController.swift */,
 				B3CEEF2220547A0400F1921B /* HipsViewController.swift */,
 				B3CEEF2420547A1500F1921B /* GlutesViewController.swift */,
-				B3CEEF1E205479EC00F1921B /* RBicepViewController.swift */,
-				B3CEEF20205479F900F1921B /* LBicepViewController.swift */,
-				B3CEEF2620547A2500F1921B /* RThighViewController.swift */,
-				B3CEEF2820547A3300F1921B /* LThighViewController.swift */,
-				B3CEEF2A20547A4500F1921B /* RCalfViewController.swift */,
-				B3CEEF2C20547A5E00F1921B /* LCalfViewController.swift */,
+				B3CEEF1E205479EC00F1921B /* BicepViewController.swift */,
+				B3CEEF20205479F900F1921B /* ShouldersViewController.swift */,
+				B3CEEF2620547A2500F1921B /* ThighViewController.swift */,
+				B3CEEF2A20547A4500F1921B /* CalfViewController.swift */,
 			);
 			path = Measurements;
 			sourceTree = "<group>";
@@ -460,13 +463,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */,
+				B3D8A1AD205FFA71008B4FC5 /* Measurements.storyboard in Resources */,
 				B366D5972055461900BBB7D1 /* Chin Up.jpg in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
-				B3481CAC202AF0CA0097101C /* Main.storyboard in Resources */,
+				B3481CAC202AF0CA0097101C /* Tab Bar.storyboard in Resources */,
+				B3D8A1B12060032C008B4FC5 /* Notes.storyboard in Resources */,
 				B3C4EDC8205536F800D009AC /* Press Up.jpg in Resources */,
 				B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */,
 				B3485E3E20518DCE0097AB4C /* GoogleService-Info.plist in Resources */,
+				B3D8A1B020600172008B4FC5 /* Challange.storyboard in Resources */,
 				B3C4EDCA205536FF00D009AC /* Squat.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,27 +661,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */,
-				B306E54120568113006C1E77 /* DailyChallenge2ViewController.swift in Sources */,
+				B306E54120568113006C1E77 /* Challenge2ViewController.swift in Sources */,
 				B3CEEF1B205479C700F1921B /* WaistViewController.swift in Sources */,
 				B3CEEF0D2054546300F1921B /* HeightViewController.swift in Sources */,
 				B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */,
-				B3CEEF2920547A3300F1921B /* LThighViewController.swift in Sources */,
-				B3CEEF2D20547A5E00F1921B /* LCalfViewController.swift in Sources */,
 				B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */,
 				B3CEEF2F20548ABC00F1921B /* ForgottenViewController.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
-				B306E53F20567F0E006C1E77 /* DailyChallengeViewController.swift in Sources */,
-				B3CEEF21205479F900F1921B /* LBicepViewController.swift in Sources */,
-				B3CEEF1F205479EC00F1921B /* RBicepViewController.swift in Sources */,
+				B306E53F20567F0E006C1E77 /* ChallengeViewController.swift in Sources */,
+				B3CEEF21205479F900F1921B /* ShouldersViewController.swift in Sources */,
+				B3CEEF1F205479EC00F1921B /* BicepViewController.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
-				B3CEEF2B20547A4500F1921B /* RCalfViewController.swift in Sources */,
+				B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */,
 				B3CEEF132054793F00F1921B /* WorkoutNotes2ViewController.swift in Sources */,
-				B3CEEF2720547A2500F1921B /* RThighViewController.swift in Sources */,
+				B3CEEF2720547A2500F1921B /* ThighViewController.swift in Sources */,
 				B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
-				B3DB13422057D1A800330BEC /* DailyRewardsViewController.swift in Sources */,
+				B3DB13422057D1A800330BEC /* RewardsViewController.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B3CEEF2320547A0400F1921B /* HipsViewController.swift in Sources */,
 				B3CEEF19205479BB00F1921B /* WeightViewController.swift in Sources */,
@@ -719,12 +723,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B3481CAA202AF0CA0097101C /* Main.storyboard */ = {
+		B3481CAA202AF0CA0097101C /* Tab Bar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B3481CAB202AF0CA0097101C /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Tab Bar.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
