@@ -30,7 +30,7 @@ class RewardsViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        ref.child("user").child(userID!).child("rewards").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("user").child(userID!).child("challenge").child(getDate()).child("rewards").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
             let gold = value?["gold reward"] as? Int ?? 0
@@ -48,5 +48,12 @@ class RewardsViewController: UIViewController {
         }
         
     }
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+        
     
+}
 }

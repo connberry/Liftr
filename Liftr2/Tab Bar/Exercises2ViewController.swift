@@ -33,6 +33,8 @@ class Exercises2ViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    exerciseImage.alpha = 0
     
     // Index connections along the passing of data from view controllers
     Imp.text = why[myIndex]
@@ -45,4 +47,11 @@ class Exercises2ViewController: UIViewController {
     // Title of view controller equals exercise selection
     Exercises.title = heading
 }
+    // Do additional tasks associated with presenting the view
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+       
+        UIView.animate(withDuration: 0.5, animations: {
+            self.exerciseImage.alpha = 1 })
+    }
 }

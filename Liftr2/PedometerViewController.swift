@@ -15,20 +15,25 @@ class PedometerViewController: UIViewController {
     private let pedometer = CMPedometer()
     private var shouldStartUpdating: Bool = false
     private var startDate: Date? = nil
-    var stepNumberVule: Int = 0 // FIREBASE CODE
+    var stepNumberVule: Int = 0
     
     // Storyboard connections
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stepsCountLabel: UILabel!
     @IBOutlet weak var activityTypeLabel: UILabel!
     
+    @IBAction func Info(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Don't kill us!", message: "If you force quit the app you lose your steps so please don't kill us. 🏃‍♀️", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+    }
     
     private func updateStepCounterValue(_ numberOfSteps: NSNumber) {
         stepNumberVule = numberOfSteps.intValue
         stepsCountLabel.text = numberOfSteps.stringValue
     }
    
-    // FIREBASE CODE - I WANT TO WORK - ADD STEPS TO FIREBASE DATABASE
     func getPedValue() {
         var ref: DatabaseReference!
         ref = Database.database().reference()
@@ -47,12 +52,18 @@ class PedometerViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        let key = ref.child("user").child(user)
-        ref.child("user/\(user)/pedometer").setValue(self.stepNumberVule)
+        let date = Date()
+        let key = ref.child("user").child(user).child("pedometer").child(getDate()).updateChildValues(["steps": stepNumberVule])
+
+    }
+    
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
         
     }
-    // END OF FIREBASE CODE
-    
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
@@ -65,8 +76,16 @@ class PedometerViewController: UIViewController {
         guard let startDate = startDate else { return }
         updateStepsCountLabelUsing(startDate: startDate)
 }
-    // Go! button tapped
+    @IBAction func Ready(_ sender: AnyObject) {
+        self.startButton.isHidden = true
+    }
+    
+    // Ready? button tapped
     @objc private func didTapStartButton() {
+        let popOverVC = UIStoryboard(name: "Tab Bar", bundle: nil).instantiateViewController(withIdentifier: "PopUp") as! PopUpViewController
+        self.addChildViewController(popOverVC)
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
         shouldStartUpdating = !shouldStartUpdating
         shouldStartUpdating ? (onStart()) : (onStop())
     }
@@ -166,7 +185,6 @@ extension PedometerViewController {
     // NHS button pressed
     @IBAction func WhyImportantPressed(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.nhs.uk/Livewell/getting-started-guides/Pages/getting-started-walking.aspx")! as URL, options: [:], completionHandler: nil)
 }
-    
-    
+
 
 }

@@ -16,6 +16,7 @@ class ChallangeViewController: UIViewController {
     var squatNumberVule: Int = 0
     var lungeNumberVule: Int = 0
     
+    @IBOutlet var completeBox: UIImageView!
     
     @IBOutlet weak var ringProgress: MKRingProgressView!
     
@@ -31,7 +32,7 @@ class ChallangeViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        ref.child("user").child(userID!).child("daily").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("user").child(userID!).child("challenge").child(getDate()).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
             let situp:Int = value?["situp"] as? Int ?? 0
@@ -68,6 +69,17 @@ class ChallangeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) { // run on window open
         drawRingProgress()
+            UIView.animate(withDuration: 2.0, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+                self.completeBox.alpha = 0.0
+                
+            }, completion: nil)
     }
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+        
     
+}
 }

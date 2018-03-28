@@ -9,6 +9,7 @@ import Firebase
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
+    var animationHasBeenShown = false
     // Storyboard connections
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -30,12 +31,26 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     self.view.layer.insertSublayer(gradientLayer, at: 0)
         
     EmailAddressTextField.delegate = self
+    EmailAddressTextField.tag = 0
+    EmailAddressTextField.center.x -= view.bounds.width
     PasswordTextField.delegate = self
+    PasswordTextField.tag = 1
+    PasswordTextField.center.x -= view.bounds.width
 }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if !animationHasBeenShown {
+        UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut], animations: {
+            self.EmailAddressTextField.center.x += self.view.bounds.width
+        }, completion: nil)
+        UIView.animate(withDuration: 0.7, delay: 0.1, options: [.curveEaseOut], animations: {
+            self.PasswordTextField.center.x += self.view.bounds.width
+        }, completion: nil)
+            animationHasBeenShown = true
 }
+    }
     
     @IBAction func LogInButton(_ sender: Any) {
         if (EmailAddressTextField.text != "" && PasswordTextField.text != ""){
@@ -55,7 +70,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        EmailAddressTextField.resignFirstResponder()
-        return true
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
     }
 }

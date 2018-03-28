@@ -8,6 +8,7 @@ import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var animationHasBeenShown = false
     // Gym picker view declarations
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1 }
@@ -15,6 +16,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var picker = UIPickerView()
 
     // Storyboard connections
+    
     @IBOutlet weak var FirstNameTextField: UITextField!
     @IBOutlet weak var LastNameTextField: UITextField!
     @IBOutlet weak var EmailAddressTextField: UITextField!
@@ -28,11 +30,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         super.viewDidLoad()
 
     // Storyboard delegates and datasources
-    FirstNameTextField.delegate = self
-    LastNameTextField.delegate = self
+    
     EmailAddressTextField.delegate = self
+    EmailAddressTextField.tag = 0
+    EmailAddressTextField.center.x -= view.bounds.width
     PasswordTextField.delegate = self
+    PasswordTextField.tag = 1
+    PasswordTextField.center.x -= view.bounds.width
+    FirstNameTextField.delegate = self
+    FirstNameTextField.tag = 2
+    FirstNameTextField.center.x -= view.bounds.width
+    LastNameTextField.delegate = self
+    LastNameTextField.tag = 3
+    LastNameTextField.center.x -= view.bounds.width
     ExperienceTextField.inputView = picker
+    ExperienceTextField.tag = 4
+    ExperienceTextField.center.x -= view.bounds.width
     picker.delegate = self
     picker.dataSource = self
         
@@ -58,6 +71,26 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     // Do additional tasks associated with presenting the view
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if !animationHasBeenShown {
+        UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut], animations: {
+            self.EmailAddressTextField.center.x += self.view.bounds.width
+            }, completion: nil)
+        UIView.animate(withDuration: 0.7, delay: 0.1, options: [.curveEaseOut], animations: {
+            self.PasswordTextField.center.x += self.view.bounds.width
+        }, completion: nil)
+        UIView.animate(withDuration: 0.7, delay: 0.2, options: [.curveEaseOut], animations: {
+            self.FirstNameTextField.center.x += self.view.bounds.width
+        }, completion: nil)
+        UIView.animate(withDuration: 0.7, delay: 0.3, options: [.curveEaseOut], animations: {
+            self.LastNameTextField.center.x += self.view.bounds.width
+        }, completion: nil)
+        UIView.animate(withDuration: 0.7, delay: 0.4, options: [.curveEaseOut], animations: {
+            self.ExperienceTextField.center.x += self.view.bounds.width
+        }, completion: nil)
+            animationHasBeenShown = true
+        }
+
         
     // Once signed in user goes straight to Profile
     if Auth.auth().currentUser != nil {
@@ -140,9 +173,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 }
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    FirstNameTextField.resignFirstResponder()
-    return true
-}
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
+        }
     
     // Email validation - email correct function
     func displayAlert(messageToDisplay: String) {

@@ -68,7 +68,7 @@ class Challange2ViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        ref.child("user").child(userID!).child("dates").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("user").child(userID!).child("challenge").child("dates").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             print("inside function")
             let value = snapshot.value as? NSDictionary
@@ -148,15 +148,16 @@ class Challange2ViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        let key = ref.child("user").child(user).child("dates")
-        ref.child("user/\(user)/rewards/bronze reward").setValue(newBronze)
-        ref.child("user/\(user)/rewards/silver reward").setValue(newSilver) // put the new scores into the database
-        ref.child("user/\(user)/rewards/gold reward").setValue(newGold)
+        let key = ref.child("user").child(user).child("challenge").child("dates")
+        ref.child("user/\(user)/challenge/\(getDate())/rewards/bronze reward").setValue(newBronze)
+        ref.child("user/\(user)/challenge/\(getDate())/rewards/silver reward").setValue(newSilver) // put the new scores into the database
+        ref.child("user/\(user)/challenge/\(getDate())/rewards/gold reward").setValue(newGold)
         
         //sets to zero
         resetExercisesToZero() // set everything to zero
         
     }
+    
     
     @IBOutlet weak var NextDay: UIButton!
     @IBAction func NextDayButton(_ sender: Any) {
@@ -169,7 +170,7 @@ class Challange2ViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        ref.child("user/\(user)/dates/lastSaveDate").setValue("1/1/1970")
+        ref.child("user/\(user)/challenge/dates/lastSaveDate").setValue("1/1/1970")
         savedChangesText.text = "Submitted, come back to check rewards!🏆"
     }
     
@@ -182,7 +183,7 @@ class Challange2ViewController: UIViewController {
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
         print(getCurrentDate())
-        ref.child("user/\(user)/dates/lastSaveDate").setValue(getCurrentDate())
+        ref.child("user/\(user)/challenge/dates/lastSaveDate").setValue(getCurrentDate())
     }
     
     func resetExercisesToZero() {
@@ -194,9 +195,9 @@ class Challange2ViewController: UIViewController {
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
         print("Resetting the exercises to zero.")
-        ref.child("user/\(user)/daily/squat").setValue(0)
-        ref.child("user/\(user)/daily/situp").setValue(0)
-        ref.child("user/\(user)/daily/lunge").setValue(0)
+        ref.child("user/\(user)/challenge/\(getDate())/squat").setValue(0)
+        ref.child("user/\(user)/challenge/\(getDate())/situp").setValue(0)
+        ref.child("user/\(user)/challenge/\(getDate())/lunge").setValue(0)
         getSitUpValue() //make everything load again.
     }
     
@@ -287,7 +288,7 @@ class Challange2ViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        ref.child("user").child(userID!).child("daily").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("user").child(userID!).child("challenge").child(getDate()).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
             let situp:Int = value?["situp"] as? Int ?? 0
@@ -313,16 +314,23 @@ class Challange2ViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        let key = ref.child("user").child(user).child("daily")
-        ref.child("user/\(user)/daily/situp").setValue(self.situpNumberVule)
-        ref.child("user/\(user)/daily/squat").setValue(self.squatNumberVule)
-        ref.child("user/\(user)/daily/lunge").setValue(self.lungeNumberVule)
-        
+        let key = ref.child("user").child(user).child("challenge").child(getDate())
+        ref.child("user/\(user)/challenge/\(getDate())/situp").setValue(self.situpNumberVule)
+        ref.child("user/\(user)/challenge/\(getDate())/squat").setValue(self.squatNumberVule)
+        ref.child("user/\(user)/challenge/\(getDate())/lunge").setValue(self.lungeNumberVule)
         
     }
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+        
+    }
+    
+    
     @IBOutlet weak var savedChangesText: UITextField!
     
-    ////SIT UP STUFF////
     //Outlets
     @IBOutlet weak var situpValue: UILabel!
     

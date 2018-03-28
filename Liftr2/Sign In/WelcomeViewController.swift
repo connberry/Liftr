@@ -57,7 +57,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
             
     // Once signed in user goes straight to Profile
     if Auth.auth().currentUser != nil {
-    self.performSegue(withIdentifier: "SignSegue", sender: self) }
+    self.performSegue(withIdentifier: "AlreadyLog", sender: self) }
         
     // Nested animation of storyboard items
     // Liftr Logo
