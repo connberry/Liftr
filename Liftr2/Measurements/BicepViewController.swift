@@ -23,6 +23,10 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
         if mesView.text != "" {
             ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("bicep").child("\(getDate())").setValue(mesView.text)
             mesView.text = ""
+            let alertController = UIAlertController(title: "Nice One!", message: "Your bicep has been stored. If you want to amend, just enter a new weight and it will be overwritten for today. 💪", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
         }
         else
             // Alert if nothing is entered
@@ -128,5 +132,8 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
         let calendar = Calendar.current
         // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
         return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+    }
+    // How button pressed
+    @IBAction func How(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.wikihow.com/Measure-Biceps")! as URL, options: [:], completionHandler: nil)
     }
 }
