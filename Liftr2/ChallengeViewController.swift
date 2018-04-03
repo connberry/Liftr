@@ -56,6 +56,7 @@ class ChallangeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     func drawRingProgress() {
         /*
          This is the function which initialises the
@@ -69,7 +70,7 @@ class ChallangeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) { // run on window open
         drawRingProgress()
-            UIView.animate(withDuration: 2.0, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+            UIView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
                 self.completeBox.alpha = 0.0
                 
             }, completion: nil)
@@ -79,7 +80,8 @@ class ChallangeViewController: UIViewController {
         let calendar = Calendar.current
         // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
         return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
-        
-    
 }
+    
+    
+    
 }

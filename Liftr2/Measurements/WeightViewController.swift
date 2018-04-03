@@ -13,8 +13,6 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
-    let date = Date()
-    let formatter = DateFormatter()
     
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +21,7 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Current user insert of exercise
         if mesView.text != "" {
-            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").childByAutoId().setValue(mesView.text)
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").child("\(getDate())").setValue(mesView.text)
             mesView.text = ""
         }
         else
@@ -35,7 +33,6 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
                 present(alertController, animated: true, completion: nil)
         }
     }
-    
     // Table returns number of exercises
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addMes.count
@@ -43,10 +40,8 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        let result = formatter.string(from: date)
-        formatter.dateFormat = "dd-MM-yyyy"
         cell.textLabel?.text = addMes[indexPath.row]
-        cell.detailTextLabel?.text = result
+        cell.detailTextLabel?.text = getDate()
         return cell
     }
     
@@ -76,9 +71,8 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         })
         
     }
-    
+    // Adds measurement
     @objc func textFieldDidChange(textfield: UITextField) {
-        
         var text = mesView.text?.replacingOccurrences(of: "kg", with: "")
         text = text! + "kg"
         mesView.text = text
@@ -128,5 +122,10 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
     {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
-
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+    }
 }

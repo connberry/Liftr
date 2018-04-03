@@ -7,6 +7,7 @@ import UIKit
 import CoreMotion
 import Dispatch
 import Firebase
+import UserNotifications
 
 class PedometerViewController: UIViewController {
     
@@ -68,6 +69,9 @@ class PedometerViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+            
+        })
         startButton.addTarget(self, action: #selector(didTapStartButton), for: .touchUpInside)
 }
     // Do additional tasks associated with presenting the view
@@ -78,6 +82,14 @@ class PedometerViewController: UIViewController {
 }
     @IBAction func Ready(_ sender: AnyObject) {
         self.startButton.isHidden = true
+        let content = UNMutableNotificationContent()
+        content.title = "Don't force quit the app!"
+        content.body = "You will lose your daily steps, so never force quit Liftr."
+        content.badge = 0
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "stepClose", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     // Ready? button tapped

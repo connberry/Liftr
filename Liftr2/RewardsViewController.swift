@@ -47,6 +47,16 @@ class RewardsViewController: UIViewController {
             print(error.localizedDescription)
         }
         
+        UIView.animate(withDuration: 5.0, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+            self.goldRewardLabel.alpha = 0.0
+         }, completion: nil)
+        UIView.animate(withDuration: 5.0, delay: 0.5, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+            self.silverRewardLabel.alpha = 0.0
+        }, completion: nil)
+        UIView.animate(withDuration: 5.0, delay: 1.0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+            self.bronzeRewardLabel.alpha = 0.0
+        }, completion: nil)
+        
     }
     func getDate() -> String {
         let date = Date()
@@ -54,6 +64,7 @@ class RewardsViewController: UIViewController {
         // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
         return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
         
-    
 }
+
 }
+

@@ -25,9 +25,9 @@
 		B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B363D736203F3E9A00E2A137 /* TabBarViewController.swift */; };
 		B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B363D738203F407700E2A137 /* QuartzCore.framework */; };
 		B366D5972055461900BBB7D1 /* Chin Up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B366D5962055461800BBB7D1 /* Chin Up.jpg */; };
-		B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
+		B38D406C206BA0DA00180841 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
 		B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */; };
 		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
 		B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */; };
@@ -107,21 +107,16 @@
 		B366D5962055461800BBB7D1 /* Chin Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chin Up.jpg"; sourceTree = "<group>"; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B384594B203A23C200787335 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
-		B387D9DB20401C650003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B387D9DF20401D320003EC01 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotes1ViewController.swift; sourceTree = "<group>"; };
 		B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsViewController.swift; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		B3B330D120401EEA00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3B330D320401F1C00E4349F /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		B3C4EDC7205536F800D009AC /* Press Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Press Up.jpg"; sourceTree = "<group>"; };
 		B3C4EDC9205536FE00D009AC /* Squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Squat.jpg; sourceTree = "<group>"; };
 		B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises2ViewController.swift; sourceTree = "<group>"; };
 		B3C88EE92041708B000943D8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		B3CA6E8620401A0D00471698 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CEEF0C2054546300F1921B /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 		B3CEEF122054793F00F1921B /* WorkoutNotes2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotes2ViewController.swift; sourceTree = "<group>"; };
 		B3CEEF142054798500F1921B /* WorkoutNotes3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotes3ViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +146,7 @@
 			files = (
 				B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */,
 				B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */,
-				B3692DA8202F6A7E00408D27 /* AVFoundation.framework in Frameworks */,
+				B38D406C206BA0DA00180841 /* AVFoundation.framework in Frameworks */,
 				CBB276DB219A2902BDC81727 /* Pods_Liftr2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,12 +235,7 @@
 		B3692DA6202F6A7E00408D27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3B330D320401F1C00E4349F /* ChameleonFramework.framework */,
-				B3B330D120401EEA00E4349F /* ChameleonFramework.framework */,
-				B387D9DF20401D320003EC01 /* ChameleonFramework.framework */,
 				B387D9DD20401C770003EC01 /* CoreGraphics.framework */,
-				B387D9DB20401C650003EC01 /* ChameleonFramework.framework */,
-				B3CA6E8620401A0D00471698 /* ChameleonFramework.framework */,
 				B363D738203F407700E2A137 /* QuartzCore.framework */,
 				B3692DA7202F6A7E00408D27 /* AVFoundation.framework */,
 				586643DFCE9E1DE387407831 /* Pods_Liftr2.framework */,
@@ -421,7 +411,6 @@
 				TargetAttributes = {
 					B3481CA2202AF0C90097101C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -856,6 +845,8 @@
 			baseConfigurationReference = 968C48DAB6DF32E71A2058F9 /* Pods-Liftr2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				HEADER_SEARCH_PATHS = (
@@ -877,6 +868,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -887,6 +879,8 @@
 			baseConfigurationReference = 03EA55D8C8FCA310E2E746F6 /* Pods-Liftr2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				HEADER_SEARCH_PATHS = (
@@ -908,6 +902,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

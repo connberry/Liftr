@@ -17,7 +17,7 @@ class Challange2ViewController: UIViewController {
     var catchGetDateError: Bool = false //catch any errors so that it'll show error
     var rewardInArray: NSArray = [] //Would hold the three medals in an array
     var bruteforceDate: Bool = false //Used to change the date to test
-    var bronze: Int = 0 //Used for adding to the bronze total - YAH is a personal term
+    var bronze: Int = 0 //Used for adding to the bronze total
     var silver: Int = 0 //Used for adding to the silver total
     var gold: Int = 0 //Used for adding to the gold medal total
     var currDate: String = "" //Getting the current date
@@ -43,10 +43,10 @@ class Challange2ViewController: UIViewController {
         ref.child("user").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            let gold = value?["gold reward"] as? Int ?? -1
-            let silver = value?["silver reward"] as? Int ?? -1
-            let bronze = value?["bronze reward"] as? Int ?? -1
-            let total = value?["total"] as? Int ?? -1
+            let gold = value?["gold reward"] as? Int ?? 0
+            let silver = value?["silver reward"] as? Int ?? 0
+            let bronze = value?["bronze reward"] as? Int ?? 0
+            let total = value?["total"] as? Int ?? 0
             //set the gathered data to variables
             self.bronze = bronze
             self.silver = silver
@@ -161,12 +161,6 @@ class Challange2ViewController: UIViewController {
     
     @IBOutlet weak var NextDay: UIButton!
     @IBAction func NextDayButton(_ sender: Any) {
-        /*
-         This function is used for testing purposes
-         it changes the database date so that when it reloads,
-         it will see it as a new day and do things as if a new
-         day had come around
-         */
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid

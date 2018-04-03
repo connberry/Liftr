@@ -1,4 +1,4 @@
-//  WeightViewController.swift
+//  CalfViewController.swift
 //  Liftr2
 //  Created by Connor Berry on 10/03/2018.
 //  Copyright © 2018 Connor Berry. All rights reserved.
@@ -13,8 +13,6 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
-    let date = Date()
-    let formatter = DateFormatter()
     
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +21,7 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Current user insert of exercise
         if mesView.text != "" {
-            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("calf").childByAutoId().setValue(mesView.text)
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("calf").child("\(getDate())").setValue(mesView.text)
             mesView.text = ""
         }
         else
@@ -42,10 +40,8 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        let result = formatter.string(from: date)
-        formatter.dateFormat = "dd-MM-yyyy"
         cell.textLabel?.text = addMes[indexPath.row]
-        cell.detailTextLabel?.text = result
+        cell.detailTextLabel?.text = getDate()
         return cell
     }
     
@@ -126,5 +122,11 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
     }
 }

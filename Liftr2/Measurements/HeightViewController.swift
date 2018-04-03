@@ -13,8 +13,6 @@ class HeightViewController: UIViewController, UITableViewDataSource, UITableView
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
-    let date = Date()
-    let formatter = DateFormatter()
     
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +21,7 @@ class HeightViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Current user insert of exercise
         if mesView.text != "" {
-            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("height").childByAutoId().setValue(mesView.text)
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("height").child("\(getDate())").setValue(mesView.text)
             mesView.text = ""
         }
         else
@@ -42,10 +40,8 @@ class HeightViewController: UIViewController, UITableViewDataSource, UITableView
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        let result = formatter.string(from: date)
-        formatter.dateFormat = "dd-MM-yyyy"
         cell.textLabel?.text = addMes[indexPath.row]
-        cell.detailTextLabel?.text = result
+        cell.detailTextLabel?.text = getDate()
         return cell
     }
     
@@ -126,6 +122,12 @@ class HeightViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
     }
 }
 
