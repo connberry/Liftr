@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5yo-g7-vBW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5yo-g7-vBW">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -181,14 +181,15 @@
             </objects>
             <point key="canvasLocation" x="-2914" y="-1176"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="YVq-Po-Gwq">
             <objects>
-                <tabBarController storyboardIdentifier="Tab Bar" id="ew0-hp-tt4" customClass="TabBarViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab Bar" id="ew0-hp-tt4" customClass="RAMAnimatedTabBarController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="YSz-UT-gca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Wcx-7N-hrD" kind="relationship" relationship="viewControllers" id="BBv-aL-RTI"/>
@@ -381,7 +382,11 @@
         <scene sceneID="Ctm-aE-zm1">
             <objects>
                 <navigationController storyboardIdentifier="Profile Navigation" title="Profile Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Wcx-7N-hrD" customClass="NavigationViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="X7M-Vm-MQU"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="X7M-Vm-MQU" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="4el-Td-h0h" id="1N0-J7-67O"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="KKt-hO-BWt">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -405,6 +410,16 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA3-ut-4F9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="4el-Td-h0h" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-5714" y="-2157"/>
         </scene>
@@ -422,7 +437,11 @@
         <scene sceneID="w82-cX-PqM">
             <objects>
                 <navigationController storyboardIdentifier="Start Navigation" title="Measurements Navigation" automaticallyAdjustsScrollViewInsets="NO" id="h3J-mj-W5X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Measurements" image="Measurements" selectedImage="Measurements" id="pfh-vh-kF8"/>
+                    <tabBarItem key="tabBarItem" title="Measurements" image="Measurements" selectedImage="Measurements" id="pfh-vh-kF8" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="wAg-pC-nm6" id="KJ6-SY-GLa"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="a5B-rq-rwZ">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -441,6 +460,16 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRp-PU-DaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wAg-pC-nm6" customClass="RAMFlipTopTransitionItemAnimations" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-5713" y="-201"/>
         </scene>
@@ -448,7 +477,11 @@
         <scene sceneID="pic-YP-Y8t">
             <objects>
                 <navigationController storyboardIdentifier="Pedometer Navigation" title="Pedometer Navigation" automaticallyAdjustsScrollViewInsets="NO" id="YNN-fs-hsy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pedometer" image="Pedometer" selectedImage="Pedometer" id="9LB-QS-1kO"/>
+                    <tabBarItem key="tabBarItem" title="Pedometer" image="Pedometer" selectedImage="Pedometer" id="9LB-QS-1kO" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="Lns-ip-FBy" id="4LS-j7-97v"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="bYH-LZ-hZu">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -467,6 +500,19 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-Gd-31q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Lns-ip-FBy" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-5714" y="757"/>
         </scene>
@@ -474,7 +520,11 @@
         <scene sceneID="wi7-KX-Ptr">
             <objects>
                 <navigationController title="Exercises Navigation" automaticallyAdjustsScrollViewInsets="NO" id="nLV-mu-SQ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exercises" image="Exercises" id="6Sc-l7-dqa"/>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="Exercises" id="6Sc-l7-dqa" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="fiw-bI-pCV" id="1Tu-Pu-hV5"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="XWr-l3-4bK">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -494,14 +544,28 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtD-9v-qik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="fiw-bI-pCV" customClass="RAMFlipBottomTransitionItemAnimations" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-5714" y="-1127"/>
         </scene>
-        <!--Challenge-->
+        <!--Challange Navigation-->
         <scene sceneID="fXX-Ge-5cD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dng-91-P3u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Challenge" image="Challenge" id="8fj-U2-QyL"/>
+                <navigationController title="Challange Navigation" automaticallyAdjustsScrollViewInsets="NO" id="dng-91-P3u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Challenge" image="Challenge" id="8fj-U2-QyL" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="Ozs-wu-K8g" id="Ygg-Uv-6Lq"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="r08-pT-yh1">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -520,6 +584,16 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTo-tE-7iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Ozs-wu-K8g" customClass="RAMRotationAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-5715" y="1838"/>
         </scene>

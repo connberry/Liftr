@@ -48,6 +48,10 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        exerView.layer.borderWidth = 2
+        exerView.layer.cornerRadius = 25.0
+        exerView.layer.borderColor = UIColor(red:0.62, green:0.32, blue:0.86, alpha:0.8).cgColor
+    
         
     tableView.allowsMultipleSelectionDuringEditing = true
         

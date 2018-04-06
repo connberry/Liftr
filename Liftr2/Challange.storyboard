@@ -342,7 +342,7 @@
         <scene sceneID="l5v-B1-aCZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="06v-aD-OYJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Challenge" image="Challenge" id="EW9-4v-B2e"/>
+                    <tabBarItem key="tabBarItem" title="Challenge" image="Challenge" id="EW9-4v-B2e" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="iSA-dn-kcJ">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -361,13 +361,14 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJn-p9-JuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="rli-XV-vqY"/>
             </objects>
             <point key="canvasLocation" x="-5825" y="1793"/>
         </scene>
         <!--Tab Bar Navigation-->
         <scene sceneID="bDC-1M-MaW">
             <objects>
-                <tabBarController storyboardIdentifier="Tab Bar" title="Tab Bar Navigation" id="Mhw-9M-Fya" customClass="TabBarViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab Bar" title="Tab Bar Navigation" id="Mhw-9M-Fya" customClass="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="mGK-gP-UER">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -829,7 +829,7 @@
         <!--Tab Bar Navigation-->
         <scene sceneID="njH-5j-rgL">
             <objects>
-                <tabBarController storyboardIdentifier="Tab Bar" title="Tab Bar Navigation" id="o21-jX-C9X" customClass="TabBarViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab Bar" title="Tab Bar Navigation" id="o21-jX-C9X" customClass="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="6FM-mZ-qLh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1072,7 +1072,7 @@
         <scene sceneID="GHu-2m-leT">
             <objects>
                 <navigationController storyboardIdentifier="Start Navigation" title="Measurements Navigation" automaticallyAdjustsScrollViewInsets="NO" id="kgp-fB-tJQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Measurements" image="Measurements" selectedImage="Measurements" id="6Mr-SN-gpw"/>
+                    <tabBarItem key="tabBarItem" title="Measurements" image="Measurements" selectedImage="Measurements" id="6Mr-SN-gpw" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="KoJ-Rc-E9x">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>

@@ -22,12 +22,19 @@
 		B3481CCA202AF0CA0097101C /* Liftr2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CC9202AF0CA0097101C /* Liftr2UITests.swift */; };
 		B3485E3E20518DCE0097AB4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3485E3D20518DCE0097AB4C /* GoogleService-Info.plist */; };
 		B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B35A2181204F1DBC00759F23 /* Video.mp4 */; };
-		B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B363D736203F3E9A00E2A137 /* TabBarViewController.swift */; };
 		B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B363D738203F407700E2A137 /* QuartzCore.framework */; };
 		B366D5972055461900BBB7D1 /* Chin Up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B366D5962055461800BBB7D1 /* Chin Up.jpg */; };
 		B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384594B203A23C200787335 /* ExercisesViewController.swift */; };
 		B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B387D9DD20401C770003EC01 /* CoreGraphics.framework */; };
 		B38D406C206BA0DA00180841 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3692DA7202F6A7E00408D27 /* AVFoundation.framework */; };
+		B38E90FA2077BBDA00D00932 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90EB2077BBDA00D00932 /* RAMAnimatedTabBarController.swift */; };
+		B38E90FB2077BBDA00D00932 /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90ED2077BBDA00D00932 /* RAMBadge.swift */; };
+		B38E90FC2077BBDA00D00932 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90EE2077BBDA00D00932 /* RAMItemAnimationProtocol.swift */; };
+		B38E90FD2077BBDA00D00932 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F12077BBDA00D00932 /* RAMFumeAnimation.swift */; };
+		B38E90FE2077BBDA00D00932 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F32077BBDA00D00932 /* RAMFrameItemAnimation.swift */; };
+		B38E90FF2077BBDA00D00932 /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F52077BBDA00D00932 /* RAMTransitionItemAnimations.swift */; };
+		B38E91002077BBDA00D00932 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F72077BBDA00D00932 /* RAMRotationAnimation.swift */; };
+		B38E91012077BBDA00D00932 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F92077BBDA00D00932 /* RAMBounceAnimation.swift */; };
 		B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */; };
 		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
 		B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */; };
@@ -102,12 +109,19 @@
 		B3481CCB202AF0CA0097101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3485E3D20518DCE0097AB4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B35A2181204F1DBC00759F23 /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
-		B363D736203F3E9A00E2A137 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B363D738203F407700E2A137 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B366D5962055461800BBB7D1 /* Chin Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chin Up.jpg"; sourceTree = "<group>"; };
 		B3692DA7202F6A7E00408D27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B384594B203A23C200787335 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		B387D9DD20401C770003EC01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B38E90EB2077BBDA00D00932 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		B38E90ED2077BBDA00D00932 /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBadge.swift; sourceTree = "<group>"; };
+		B38E90EE2077BBDA00D00932 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		B38E90F12077BBDA00D00932 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		B38E90F32077BBDA00D00932 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		B38E90F52077BBDA00D00932 /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
+		B38E90F72077BBDA00D00932 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		B38E90F92077BBDA00D00932 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
 		B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotes1ViewController.swift; sourceTree = "<group>"; };
 		B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +259,77 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B38E90EA2077BBDA00D00932 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90EB2077BBDA00D00932 /* RAMAnimatedTabBarController.swift */,
+				B38E90EC2077BBDA00D00932 /* RAMBadge */,
+				B38E90EE2077BBDA00D00932 /* RAMItemAnimationProtocol.swift */,
+				B38E90EF2077BBDA00D00932 /* Animations */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		B38E90EC2077BBDA00D00932 /* RAMBadge */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90ED2077BBDA00D00932 /* RAMBadge.swift */,
+			);
+			path = RAMBadge;
+			sourceTree = "<group>";
+		};
+		B38E90EF2077BBDA00D00932 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90F02077BBDA00D00932 /* FumeAnimation */,
+				B38E90F22077BBDA00D00932 /* FrameAnimation */,
+				B38E90F42077BBDA00D00932 /* TransitionAniamtions */,
+				B38E90F62077BBDA00D00932 /* RotationAnimation */,
+				B38E90F82077BBDA00D00932 /* BounceAnimation */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		B38E90F02077BBDA00D00932 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90F12077BBDA00D00932 /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		B38E90F22077BBDA00D00932 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90F32077BBDA00D00932 /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		B38E90F42077BBDA00D00932 /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90F52077BBDA00D00932 /* RAMTransitionItemAnimations.swift */,
+			);
+			path = TransitionAniamtions;
+			sourceTree = "<group>";
+		};
+		B38E90F62077BBDA00D00932 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90F72077BBDA00D00932 /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		B38E90F82077BBDA00D00932 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B38E90F92077BBDA00D00932 /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
 		B3ACF45E205826BD00FA5281 /* Challange */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,7 +355,7 @@
 		B3CEEF0F2054772200F1921B /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
-				B363D736203F3E9A00E2A137 /* TabBarViewController.swift */,
+				B38E90EA2077BBDA00D00932 /* RAMAnimatedTabBarController */,
 				B3230207202EF7C0008DF62D /* ProfileViewController.swift */,
 				B384594B203A23C200787335 /* ExercisesViewController.swift */,
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
@@ -610,6 +695,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -620,6 +706,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -668,18 +755,25 @@
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */,
 				B3CEEF132054793F00F1921B /* WorkoutNotes2ViewController.swift in Sources */,
+				B38E90FB2077BBDA00D00932 /* RAMBadge.swift in Sources */,
 				B3CEEF2720547A2500F1921B /* ThighViewController.swift in Sources */,
-				B363D737203F3E9A00E2A137 /* TabBarViewController.swift in Sources */,
+				B38E90FA2077BBDA00D00932 /* RAMAnimatedTabBarController.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3DB13422057D1A800330BEC /* RewardsViewController.swift in Sources */,
+				B38E90FE2077BBDA00D00932 /* RAMFrameItemAnimation.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
+				B38E91002077BBDA00D00932 /* RAMRotationAnimation.swift in Sources */,
 				B3CEEF2320547A0400F1921B /* HipsViewController.swift in Sources */,
 				B3CEEF19205479BB00F1921B /* WeightViewController.swift in Sources */,
+				B38E91012077BBDA00D00932 /* RAMBounceAnimation.swift in Sources */,
 				B3CEEF1D205479D400F1921B /* ChestViewController.swift in Sources */,
 				B3CEEF2520547A1500F1921B /* GlutesViewController.swift in Sources */,
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,
+				B38E90FF2077BBDA00D00932 /* RAMTransitionItemAnimations.swift in Sources */,
 				B3E4A813205274EC000C650E /* PedometerViewController.swift in Sources */,
+				B38E90FC2077BBDA00D00932 /* RAMItemAnimationProtocol.swift in Sources */,
+				B38E90FD2077BBDA00D00932 /* RAMFumeAnimation.swift in Sources */,
 				B3CEEF152054798500F1921B /* WorkoutNotes3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

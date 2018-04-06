@@ -9,10 +9,11 @@ import Firebase
 class WeightViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     // Declarations of Database and Added Exercise
-    var addMes:[String] = []
+    var addMes:[[String: String]] = [[:]]
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
+
     
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +22,7 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Current user insert of exercise
         if mesView.text != "" {
-            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").child("\(getDate())").setValue(mesView.text)
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").child("\(getDate())").setValue(["message": mesView.text, "date": getDate()])
             mesView.text = ""
             let alertController = UIAlertController(title: "Nice One!", message: "Your weight has been stored. If you want to amend, just enter a new weight and it will be overwritten for today. 💪", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -44,8 +45,8 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        cell.textLabel?.text = addMes[indexPath.row]
-        cell.detailTextLabel?.text = getDate()
+        cell.textLabel?.text = addMes[indexPath.row]["message"]
+        cell.detailTextLabel?.text = addMes[indexPath.row]["date"]
         return cell
     }
     
@@ -67,7 +68,7 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Adds notes child
         handle = ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").observe(.childAdded, with: { (snapshot) in
-            if let item = snapshot.value as? String
+            if let item = snapshot.value as? [String: String]
             {
                 self.addMes.append(item)
                 self.tableView.reloadData()
