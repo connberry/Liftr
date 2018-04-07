@@ -66,12 +66,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-hh-C3W">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="294-oQ-xo2">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -93,6 +98,9 @@
                         <viewLayoutGuide key="safeArea" id="BMR-oh-zhd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uDc-nb-CXU"/>
+                    <navigationItem key="navigationItem" title="Height" id="pKk-vk-Glf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Height Small" id="URt-cZ-6JM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="UCl-hh-C3W" id="Un1-By-ZuN"/>
                         <outlet property="tableView" destination="hyi-z3-97J" id="O7T-vn-wGT"/>
@@ -149,18 +157,26 @@
                                 <rect key="frame" x="140" y="127" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save Weight 👏"/>
+                                <color key="tintColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save Weight 👏">
+                                    <color key="titleColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="inputButton:" destination="d7L-ZO-kor" eventType="touchUpInside" id="Qku-6Y-gUt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight in KG" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kht-P8-Wa0">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450980395" green="0.31764705882352939" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2S-ft-X5N">
                                 <rect key="frame" x="63" y="261" width="250" height="66"/>
@@ -181,7 +197,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MT0-tK-clc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Weight" id="M30-P0-Lm1"/>
+                    <navigationItem key="navigationItem" title="Weight" id="7TP-AD-32p">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Weight Small" id="cUV-3L-rqM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="kht-P8-Wa0" id="Xt9-yY-F2v"/>
                         <outlet property="tableView" destination="fUo-Rn-9Z3" id="QPL-Nd-fGt"/>
@@ -189,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXD-fw-8fF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848.79999999999995" y="-1196.305418719212"/>
+            <point key="canvasLocation" x="589.60000000000002" y="-1196.305418719212"/>
         </scene>
         <!--Hips-->
         <scene sceneID="3h1-Dx-oZq">
@@ -245,12 +263,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hips Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4n-ug-cp7">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-o9-a4H">
                                 <rect key="frame" x="68" y="196" width="238" height="44"/>
@@ -271,6 +294,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qBh-0O-Cam"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Hips" id="P4h-kV-ojm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Hips Small" id="Ukm-P5-ne1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="K4n-ug-cp7" id="UdU-hk-Ngf"/>
                         <outlet property="tableView" destination="J1m-ej-ZFe" id="1Fl-Lw-Xxu"/>
@@ -327,21 +353,24 @@
                                 <rect key="frame" x="146" y="145" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save Waist👏">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Save Waist👏"/>
                                 <connections>
                                     <action selector="inputButton:" destination="d7L-ZO-kor" eventType="touchUpInside" id="d7e-uv-XrL"/>
                                     <action selector="inputButton:" destination="MEU-ud-xBM" eventType="touchUpInside" id="sje-IB-I9n"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Waist Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WrI-c6-EFr">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygh-UH-VwW">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -362,6 +391,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fqi-JC-6H0"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Waist" id="anI-4O-HVk">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Waist Small" id="Z2e-pZ-C0z"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="WrI-c6-EFr" id="5Vu-vr-9i2"/>
                         <outlet property="tableView" destination="6CP-38-GsQ" id="6F8-aN-Py1"/>
@@ -419,7 +451,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save Chest 👏">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="inputButton:" destination="d7L-ZO-kor" eventType="touchUpInside" id="c0X-fE-bB4"/>
@@ -427,12 +459,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chest Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AI2-x8-tnr">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-yj-NIH">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -453,6 +490,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iAx-W1-Ybv"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Chest" id="5Uz-iY-lxt">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Chest Small" id="79t-0C-XBO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="AI2-x8-tnr" id="Kca-kD-Nco"/>
                         <outlet property="tableView" destination="XM6-qr-WCL" id="TWh-cP-mJ7"/>
@@ -460,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxL-kk-h0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.60000000000002" y="-361.33004926108379"/>
+            <point key="canvasLocation" x="1557.5999999999999" y="-516.50246305418716"/>
         </scene>
         <!--Glutes-->
         <scene sceneID="o0Q-Z3-Uhl">
@@ -509,21 +549,24 @@
                                 <rect key="frame" x="141" y="127" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save Glutes 👏">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Save Glutes 👏"/>
                                 <connections>
                                     <action selector="inputButton:" destination="d7L-ZO-kor" eventType="touchUpInside" id="FR7-4q-b8r"/>
                                     <action selector="inputButton:" destination="EfE-Yw-EAb" eventType="touchUpInside" id="kdJ-4m-Wcv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Glutes Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5k-nO-WBu">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FT8-KL-BLL">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -544,6 +587,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qeE-5h-GD7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Glutes" id="IMD-ZC-n1l">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Glutes Small" id="qkm-Py-Mdt"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="p5k-nO-WBu" id="IJP-Wk-2aB"/>
                         <outlet property="tableView" destination="6sD-P7-vry" id="KEf-Hy-6cL"/>
@@ -556,6 +602,7 @@
         <!--Bicep-->
         <scene sceneID="h89-4B-0Kq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6k1-Cd-pDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Bicep" id="rJp-Za-1DF" customClass="BicepViewController" customModule="Liftr2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJu-h2-dS2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
@@ -601,7 +648,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save Bicep 👏">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="inputButton:" destination="rJp-Za-1DF" eventType="touchUpInside" id="Zbr-ik-stO"/>
@@ -609,12 +656,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bicep Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wfs-E9-BUX">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450980395" green="0.31764705882352939" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9D-vP-25h">
                                 <rect key="frame" x="63" y="261" width="250" height="66"/>
@@ -635,14 +687,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4aN-sI-upC"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Bicep" id="nkZ-Wv-gNV">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Bicep Small" style="plain" id="QnW-ba-qnG"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="bicep" destination="QnW-ba-qnG" id="m3F-GM-wPW"/>
                         <outlet property="mesView" destination="Wfs-E9-BUX" id="qfV-xD-xgM"/>
                         <outlet property="tableView" destination="pgZ-Xe-9P9" id="iAo-sq-Bzu"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6k1-Cd-pDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3044" y="-1196.305418719212"/>
+            <point key="canvasLocation" x="1736.8" y="-1237.6847290640394"/>
         </scene>
         <!--Thigh-->
         <scene sceneID="J3C-qH-bW2">
@@ -692,7 +747,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save Thigh 👏">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="inputButton:" destination="qd1-kB-OyW" eventType="touchUpInside" id="F3j-G9-A1y"/>
@@ -700,12 +755,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Thigh Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHH-EL-ATw">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-5Q-JGP">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -726,6 +786,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="34t-GE-3wx"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Thigh" id="pjI-C5-Bjd">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Thigh Small" id="vxA-rs-1zV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="tHH-EL-ATw" id="cDK-SZ-d3f"/>
                         <outlet property="tableView" destination="oY5-id-bko" id="R4W-Xq-BU5"/>
@@ -783,7 +846,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save Calf 👏">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="inputButton:" destination="d7L-ZO-kor" eventType="touchUpInside" id="mdb-Nc-ECz"/>
@@ -791,12 +854,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calf Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIg-ZI-OPo">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptt-Jg-lg6">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -817,6 +885,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kGt-zc-nh5"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Calf" id="KAG-eL-Ygf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Calf Small" id="Trb-11-qHO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="eIg-ZI-OPo" id="OTk-RW-aJ7"/>
                         <outlet property="tableView" destination="Niw-rR-goJ" id="2f6-RV-XJt"/>
@@ -848,7 +919,7 @@
             <objects>
                 <viewController id="tuW-mZ-sNE" customClass="MeasurementsViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGb-UC-g1U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="877"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqj-tR-SF6">
@@ -857,156 +928,176 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wq-DO-NeB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="850.33333333333337"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3Y-bW-dcp">
-                                                <rect key="frame" x="20" y="24" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUZ-GY-ORK">
+                                                <rect key="frame" x="52" y="35" width="93" height="89"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Weight"/>
+                                                <state key="normal" image="Weight">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="d7L-ZO-kor" kind="show" id="1St-Og-pby"/>
+                                                    <segue destination="d7L-ZO-kor" kind="show" id="qjw-pd-acu"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-aJ-DK4">
-                                                <rect key="frame" x="59" y="134" width="67" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz2-OB-WJq">
+                                                <rect key="frame" x="60" y="132" width="71" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-bX-9oy">
-                                                <rect key="frame" x="205" y="24" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEi-dW-Tao">
+                                                <rect key="frame" x="238" y="32" width="83" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Height"/>
+                                                <state key="normal" image="Height">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="2dq-lF-u89" kind="show" id="KQo-BE-FUx"/>
+                                                    <segue destination="2dq-lF-u89" kind="show" id="eEx-xZ-dAT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-1z-Go7">
-                                                <rect key="frame" x="20" y="179" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOA-xP-8xY">
+                                                <rect key="frame" x="60" y="203" width="70" height="81"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Waist"/>
+                                                <state key="normal" image="Waist">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="MEU-ud-xBM" kind="show" id="Bl9-Bw-2J8"/>
+                                                    <segue destination="MEU-ud-xBM" kind="show" id="CEE-oA-CFw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajE-eP-eCW">
-                                                <rect key="frame" x="205" y="489" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7c-Xg-vlz">
+                                                <rect key="frame" x="248" y="375" width="70" height="75"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Glutes"/>
+                                                <state key="normal" image="Glutes">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="EfE-Yw-EAb" kind="show" id="UOv-Wd-YqY"/>
+                                                    <segue destination="EfE-Yw-EAb" kind="show" id="hEL-CA-wPY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM7-jx-D1B">
-                                                <rect key="frame" x="205" y="179" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DI-4O-dbm">
+                                                <rect key="frame" x="62" y="375" width="73" height="82"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Chest"/>
+                                                <state key="normal" image="Shoulders">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="8II-Se-xW3" kind="show" id="Kcs-l6-qgI"/>
+                                                    <segue destination="yUj-Kj-cJA" kind="show" id="33S-oW-4aW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gq-sO-gta">
-                                                <rect key="frame" x="20" y="489" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smQ-FK-qOi">
+                                                <rect key="frame" x="241" y="203" width="84" height="81"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Thigh"/>
+                                                <state key="normal" image="Chest">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="vNh-cb-1PR" kind="show" id="XmS-0V-1ll"/>
+                                                    <segue destination="8II-Se-xW3" kind="show" id="0Y3-3B-1fG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6U-66-7z3">
-                                                <rect key="frame" x="20" y="644" width="152" height="147"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVP-mP-p5o">
+                                                <rect key="frame" x="246" y="132" width="67" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Calf"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-g9-fDL">
+                                                <rect key="frame" x="66" y="296" width="56" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-Zc-MdX">
+                                                <rect key="frame" x="250" y="295" width="59" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLG-kl-yXN">
+                                                <rect key="frame" x="62" y="699" width="73" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Calf">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="qd1-kB-OyW" kind="show" id="8rZ-Fe-noW"/>
+                                                    <segue destination="dPA-Wl-NqM" kind="show" id="saQ-fs-Thu"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvb-FX-USO">
-                                                <rect key="frame" x="205" y="334" width="152" height="147"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clf-Yz-F11">
+                                                <rect key="frame" x="60" y="536" width="77" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Bicep"/>
+                                                <state key="normal" image="Hips">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="rJp-Za-1DF" kind="show" id="BD7-C9-1Sf"/>
+                                                    <segue destination="vNh-cb-1PR" kind="show" id="lVD-k0-yhW"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-zp-ul3">
-                                                <rect key="frame" x="254" y="134" width="64" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shoulders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doW-dj-jui">
+                                                <rect key="frame" x="44" y="465" width="101" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9G-tT-Frh">
-                                                <rect key="frame" x="70" y="291" width="53" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do2-eI-8gr">
+                                                <rect key="frame" x="251" y="464" width="65" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqr-q1-ZWB">
-                                                <rect key="frame" x="253" y="291" width="57" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEp-Zf-7dw">
+                                                <rect key="frame" x="248" y="536" width="85" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-7v-YGN">
-                                                <rect key="frame" x="75" y="590" width="43" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thigh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izK-Br-NbW">
-                                                <rect key="frame" x="70" y="753" width="54" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bicep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKz-5j-57b">
-                                                <rect key="frame" x="262" y="445" width="54" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-er-z51">
-                                                <rect key="frame" x="20" y="334" width="152" height="147"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Shoulders"/>
+                                                <state key="normal" image="Bicep">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="yUj-Kj-cJA" kind="show" id="zaC-U7-YUZ"/>
+                                                    <segue destination="rJp-Za-1DF" kind="show" id="kmp-Ke-Ra2"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shoulders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-Ud-Bjo">
-                                                <rect key="frame" x="48" y="445" width="96" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-Qf-Hv6">
+                                                <rect key="frame" x="76" y="627" width="46" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQi-8o-1uh">
-                                                <rect key="frame" x="205" y="645" width="152" height="147"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bicep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L1-wd-ICQ">
+                                                <rect key="frame" x="251" y="628" width="56" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Hips"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-CV-wWg">
+                                                <rect key="frame" x="65" y="791" width="67" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thighs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTL-Gg-vCj">
+                                                <rect key="frame" x="249" y="791" width="68" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-78-bLq">
+                                                <rect key="frame" x="246" y="699" width="76" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Thigh">
+                                                    <color key="titleColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="dPA-Wl-NqM" kind="show" id="oHa-k0-k0X"/>
+                                                    <segue destination="qd1-kB-OyW" kind="show" id="PFC-zb-c6Z"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-H4-f32">
-                                                <rect key="frame" x="262" y="753" width="39" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-Ur-mfy">
-                                                <rect key="frame" x="254" y="590" width="62" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1062,18 +1153,18 @@
                         <viewLayoutGuide key="safeArea" id="QwA-uD-jig"/>
                     </view>
                     <navigationItem key="navigationItem" title="Measurements" largeTitleDisplayMode="always" id="hfL-Fc-VG0"/>
-                    <size key="freeformSize" width="375" height="850"/>
+                    <size key="freeformSize" width="375" height="1100"/>
                     <connections>
-                        <outlet property="bicep" destination="Fvb-FX-USO" id="h79-lm-TJ0"/>
-                        <outlet property="calf" destination="hQi-8o-1uh" id="ep2-s3-0s0"/>
-                        <outlet property="chest" destination="YM7-jx-D1B" id="lNW-xQ-uOV"/>
-                        <outlet property="glutes" destination="ajE-eP-eCW" id="01Q-vS-unT"/>
-                        <outlet property="height" destination="8mF-bX-9oy" id="pA1-oh-2NZ"/>
-                        <outlet property="hips" destination="6Gq-sO-gta" id="KGq-xr-6YI"/>
-                        <outlet property="shoulders" destination="2tl-er-z51" id="mdq-rG-h5Z"/>
-                        <outlet property="thigh" destination="W6U-66-7z3" id="K1X-NR-dp0"/>
-                        <outlet property="waist" destination="UPd-1z-Go7" id="a2Z-fq-GoD"/>
-                        <outlet property="weight" destination="e3Y-bW-dcp" id="X2O-Ke-mAv"/>
+                        <outlet property="bicep" destination="pEp-Zf-7dw" id="V0I-vo-epw"/>
+                        <outlet property="calf" destination="BLG-kl-yXN" id="B7R-cv-DGk"/>
+                        <outlet property="chest" destination="smQ-FK-qOi" id="uer-1Q-f4c"/>
+                        <outlet property="glutes" destination="q7c-Xg-vlz" id="OsN-p6-e0q"/>
+                        <outlet property="height" destination="mEi-dW-Tao" id="ztc-is-F9G"/>
+                        <outlet property="hips" destination="clf-Yz-F11" id="RhQ-jT-xgQ"/>
+                        <outlet property="shoulders" destination="5DI-4O-dbm" id="e5x-oL-d0g"/>
+                        <outlet property="thigh" destination="jcy-78-bLq" id="TWS-FP-ABc"/>
+                        <outlet property="waist" destination="cOA-xP-8xY" id="S3U-gh-jPO"/>
+                        <outlet property="weight" destination="KUZ-GY-ORK" id="pju-pj-ADA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pft-9C-OOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1150,10 +1241,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0j-KJ-EJK">
-                                <rect key="frame" x="148" y="127" width="97" height="30"/>
+                                <rect key="frame" x="128" y="127" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save Hips 👏">
+                                <state key="normal" title="Save Shoulders 👏">
                                     <color key="titleColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1162,12 +1253,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hips Diameter in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbR-iW-ulX">
-                                <rect key="frame" x="63" y="69" width="250" height="30"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.61176470589999998" green="0.40000000000000002" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.61568627450000002" green="0.31764705879999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure how to accuratley measure this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-bP-3ij">
                                 <rect key="frame" x="69" y="196" width="238" height="44"/>
@@ -1185,6 +1281,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KaU-MH-3Tn"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Shoulders" id="xZ1-hu-Xi0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Shoulders Small" id="XHu-mg-xke"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mesView" destination="vbR-iW-ulX" id="fOd-JZ-zmg"/>
                         <outlet property="tableView" destination="bff-8d-FWs" id="KVn-R7-0mr"/>
@@ -1192,21 +1291,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8D-PZ-AVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="-184"/>
+            <point key="canvasLocation" x="-98.400000000000006" y="-184.72906403940888"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Bicep" width="236" height="218"/>
-        <image name="Calf" width="236" height="218"/>
-        <image name="Chest" width="236" height="218"/>
-        <image name="Glutes" width="236" height="218"/>
-        <image name="Height" width="236" height="218"/>
-        <image name="Hips" width="236" height="218"/>
+        <image name="Bicep" width="478" height="512"/>
+        <image name="Bicep Small" width="25" height="26"/>
+        <image name="Calf" width="352" height="512"/>
+        <image name="Calf Small" width="25" height="36"/>
+        <image name="Chest" width="508" height="512"/>
+        <image name="Chest Small" width="25" height="25"/>
+        <image name="Glutes" width="352" height="512"/>
+        <image name="Glutes Small" width="25" height="36"/>
+        <image name="Height" width="412" height="512"/>
+        <image name="Height Small" width="25" height="31"/>
+        <image name="Hips" width="440" height="512"/>
+        <image name="Hips Small" width="25" height="29"/>
         <image name="Measurements" width="25" height="25"/>
-        <image name="Shoulders" width="236" height="218"/>
-        <image name="Thigh" width="236" height="218"/>
-        <image name="Waist" width="236" height="218"/>
-        <image name="Weight" width="236" height="218"/>
+        <image name="Shoulders" width="476" height="512"/>
+        <image name="Shoulders Small" width="25" height="27"/>
+        <image name="Thigh" width="512" height="512"/>
+        <image name="Thigh Small" width="25" height="25"/>
+        <image name="Waist" width="350" height="512"/>
+        <image name="Waist Small" width="25" height="36"/>
+        <image name="Weight" width="512" height="512"/>
+        <image name="Weight Small" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

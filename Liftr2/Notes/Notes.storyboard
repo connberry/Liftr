@@ -24,24 +24,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZd-Da-QUm">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skl-ch-j2Z">
-                                                <rect key="frame" x="14" y="31" width="347" height="177"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Notes 1 Image"/>
-                                                <connections>
-                                                    <segue destination="VqA-Fs-nzU" kind="show" id="YJ3-Rv-crn"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9n-PR-rHv">
-                                                <rect key="frame" x="14" y="248" width="347" height="177"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9n-PR-rHv">
+                                                <rect key="frame" x="22" y="264" width="330" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Notes 2 Image"/>
                                                 <connections>
                                                     <segue destination="lTs-v3-ZwW" kind="show" id="z6w-Fh-eVM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrP-vN-CzY">
-                                                <rect key="frame" x="14" y="465" width="347" height="177"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrP-vN-CzY">
+                                                <rect key="frame" x="22" y="504" width="330" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Notes 3 Image"/>
                                                 <connections>
@@ -49,7 +41,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWl-nO-tP1">
-                                                <rect key="frame" x="14" y="677" width="40" height="40"/>
+                                                <rect key="frame" x="14" y="720" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Email"/>
                                                 <connections>
@@ -57,7 +49,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-7j-V8o">
-                                                <rect key="frame" x="69" y="677" width="40" height="40"/>
+                                                <rect key="frame" x="69" y="720" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Facebook"/>
                                                 <connections>
@@ -65,7 +57,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPi-O0-vYF">
-                                                <rect key="frame" x="129" y="677" width="40" height="40"/>
+                                                <rect key="frame" x="129" y="720" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Instagram"/>
                                                 <connections>
@@ -73,7 +65,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chs-aR-c81">
-                                                <rect key="frame" x="192" y="677" width="40" height="40"/>
+                                                <rect key="frame" x="192" y="720" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Twitter"/>
                                                 <connections>
@@ -81,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fds-NG-7fH">
-                                                <rect key="frame" x="261" y="677" width="40" height="40"/>
+                                                <rect key="frame" x="261" y="720" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Snapchat"/>
                                                 <connections>
@@ -89,39 +81,47 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-AN-49R">
-                                                <rect key="frame" x="321" y="677" width="40" height="40"/>
+                                                <rect key="frame" x="321" y="720" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Spotify"/>
                                                 <connections>
                                                     <action selector="SpotifyPressed:" destination="x3D-w9-sxW" eventType="touchUpInside" id="LQq-fH-ouc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Notes 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-cx-Ahv">
-                                                <rect key="frame" x="69" y="155" width="244" height="39"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skl-ch-j2Z">
+                                                <rect key="frame" x="22" y="22" width="330" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Notes 1 Image"/>
+                                                <connections>
+                                                    <segue destination="VqA-Fs-nzU" kind="show" id="YJ3-Rv-crn"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-cx-Ahv">
+                                                <rect key="frame" x="39" y="39" width="117" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="0.0" height="-0.5"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Notes 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-po-0Tg">
-                                                <rect key="frame" x="69" y="371" width="248" height="39"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRU-0q-mA9">
+                                                <rect key="frame" x="39" y="521" width="117" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="0.0" height="-0.5"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Notes 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRU-0q-mA9">
-                                                <rect key="frame" x="69" y="586" width="249" height="39"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-po-0Tg">
+                                                <rect key="frame" x="39" y="281" width="117" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="0.0" height="-0.5"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,10 +157,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="notes1" destination="skl-ch-j2Z" id="MHU-C0-cgx"/>
+                        <outlet property="notes2" destination="p9n-PR-rHv" id="Mgp-Uy-tsB"/>
+                        <outlet property="notes3" destination="wrP-vN-CzY" id="avG-Ho-aCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmT-jX-oBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4484" y="-1856"/>
+            <point key="canvasLocation" x="-4484" y="-1856.1576354679803"/>
         </scene>
         <!--Notes 3-->
         <scene sceneID="V6k-Qi-NhY">
@@ -293,7 +298,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Exercise, Reps x Sets Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rG6-0w-uXF">
                                 <rect key="frame" x="14" y="41" width="347" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61568627450980395" green="0.31764705882352939" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -462,9 +467,9 @@
         <image name="Email" width="25" height="25"/>
         <image name="Facebook" width="25" height="25"/>
         <image name="Instagram" width="25" height="25"/>
-        <image name="Notes 1 Image" width="358" height="193"/>
-        <image name="Notes 2 Image" width="358" height="193"/>
-        <image name="Notes 3 Image" width="358" height="193"/>
+        <image name="Notes 1 Image" width="2661" height="1847"/>
+        <image name="Notes 2 Image" width="2438" height="1625"/>
+        <image name="Notes 3 Image" width="2500" height="1667"/>
         <image name="Profile" width="25" height="25"/>
         <image name="Snapchat" width="25" height="25"/>
         <image name="Spotify" width="25" height="25"/>

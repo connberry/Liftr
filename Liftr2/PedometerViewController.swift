@@ -29,7 +29,7 @@ class PedometerViewController: UIViewController {
     @IBOutlet weak var activityTypeLabel: UILabel!
     
     @IBAction func Info(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Don't kill us!", message: "If you force quit the app you lose your steps so please don't kill us. 🏃‍♀️", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Don't Kill Me!", message: "If you force quit the app you lose your steps.🏃‍♀️", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
@@ -111,7 +111,7 @@ class PedometerViewController: UIViewController {
         self.startButton.isHidden = true
         let content = UNMutableNotificationContent()
         content.title = "Don't force quit the app!"
-        content.body = "You will lose your daily steps, so never force quit Liftr."
+        content.body = "You will lose your daily steps, so never quit Liftr and keep on walking. 🏃‍♀️ "
         content.badge = 0
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)

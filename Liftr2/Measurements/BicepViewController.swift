@@ -14,6 +14,8 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     var ref: DatabaseReference?
     var keyArray: [String] = []
     
+    @IBOutlet weak var bicep: UIBarButtonItem!
+    
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mesView: UITextField!
@@ -52,6 +54,7 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Adds target to add measurement type
         mesView.delegate = self
@@ -135,5 +138,8 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     // How button pressed
     @IBAction func How(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.wikihow.com/Measure-Biceps")! as URL, options: [:], completionHandler: nil)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }

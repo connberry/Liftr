@@ -9,9 +9,18 @@ import MessageUI
 
 class ProfileViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    @IBOutlet weak var notes1: UIButton!
+    @IBOutlet weak var notes2: UIButton!
+    @IBOutlet weak var notes3: UIButton!
+    
+    
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         notes1.layer.cornerRadius = 22.0
+         notes2.layer.cornerRadius = 22.0
+         notes3.layer.cornerRadius = 22.0
         
     // Fetches users first name from Firebase to display as heading
     if Auth.auth().currentUser?.uid != nil {

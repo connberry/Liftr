@@ -16,13 +16,11 @@ class ChallangeViewController: UIViewController {
     var squatNumberVule: Int = 0
     var lungeNumberVule: Int = 0
     
-    
-    @IBOutlet weak var textView: UIView!
-    @IBOutlet weak var textView2: UIView!
-    
-    @IBOutlet weak var ringProgress: MKRingProgressView!
+    @IBOutlet var ringProgress: MKRingProgressView!
     
     @IBOutlet weak var numberProgress: UILabel!
+    @IBOutlet weak var textView: UIView!
+    @IBOutlet weak var textView2: UIView!
     
     func setDailyProgressPercentage() -> Double {
         /*
@@ -55,11 +53,11 @@ class ChallangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textView.frame.origin.y -= view.bounds.width
-        textView.layer.cornerRadius = 25.0
-        textView2.frame.origin.y -= view.bounds.width
-        textView2.layer.cornerRadius = 25.0
+        textView.center.y -= view.bounds.width
+        textView2.center.y -= view.bounds.width
         
+        textView.layer.cornerRadius = 30.0
+        textView2.layer.cornerRadius = 30.0
         // Do any additional setup after loading the view.
     }
     
@@ -75,14 +73,18 @@ class ChallangeViewController: UIViewController {
         CATransaction.commit()
     }
     
-    override func viewDidAppear(_ animated: Bool) { // run on window open
+    override func viewDidAppear(_ animated: Bool) {
         
         drawRingProgress()
-       
+
         UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {
             self.textView.frame.origin.y = self.view.bounds.width - 350
         }, completion: { (true) in gone() })
         
+        
+        UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {
+            self.textView2.frame.origin.y = self.view.bounds.width - 350
+        }, completion: { (true) in gone() })
         func gone() {
             UIView.animate(withDuration: 0.6, delay: 2, options: [.curveEaseIn],
                            animations: {
@@ -107,7 +109,8 @@ class ChallangeViewController: UIViewController {
         let calendar = Calendar.current
         // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
         return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
-}
+    }
+    
     
     
     
