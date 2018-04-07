@@ -80,11 +80,6 @@ class ChallangeViewController: UIViewController {
         UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {
             self.textView.frame.origin.y = self.view.bounds.width - 350
         }, completion: { (true) in gone() })
-        
-        
-        UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {
-            self.textView2.frame.origin.y = self.view.bounds.width - 350
-        }, completion: { (true) in gone() })
         func gone() {
             UIView.animate(withDuration: 0.6, delay: 2, options: [.curveEaseIn],
                            animations: {

@@ -18,12 +18,12 @@ class LaunchViewController: UIViewController {
         UIView.animate(withDuration: 1.0, animations: {() -> Void in
             self.image.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         }, completion: {(_ finished: Bool) -> Void in
-            UIView.animate(withDuration: 0.8, animations: {() -> Void in
+            UIView.animate(withDuration: 0.35, animations: {() -> Void in
                 self.image.transform = CGAffineTransform(scaleX: 30, y: 30)
             })
         })
         
-        let logtimer = Timer.scheduledTimer(timeInterval: 1.4, target: self, selector: #selector(timelogged), userInfo: nil, repeats: false)
+        let logtimer = Timer.scheduledTimer(timeInterval: 1.15, target: self, selector: #selector(timelogged), userInfo: nil, repeats: false)
     }
     @objc func timelogged() {
         // Once signed in user goes straight to Profile

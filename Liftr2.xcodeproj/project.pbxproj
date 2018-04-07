@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		42A08C7F1EF63C27FCA0E47D /* Pods_Liftr2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF43B910DBABA803897DBF5 /* Pods_Liftr2UITests.framework */; };
 		48FED7F5206517A389D0EDA2 /* Pods_Liftr2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */; };
+		B304F4A62079641D007D9F8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B304F4A52079641D007D9F8D /* CoreLocation.framework */; };
+		B304F4A82079649B007D9F8D /* MapMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304F4A72079649B007D9F8D /* MapMeViewController.swift */; };
 		B306E53F20567F0E006C1E77 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E53E20567F0E006C1E77 /* ChallengeViewController.swift */; };
 		B306E54120568113006C1E77 /* Challenge2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E54020568113006C1E77 /* Challenge2ViewController.swift */; };
 		B31CD2992068F1F900734B7C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CD2982068F1F900734B7C /* PopUpViewController.swift */; };
@@ -91,6 +93,8 @@
 		6B3ACACF529E3BAC57CD50DB /* Pods-Liftr2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2Tests/Pods-Liftr2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8777D7821B023B83827A56B2 /* Pods_Liftr2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liftr2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968C48DAB6DF32E71A2058F9 /* Pods-Liftr2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liftr2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2.debug.xcconfig"; sourceTree = "<group>"; };
+		B304F4A52079641D007D9F8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B304F4A72079649B007D9F8D /* MapMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMeViewController.swift; sourceTree = "<group>"; };
 		B306E53E20567F0E006C1E77 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		B306E54020568113006C1E77 /* Challenge2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2ViewController.swift; sourceTree = "<group>"; };
 		B31CD2982068F1F900734B7C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B304F4A62079641D007D9F8D /* CoreLocation.framework in Frameworks */,
 				B387D9DE20401C770003EC01 /* CoreGraphics.framework in Frameworks */,
 				B363D739203F407700E2A137 /* QuartzCore.framework in Frameworks */,
 				B38D406C206BA0DA00180841 /* AVFoundation.framework in Frameworks */,
@@ -251,6 +256,7 @@
 		B3692DA6202F6A7E00408D27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B304F4A52079641D007D9F8D /* CoreLocation.framework */,
 				B387D9DD20401C770003EC01 /* CoreGraphics.framework */,
 				B363D738203F407700E2A137 /* QuartzCore.framework */,
 				B3692DA7202F6A7E00408D27 /* AVFoundation.framework */,
@@ -364,6 +370,7 @@
 				B3C82AA8203A370900B10AC9 /* Exercises2ViewController.swift */,
 				B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */,
 				B3E4A812205274EC000C650E /* PedometerViewController.swift */,
+				B304F4A72079649B007D9F8D /* MapMeViewController.swift */,
 				B31CD2982068F1F900734B7C /* PopUpViewController.swift */,
 			);
 			path = "Tab Bar";
@@ -745,6 +752,7 @@
 				B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */,
 				B306E54120568113006C1E77 /* Challenge2ViewController.swift in Sources */,
 				B3CEEF1B205479C700F1921B /* WaistViewController.swift in Sources */,
+				B304F4A82079649B007D9F8D /* MapMeViewController.swift in Sources */,
 				B3CEEF0D2054546300F1921B /* HeightViewController.swift in Sources */,
 				B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */,
 				B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */,
@@ -960,7 +968,10 @@
 				);
 				INFOPLIST_FILE = Liftr2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -991,7 +1002,10 @@
 				);
 				INFOPLIST_FILE = Liftr2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1009,7 +1023,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1027,7 +1045,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1044,7 +1066,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1061,7 +1087,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

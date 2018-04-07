@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
 
     // Storyboard connections
     @IBOutlet weak var LiftrLogo: UIImageView!
-    @IBOutlet weak var LogInImage: UIImageView!
+    @IBOutlet weak var LogInImage: UIView!
     @IBOutlet weak var Sentence1: UILabel!
     @IBOutlet weak var Sentence2: UILabel!
     @IBOutlet weak var Sentence3: UILabel!
@@ -26,6 +26,9 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LogInImage.layer.cornerRadius = 30.0
+        SignInButton.layer.cornerRadius = 25.0
         
     // Makes storyboard items invisible for animations
     LiftrLogo.alpha = 0

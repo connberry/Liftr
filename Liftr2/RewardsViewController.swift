@@ -19,6 +19,11 @@ class RewardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        totalLabel.center.y -= view.bounds.width + 100
+        bronzeRewardLabel.center.y -= view.bounds.width
+        silverRewardLabel.center.y -= view.bounds.width
+        goldRewardLabel.center.y -= view.bounds.width
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,15 +52,27 @@ class RewardsViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        UIView.animate(withDuration: 5.0, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
-            self.goldRewardLabel.alpha = 0.0
-         }, completion: nil)
-        UIView.animate(withDuration: 5.0, delay: 0.5, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
-            self.silverRewardLabel.alpha = 0.0
-        }, completion: nil)
-        UIView.animate(withDuration: 5.0, delay: 1.0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
-            self.bronzeRewardLabel.alpha = 0.0
-        }, completion: nil)
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn], animations: {
+            self.totalLabel.frame.origin.y += self.view.bounds.width + 110
+        }, completion: { (true) in gone() })
+        func gone() {
+            UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn],
+                           animations: {
+                self.bronzeRewardLabel.frame.origin.y += self.view.bounds.height - 210
+            }, completion:  { (true) in txt2() })
+            func txt2() {
+                UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn], animations: {
+                    self.silverRewardLabel.frame.origin.y += self.view.bounds.width + 10
+                }, completion: { (true) in txt22() })
+                
+                func txt22() {
+                    UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn],
+                                   animations: {
+                    self.goldRewardLabel.frame.origin.y += self.view.bounds.height - 200
+                    }, completion: nil)
+                }
+            }
+        }
         
     }
     func getDate() -> String {
