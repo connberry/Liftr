@@ -11,6 +11,11 @@ import UserNotifications
 
 class PedometerViewController: UIViewController {
     
+    var animationHasBeenShown = false
+    @IBOutlet weak var steps: UIView!
+    @IBOutlet weak var movement: UIView!
+    @IBOutlet weak var ready: UIButton!
+    
     // Declarations of Pedometer
     private let activityManager = CMMotionActivityManager()
     private let pedometer = CMPedometer()
@@ -69,6 +74,14 @@ class PedometerViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        steps.center.y += view.bounds.width
+        movement.center.y += view.bounds.width
+        ready.center.y += view.bounds.width
+        steps.layer.cornerRadius = 30.0
+        movement.layer.cornerRadius = 30.0
+        ready.layer.cornerRadius = 25.0
+        
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
             
         })
@@ -77,6 +90,20 @@ class PedometerViewController: UIViewController {
     // Do additional tasks associated with presenting the view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if !animationHasBeenShown {
+            UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut], animations: {
+                self.steps.center.y -= self.view.bounds.height - 225
+            }, completion: nil)
+            UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut], animations: {
+                self.movement.center.y -= self.view.bounds.height - 225
+            }, completion: nil)
+            UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut], animations: {
+                self.ready.center.y -= self.view.bounds.height - 225
+            }, completion: nil)
+            animationHasBeenShown = true
+        }
+        
         guard let startDate = startDate else { return }
         updateStepsCountLabelUsing(startDate: startDate)
 }

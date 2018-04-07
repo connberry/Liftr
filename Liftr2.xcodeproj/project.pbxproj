@@ -39,6 +39,7 @@
 		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
 		B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */; };
 		B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */; };
+		B3B7CE8720789CB000873D04 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7CE8620789CAF00873D04 /* LaunchViewController.swift */; };
 		B3BCB51D202DB95100A0BA73 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B3BCB51C202DB95100A0BA73 /* Images */; };
 		B3C4EDC8205536F800D009AC /* Press Up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3C4EDC7205536F800D009AC /* Press Up.jpg */; };
 		B3C4EDCA205536FF00D009AC /* Squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3C4EDC9205536FE00D009AC /* Squat.jpg */; };
@@ -126,6 +127,7 @@
 		B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsViewController.swift; sourceTree = "<group>"; };
 		B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B3B7CE8620789CAF00873D04 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		B3BCB51C202DB95100A0BA73 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		B3C4EDC7205536F800D009AC /* Press Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Press Up.jpg"; sourceTree = "<group>"; };
 		B3C4EDC9205536FE00D009AC /* Squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Squat.jpg; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 		B3CEEF0E205476E800F1921B /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				B3B7CE8620789CAF00873D04 /* LaunchViewController.swift */,
 				B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */,
 				B3230205202EE95E008DF62D /* SignUpViewController.swift */,
 				B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */,
@@ -756,6 +759,7 @@
 				B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */,
 				B3CEEF132054793F00F1921B /* WorkoutNotes2ViewController.swift in Sources */,
 				B38E90FB2077BBDA00D00932 /* RAMBadge.swift in Sources */,
+				B3B7CE8720789CB000873D04 /* LaunchViewController.swift in Sources */,
 				B3CEEF2720547A2500F1921B /* ThighViewController.swift in Sources */,
 				B38E90FA2077BBDA00D00932 /* RAMAnimatedTabBarController.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */,

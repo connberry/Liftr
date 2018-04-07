@@ -54,10 +54,11 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     // Do additional tasks associated with presenting the view
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-            
+        
     // Once signed in user goes straight to Profile
     if Auth.auth().currentUser != nil {
-    self.performSegue(withIdentifier: "AlreadyLog", sender: self) }
+    self.performSegue(withIdentifier: "logged", sender: self)
+        }
         
     // Nested animation of storyboard items
     // Liftr Logo

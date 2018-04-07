@@ -865,6 +865,13 @@
                                                     <segue destination="d7L-ZO-kor" kind="show" id="1St-Og-pby"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-aJ-DK4">
+                                                <rect key="frame" x="59" y="134" width="67" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-bX-9oy">
                                                 <rect key="frame" x="205" y="24" width="152" height="147"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -921,13 +928,6 @@
                                                     <segue destination="rJp-Za-1DF" kind="show" id="BD7-C9-1Sf"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-aJ-DK4">
-                                                <rect key="frame" x="59" y="134" width="67" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-zp-ul3">
                                                 <rect key="frame" x="254" y="134" width="64" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1063,6 +1063,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Measurements" largeTitleDisplayMode="always" id="hfL-Fc-VG0"/>
                     <size key="freeformSize" width="375" height="850"/>
+                    <connections>
+                        <outlet property="bicep" destination="Fvb-FX-USO" id="h79-lm-TJ0"/>
+                        <outlet property="calf" destination="hQi-8o-1uh" id="ep2-s3-0s0"/>
+                        <outlet property="chest" destination="YM7-jx-D1B" id="lNW-xQ-uOV"/>
+                        <outlet property="glutes" destination="ajE-eP-eCW" id="01Q-vS-unT"/>
+                        <outlet property="height" destination="8mF-bX-9oy" id="pA1-oh-2NZ"/>
+                        <outlet property="hips" destination="6Gq-sO-gta" id="KGq-xr-6YI"/>
+                        <outlet property="shoulders" destination="2tl-er-z51" id="mdq-rG-h5Z"/>
+                        <outlet property="thigh" destination="W6U-66-7z3" id="K1X-NR-dp0"/>
+                        <outlet property="waist" destination="UPd-1z-Go7" id="a2Z-fq-GoD"/>
+                        <outlet property="weight" destination="e3Y-bW-dcp" id="X2O-Ke-mAv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pft-9C-OOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

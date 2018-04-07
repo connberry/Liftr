@@ -16,7 +16,9 @@ class ChallangeViewController: UIViewController {
     var squatNumberVule: Int = 0
     var lungeNumberVule: Int = 0
     
-    @IBOutlet var completeBox: UIImageView!
+    
+    @IBOutlet weak var textView: UIView!
+    @IBOutlet weak var textView2: UIView!
     
     @IBOutlet weak var ringProgress: MKRingProgressView!
     
@@ -53,6 +55,11 @@ class ChallangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textView.frame.origin.y -= view.bounds.width
+        textView.layer.cornerRadius = 25.0
+        textView2.frame.origin.y -= view.bounds.width
+        textView2.layer.cornerRadius = 25.0
+        
         // Do any additional setup after loading the view.
     }
     
@@ -69,11 +76,31 @@ class ChallangeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) { // run on window open
+        
         drawRingProgress()
-            UIView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
-                self.completeBox.alpha = 0.0
+       
+        UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {
+            self.textView.frame.origin.y = self.view.bounds.width - 350
+        }, completion: { (true) in gone() })
+        
+        func gone() {
+            UIView.animate(withDuration: 0.6, delay: 2, options: [.curveEaseIn],
+                           animations: {
+                            self.textView.center.y -= self.view.bounds.height - 100
+            }, completion:  { (true) in txt2() })
+            func txt2() {
+                UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {
+                    self.textView2.frame.origin.y = self.view.bounds.width - 350
+                }, completion: { (true) in txt22() })
                 
-            }, completion: nil)
+                func txt22() {
+                    UIView.animate(withDuration: 0.6, delay: 2, options: [.curveEaseIn],
+                                   animations: {
+                                    self.textView2.center.y -= self.view.bounds.height - 100
+                    }, completion: nil)
+                }
+            }
+        }
     }
     func getDate() -> String {
         let date = Date()

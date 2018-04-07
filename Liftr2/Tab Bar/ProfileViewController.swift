@@ -28,8 +28,12 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     // Sign user out of firebase
     @IBAction func SignOutButton(_ sender: Any) {
         let firebaseAuth = Auth.auth()
-        do { try firebaseAuth.signOut() } catch let signOutError as NSError { print ("Error signing out: %@", signOutError) }
-        dismiss(animated: true, completion: nil)
+        do { try firebaseAuth.signOut()
+        } catch let signOutError as NSError { print ("Error signing out: %@", signOutError) }
+        if Auth.auth().currentUser == nil {
+            let signOutVC = UIStoryboard(name: "Tab Bar", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController")
+            self.present(signOutVC, animated: true, completion: nil)
+        }
     }
 
     // Dispose of any resources that can be recreated.

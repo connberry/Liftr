@@ -48,10 +48,8 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exerView.layer.borderWidth = 2
-        exerView.layer.cornerRadius = 25.0
-        exerView.layer.borderColor = UIColor(red:0.62, green:0.32, blue:0.86, alpha:0.8).cgColor
-    
+       exerView.layer.cornerRadius = 20.0
+        exerView.frame.origin.y -= view.bounds.width
         
     tableView.allowsMultipleSelectionDuringEditing = true
         
@@ -119,4 +117,9 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+            self.exerView.frame.origin.y = self.view.bounds.width - 320
+        }, completion: nil )}
+    
 }

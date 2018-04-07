@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Liftr Text 2.png",
+      "filename" : "Liftr.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Liftr Text 2-1.png",
+      "filename" : "Liftr@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Liftr Text 2-2.png",
+      "filename" : "Liftr@3x.png",
       "scale" : "3x"
     }
   ],
