@@ -9,7 +9,6 @@ import Firebase
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
-    var animationHasBeenShown = false
     // Storyboard connections
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -22,25 +21,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     self.EmailAddressTextField.delegate = self
         
     EmailAddressTextField.delegate = self
-    EmailAddressTextField.tag = 0
-    EmailAddressTextField.center.x -= view.bounds.width
     PasswordTextField.delegate = self
-    PasswordTextField.tag = 1
-    PasswordTextField.center.x -= view.bounds.width
 }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !animationHasBeenShown {
-        UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut], animations: {
-            self.EmailAddressTextField.center.x += self.view.bounds.width
-        }, completion: nil)
-        UIView.animate(withDuration: 0.7, delay: 0.1, options: [.curveEaseOut], animations: {
-            self.PasswordTextField.center.x += self.view.bounds.width
-        }, completion: nil)
-            animationHasBeenShown = true
-}
     }
     
     @IBAction func LogInButton(_ sender: Any) {

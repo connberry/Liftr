@@ -366,7 +366,7 @@
                     <navigationItem key="navigationItem" title="Map Me" id="M9p-yV-EvG">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="iKh-Nb-pWs">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="owm-ZC-YsN">
-                                <rect key="frame" x="145" y="104" width="22" height="22"/>
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="Info:" destination="3kz-qw-Ycj" eventType="touchUpInside" id="RVm-S0-Ahv"/>
@@ -680,7 +680,7 @@
                     <connections>
                         <outlet property="image" destination="KbG-y1-Dop" id="HYF-QT-eR5"/>
                         <segue destination="5yo-g7-vBW" kind="show" identifier="welcome" id="Wha-Gh-Sjy"/>
-                        <segue destination="ew0-hp-tt4" kind="show" identifier="logged" id="6kL-K4-FYp"/>
+                        <segue destination="ew0-hp-tt4" kind="show" identifier="logged" customClass="ScaleSegue" customModule="Liftr2" customModuleProvider="target" id="6kL-K4-FYp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxx-lg-gR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -865,7 +865,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SignUpButton:" destination="0qr-Ap-cdk" eventType="touchUpInside" id="zdm-1t-IA1"/>
-                                    <segue destination="ew0-hp-tt4" kind="show" identifier="SignUpSegue" id="sKX-sn-XZj"/>
+                                    <segue destination="ew0-hp-tt4" kind="show" identifier="SignUpSegue" customClass="ScaleSegue" customModule="Liftr2" customModuleProvider="target" id="N8W-zi-Ttq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yym-iS-IZS">
@@ -893,7 +893,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Already a Liftr? Sign In!"/>
                                 <connections>
-                                    <segue destination="7mi-yM-TRZ" kind="show" id="ttB-V1-qxp"/>
+                                    <segue destination="7mi-yM-TRZ" kind="show" customClass="ScaleSegue" customModule="Liftr2" customModuleProvider="target" id="ttB-V1-qxp"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Experience? (Optional)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-r3-y8p">
@@ -955,7 +955,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7mi-yM-TRZ" kind="show" id="ohh-R5-vJ3"/>
+                                    <segue destination="7mi-yM-TRZ" kind="show" customClass="ScaleSegue" customModule="Liftr2" customModuleProvider="target" id="ohh-R5-vJ3"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Liftr Text 2" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-QD-nVO">
@@ -1065,7 +1065,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0qr-Ap-cdk" kind="show" id="ajo-2D-plG"/>
+                                    <segue destination="0qr-Ap-cdk" kind="show" customClass="ScaleSegue" customModule="Liftr2" customModuleProvider="target" id="ajo-2D-plG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In and Go!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e59-IJ-gE8">
@@ -1109,7 +1109,7 @@
                     <connections>
                         <outlet property="EmailAddressTextField" destination="65O-8H-NJI" id="vCh-ey-qFU"/>
                         <outlet property="PasswordTextField" destination="N9I-qH-E72" id="acd-kw-0JW"/>
-                        <segue destination="ew0-hp-tt4" kind="show" identifier="LogInSegue" id="WDo-e5-cQG"/>
+                        <segue destination="ew0-hp-tt4" kind="show" identifier="LogInSegue" customClass="ScaleSegue" customModule="Liftr2" customModuleProvider="target" id="WDo-e5-cQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89c-FK-c0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1128,10 +1128,10 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jQM-c7-HbD"/>
-        <segue reference="NM3-96-U3H"/>
-        <segue reference="Poj-mk-NUZ"/>
-        <segue reference="Mkp-tW-6Wy"/>
+        <segue reference="ttB-V1-qxp"/>
+        <segue reference="ajo-2D-plG"/>
+        <segue reference="Wha-Gh-Sjy"/>
+        <segue reference="N8W-zi-Ttq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -13,7 +13,6 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     @IBOutlet weak var notes2: UIButton!
     @IBOutlet weak var notes3: UIButton!
     
-    
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,4 +86,5 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     @IBAction func SpotifyPressed(_ sender: Any) {
         UIApplication.shared.open(URL(string: "https://open.spotify.com/user/c8z2c365h5uho6hhitbnk3fq2?si=NKBcLgXGSuGZ2FbBOqqMuw")! as URL, options: [:], completionHandler: nil)
     }
+
 }

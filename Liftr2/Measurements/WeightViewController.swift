@@ -9,11 +9,10 @@ import Firebase
 class WeightViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     // Declarations of Database and Added Exercise
-    var addMes:[[String: String]] = [[:]]
+    var addMes:[String] = []
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
-
     
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +21,7 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Current user insert of exercise
         if mesView.text != "" {
-            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").child("\(getDate())").setValue(["message": mesView.text, "date": getDate()])
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").child("\(getDate())").setValue(mesView.text)
             mesView.text = ""
             let alertController = UIAlertController(title: "Nice One!", message: "Your weight has been stored. If you want to amend, just enter a new weight and it will be overwritten for today. 💪", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -45,8 +44,8 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        cell.textLabel?.text = addMes[indexPath.row]["message"]
-        cell.detailTextLabel?.text = addMes[indexPath.row]["date"]
+        cell.textLabel?.text = addMes[indexPath.row]
+        cell.detailTextLabel?.text = getDate()
         return cell
     }
     
@@ -68,7 +67,7 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Adds notes child
         handle = ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("weight").observe(.childAdded, with: { (snapshot) in
-            if let item = snapshot.value as? [String: String]
+            if let item = snapshot.value as? String
             {
                 self.addMes.append(item)
                 self.tableView.reloadData()
@@ -78,6 +77,7 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
     }
     // Adds measurement
     @objc func textFieldDidChange(textfield: UITextField) {
+        
         var text = mesView.text?.replacingOccurrences(of: "kg", with: "")
         text = text! + "kg"
         mesView.text = text
@@ -133,7 +133,9 @@ class WeightViewController: UIViewController, UITableViewDataSource, UITableView
         // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
         return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
     }
+    
     // How button pressed
-    @IBAction func How(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.wikihow.com/Take-Body-Measurements")! as URL, options: [:], completionHandler: nil)
+    @IBAction func How(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.wikihow.com/Measure-Your-Weight-by-Yourself")! as URL, options: [:], completionHandler: nil)
     }
+    
 }

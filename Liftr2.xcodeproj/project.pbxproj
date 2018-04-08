@@ -16,6 +16,7 @@
 		B31CD2992068F1F900734B7C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CD2982068F1F900734B7C /* PopUpViewController.swift */; };
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
+		B327C4FD207A4A2F007206CF /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327C4FC207A4A2F007206CF /* ScaleSegue.swift */; };
 		B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA6202AF0C90097101C /* AppDelegate.swift */; };
 		B3481CAC202AF0CA0097101C /* Tab Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3481CAA202AF0CA0097101C /* Tab Bar.storyboard */; };
 		B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3481CAD202AF0CA0097101C /* Liftr2.xcdatamodeld */; };
@@ -100,6 +101,7 @@
 		B31CD2982068F1F900734B7C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B327C4FC207A4A2F007206CF /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		B3481CA3202AF0C90097101C /* Liftr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CA6202AF0C90097101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3481CAB202AF0CA0097101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Tab Bar.storyboard"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				B3481CA6202AF0C90097101C /* AppDelegate.swift */,
 				B3C88EE92041708B000943D8 /* Launch Screen.storyboard */,
 				B3481CAA202AF0CA0097101C /* Tab Bar.storyboard */,
+				B327C4FC207A4A2F007206CF /* ScaleSegue.swift */,
 				B3CEEF0E205476E800F1921B /* Sign In */,
 				B3CEEF0F2054772200F1921B /* Tab Bar */,
 				B3CEEF102054777300F1921B /* Notes */,
@@ -763,6 +766,7 @@
 				B3CEEF21205479F900F1921B /* ShouldersViewController.swift in Sources */,
 				B3CEEF1F205479EC00F1921B /* BicepViewController.swift in Sources */,
 				B31CD2992068F1F900734B7C /* PopUpViewController.swift in Sources */,
+				B327C4FD207A4A2F007206CF /* ScaleSegue.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */,
 				B3CEEF132054793F00F1921B /* WorkoutNotes2ViewController.swift in Sources */,

@@ -16,8 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+
+
         func applicationDidBecomeActive(_ application: UIApplication) {
             UIApplication.shared.applicationIconBadgeNumber = 0
+        
+            
         }
         
     // Firebase configuration for the rest of the app.

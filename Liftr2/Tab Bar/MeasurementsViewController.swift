@@ -18,6 +18,7 @@ class MeasurementsViewController: UIViewController {
     @IBOutlet weak var glutes: UIButton!
     @IBOutlet weak var thigh: UIButton!
     @IBOutlet weak var calf: UIButton!
+
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {

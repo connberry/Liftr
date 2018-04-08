@@ -23,7 +23,7 @@ class LaunchViewController: UIViewController {
             })
         })
         
-        let logtimer = Timer.scheduledTimer(timeInterval: 1.15, target: self, selector: #selector(timelogged), userInfo: nil, repeats: false)
+        let logtimer = Timer.scheduledTimer(timeInterval: 1.05, target: self, selector: #selector(timelogged), userInfo: nil, repeats: false)
     }
     @objc func timelogged() {
         // Once signed in user goes straight to Profile

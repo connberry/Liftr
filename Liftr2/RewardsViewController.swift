@@ -9,7 +9,7 @@ import Firebase
 
 class RewardsViewController: UIViewController {
     
-    
+    var animationHasBeenShown = false
     @IBOutlet weak var goldRewardLabel: UILabel!
     @IBOutlet weak var silverRewardLabel: UILabel!
     @IBOutlet weak var bronzeRewardLabel: UILabel!
@@ -51,7 +51,7 @@ class RewardsViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        
+        if !animationHasBeenShown {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn], animations: {
             self.totalLabel.frame.origin.y += self.view.bounds.width + 110
         }, completion: { (true) in gone() })
@@ -71,6 +71,7 @@ class RewardsViewController: UIViewController {
                     self.goldRewardLabel.frame.origin.y += self.view.bounds.height - 200
                     }, completion: nil)
                 }
+            }
             }
         }
         
