@@ -150,7 +150,7 @@ import UserNotifications
             }
             
             savedChangesText.text = "Completed! Restart and let your ring reset. Well done! 👏🏻"
-            let alert = UIAlertController(title: "It's a fresh new day!", message: "Press the reset button and allow your ring to reset. Then start your challange and do better than yesterday! 🏆", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Check your rewards from yesterday!", message: "It's a fresh new challange! Press the reset button then start your challange and do better than yesterday! 🏆", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
@@ -178,6 +178,8 @@ import UserNotifications
         
         @IBOutlet weak var NextDay: UIButton!
         @IBAction func NextDayButton(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
             /*
              This function is used for testing purposes
              it changes the database date so that when it reloads,
@@ -189,7 +191,7 @@ import UserNotifications
             let user = Auth.auth().currentUser!.uid
             ref.child("user/\(user)/challenge/dates/lastSaveDate").setValue("1/1/1970")
             savedChangesText.text = ""
-            let alert = UIAlertController(title: "Well Done!", message: "Submission Recieved! Go back to see your ring percentage then view your rewards! 🏆", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Well Done!", message: "Submission Recieved! Go to your ring percentage then come back to view your rewards! 🏆", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
@@ -328,6 +330,8 @@ import UserNotifications
         
         
         @IBAction func saveButton(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             
             let content = UNMutableNotificationContent()
             content.title = "Complete your challange!"
@@ -366,6 +370,8 @@ import UserNotifications
         
         //Functions
         @IBAction func situpPlusValue(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             if (self.situpNumberVule < 100) {
                 self.situpNumberVule += 1
                 self.situpValue.text = ("\(situpNumberVule) / 100")
@@ -373,6 +379,8 @@ import UserNotifications
         }
         
         @IBAction func situpMinusValue(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             if (self.situpNumberVule > 0) {
                 self.situpNumberVule -= 1
                 self.situpValue.text = ("\(situpNumberVule) / 100")
@@ -381,6 +389,8 @@ import UserNotifications
         }
         
         @IBAction func squatPlusValue(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             if (self.squatNumberVule < 100) {
                 self.squatNumberVule += 1
                 self.squatValue.text = ("\(self.squatNumberVule) / 100")
@@ -388,6 +398,8 @@ import UserNotifications
         }
         
         @IBAction func squatMinusValue(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             if (self.squatNumberVule > 0) {
                 self.squatNumberVule -= 1
                 self.squatValue.text = ("\(self.squatNumberVule) / 100")
@@ -396,6 +408,8 @@ import UserNotifications
         }
         
         @IBAction func lungePlusValue(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             if (self.lungeNumberVule < 100) {
                 self.lungeNumberVule += 1
                 self.lungeValue.text = ("\(self.lungeNumberVule) / 100")
@@ -403,6 +417,8 @@ import UserNotifications
         }
         
         @IBAction func lungeMinusValue(_ sender: Any) {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             if (self.lungeNumberVule > 0) {
                 self.lungeNumberVule -= 1
                 self.lungeValue.text = ("\(self.lungeNumberVule) / 100")
@@ -410,6 +426,8 @@ import UserNotifications
         }
         
         @IBAction func updateDay(_ sender: Any) { //when the update button is pressed, run this
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             saveCurrentDate()
         }
         
@@ -464,6 +482,8 @@ import UserNotifications
     }
     
     @IBAction func addClicked(_ sender: UIButton) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         if sender.currentImage == #imageLiteral(resourceName: "Add 2") {
             UIView.animate(withDuration: 0.3, animations: {
                 self.save.alpha = 1
@@ -493,5 +513,11 @@ import UserNotifications
             button.setImage(offImage, for: .normal)
         }
     }
+        
+        @IBAction func reward(_ sender: Any) { //when the update button is pressed, run this
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+
+        }
     
 }

@@ -30,6 +30,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func LogInButton(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         if (EmailAddressTextField.text != "" && PasswordTextField.text != ""){
         Auth.auth().signIn(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!) { user, error in
         if error == nil { 

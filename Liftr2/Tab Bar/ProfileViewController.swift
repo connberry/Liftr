@@ -35,6 +35,8 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     // Sign user out of firebase
     @IBAction func SignOutButton(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
         let firebaseAuth = Auth.auth()
         do { try firebaseAuth.signOut()
         } catch let signOutError as NSError { print ("Error signing out: %@", signOutError) }
@@ -72,18 +74,28 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
 }
     // Facebook link
     @IBAction func FacebookPressed(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         UIApplication.shared.open(URL(string: "https://www.facebook.com/theliftrapp/")! as URL, options: [:], completionHandler: nil)
     }   // Instagram link
     @IBAction func InstagramPressed(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         UIApplication.shared.open(URL(string: "https://www.instagram.com/theliftrapp/")! as URL, options: [:], completionHandler: nil)
     }   // Twitter link
     @IBAction func TwitterPressed(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         UIApplication.shared.open(URL(string: "https://twitter.com/theliftrapp")! as URL, options: [:], completionHandler: nil)
     }   // Snapchat link
     @IBAction func SnapchatPressed(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         UIApplication.shared.open(URL(string: "https://www.snapchat.com/add/thelifrapp")! as URL, options: [:], completionHandler: nil)
     }   // Spotify link
     @IBAction func SpotifyPressed(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         UIApplication.shared.open(URL(string: "https://open.spotify.com/user/c8z2c365h5uho6hhitbnk3fq2?si=NKBcLgXGSuGZ2FbBOqqMuw")! as URL, options: [:], completionHandler: nil)
     }
 

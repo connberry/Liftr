@@ -11,7 +11,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Walking hard? Check your location and keep moving!</string>
+	<string>Walking hard? Check your location and keep moving! 🏃‍♀️</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -27,7 +27,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Camera Privacy</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Count steps using pedometer</string>
+	<string>This is to count your steps for the Pedometer 🏃‍♀️</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Image Privacy</string>
 	<key>UILaunchStoryboardName</key>

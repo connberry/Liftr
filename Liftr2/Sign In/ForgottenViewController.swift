@@ -24,6 +24,8 @@ class ForgottenViewController: UIViewController, UITextFieldDelegate {
 }
     // When button is pressed a reset email is sent to user email
     @IBAction func resetButtonPressed(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         let email = EmailAddressTextField.text
         Auth.auth().sendPasswordReset(withEmail: email!) { (error) in
         if let error = error {

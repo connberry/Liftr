@@ -96,5 +96,9 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     func LogText() {
     UIView.animate(withDuration: 1, animations: { self.SignInText.alpha = 1 }, completion: { (true) in })
 }
+    @IBAction func SignInButton(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
 
+}
 }

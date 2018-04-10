@@ -15,6 +15,8 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var Go: UIButton!
 
     @IBAction func closePop(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         self.view.removeFromSuperview()
     }
     override func viewDidLoad() {

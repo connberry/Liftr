@@ -355,7 +355,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-0m-84T">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-0m-84T">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
@@ -705,6 +705,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="SignInButton:" destination="5yo-g7-vBW" eventType="touchUpInside" id="jhN-V1-ZNx"/>
                                     <segue destination="0qr-Ap-cdk" kind="show" id="NM3-96-U3H"/>
                                 </connections>
                             </button>
@@ -1129,10 +1130,10 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ttB-V1-qxp"/>
-        <segue reference="ajo-2D-plG"/>
+        <segue reference="jQM-c7-HbD"/>
+        <segue reference="NM3-96-U3H"/>
         <segue reference="Wha-Gh-Sjy"/>
-        <segue reference="N8W-zi-Ttq"/>
+        <segue reference="Mkp-tW-6Wy"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -29,6 +29,8 @@ class PedometerViewController: UIViewController {
     @IBOutlet weak var activityTypeLabel: UILabel!
     
     @IBAction func Info(_ sender: UIButton) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
         let alertController = UIAlertController(title: "Don't Kill Me!", message: "If you force quit the app you lose your steps.🏃‍♀️", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -55,6 +57,8 @@ class PedometerViewController: UIViewController {
         }
     
     @IBAction func Save(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
@@ -108,6 +112,8 @@ class PedometerViewController: UIViewController {
         updateStepsCountLabelUsing(startDate: startDate)
 }
     @IBAction func Ready(_ sender: AnyObject) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
         self.startButton.isHidden = true
         let content = UNMutableNotificationContent()
         content.title = "Don't force quit the app!"

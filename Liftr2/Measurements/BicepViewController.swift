@@ -20,6 +20,8 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mesView: UITextField!
     @IBAction func inputButton(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         
         // Current user insert of exercise
         if mesView.text != "" {

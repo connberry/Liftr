@@ -30,6 +30,8 @@ class MapMeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func Info(_ sender: UIButton) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
         let alertController = UIAlertController(title: "Map Me!", message: "This map shows you where you currently are, to guide you on your walks! 🗺", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)

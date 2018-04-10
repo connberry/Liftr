@@ -56,6 +56,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 }
     // Create user and import to Firebase
     @IBAction func SignUpButton(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!, completion: { (user: User?, error: Error?) in
             if error != nil {
                 return }

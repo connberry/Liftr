@@ -15,6 +15,8 @@ class Exercises2ViewController: UIViewController {
     @IBOutlet weak var No3: UILabel!
     @IBOutlet weak var muscles: UILabel!
    @IBAction func addWorkout(_ sender: Any) {
+    let generator = UINotificationFeedbackGenerator()
+    generator.notificationOccurred(.success)
     let alert = UIAlertController(title: "Which Workout?", message: "Choose a workout to add this exercise!", preferredStyle: .actionSheet)
     let work1 = UIAlertAction(title: "Notes 1", style: .default, handler: { action in self.performSegue(withIdentifier: "note1", sender: self)})
     alert.addAction(work1)

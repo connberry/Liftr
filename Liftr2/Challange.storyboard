@@ -81,11 +81,6 @@
                         <viewLayoutGuide key="safeArea" id="Jh0-9y-Mch"/>
                     </view>
                     <navigationItem key="navigationItem" title="Progression" id="E2r-gA-kVZ">
-                        <barButtonItem key="leftBarButtonItem" title="Rewards" id="k2T-dD-dct">
-                            <connections>
-                                <segue destination="0ES-Mj-ZnQ" kind="show" id="eBn-TQ-Izo"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Challenge" id="wsN-Hq-XsY">
                             <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -261,6 +256,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Star"/>
                                 <connections>
+                                    <action selector="reward:" destination="Jdv-k5-xtw" eventType="touchUpInside" id="9mK-g3-UFo"/>
                                     <segue destination="0ES-Mj-ZnQ" kind="show" id="uSP-E4-8bV"/>
                                 </connections>
                             </button>
@@ -431,8 +427,5 @@
         <image name="Save" width="168" height="168"/>
         <image name="Star" width="168" height="168"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="eBn-TQ-Izo"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
