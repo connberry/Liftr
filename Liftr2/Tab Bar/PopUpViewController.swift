@@ -20,6 +20,8 @@ class PopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Close.layer.cornerRadius = 30.0
+        
         self.view.backgroundColor = UIColor.white
 
     }

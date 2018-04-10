@@ -6,6 +6,7 @@
 import UIKit
 import FirebaseDatabase
 import Firebase
+import ConfettiView
 
 class RewardsViewController: UIViewController {
     
@@ -15,9 +16,10 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var bronzeRewardLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let confettiView = ConfettiView()
+        self.view.addSubview(confettiView)
         
         totalLabel.center.y -= view.bounds.width + 100
         bronzeRewardLabel.center.y -= view.bounds.width
@@ -28,6 +30,7 @@ class RewardsViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+
         /*
          Pulls the data from the online databse and displays it
          in the empty slots to show the user how they are doing

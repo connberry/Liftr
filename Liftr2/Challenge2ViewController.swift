@@ -3,9 +3,10 @@
 //  Created by Connor Berry on 07/03/2018.
 //  Copyright © 2018 Connor Berry. All rights reserved.
 
-    import UIKit
-    import Firebase
-    import FirebaseDatabase
+import UIKit
+import Firebase
+import FirebaseDatabase
+import UserNotifications
     
     class Challange2ViewController: UIViewController {
         
@@ -149,6 +150,10 @@
             }
             
             savedChangesText.text = "Completed! Restart and let your ring reset. Well done! 👏🏻"
+            let alert = UIAlertController(title: "It's a fresh new day!", message: "Press the reset button and allow your ring to reset. Then start your challange and do better than yesterday! 🏆", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
             
             let currentAmounts = getCurrentReward()
             print("Bronze: \(self.bronze)")
@@ -323,6 +328,15 @@
         
         
         @IBAction func saveButton(_ sender: Any) {
+            
+            let content = UNMutableNotificationContent()
+            content.title = "Complete your challange!"
+            content.body = "You just saved your challange, so just reminding you to keep going and don't give up! 💪 "
+            content.badge = 0
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: "stepClose", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             //var changesWereASuccess = false
             /*
              Saves the current values to the database
@@ -427,6 +441,11 @@
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+            
+        })
         
         view1.layer.cornerRadius = 30.0
         view2.layer.cornerRadius = 30.0
