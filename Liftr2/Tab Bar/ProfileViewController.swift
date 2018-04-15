@@ -6,16 +6,106 @@
 import UIKit
 import Firebase
 import MessageUI
+import NotificationBannerSwift
 
 class ProfileViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    var exerTextField1: UITextField?
+    var exerTextField2: UITextField?
+    var exerTextField3: UITextField?
+    var ref: DatabaseReference!
+    
+    
     @IBOutlet weak var notes1: UIButton!
+    @IBOutlet weak var not1: UILabel!
+    @IBAction func name1(_ sender: Any) {
+        if exerTextField1?.text != "" {
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 1": self.exerTextField1?.text])
+        }
+       let alertController = UIAlertController(title: "Change Workout Name", message: "Change the name of your workout, then confirm by clicking the tick button", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.not1.text = self.exerTextField1?.text
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addTextField { (textField) -> Void in
+        self.exerTextField1 = textField
+        self.exerTextField1?.placeholder = "Type Workout Name"
+        }
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func conf1(_ sender: Any) {
+        let banner = NotificationBanner(title: "Success, Workout Name Saved 🏋️‍♀️", style: .success)
+        banner.show()
+        if exerTextField1?.text != "" {
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 1": self.exerTextField1?.text])
+        }
+    }
+    
     @IBOutlet weak var notes2: UIButton!
+    @IBOutlet weak var not2: UILabel!
+    @IBAction func name2(_ sender: Any) {
+        if exerTextField2?.text != "" {
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 2": self.exerTextField2?.text])
+        }
+        let alertController = UIAlertController(title: "Change Workout Name", message: "Change the name of your workout, then confirm by clicking the tick button", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.not2.text = self.exerTextField2?.text
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addTextField { (textField) -> Void in
+            self.exerTextField2 = textField
+            self.exerTextField2?.placeholder = "Type Workout Name"
+        }
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func conf2(_ sender: Any) {
+        let banner = NotificationBanner(title: "Success, Workout Name Saved 🏋️‍♀️", style: .success)
+        banner.show()
+        if exerTextField2?.text != "" {
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 2": self.exerTextField2?.text])
+        }
+    }
+    
     @IBOutlet weak var notes3: UIButton!
+    @IBOutlet weak var not3: UILabel!
+    @IBAction func name3(_ sender: Any) {
+        if exerTextField3?.text != "" {
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 3": self.exerTextField3?.text])
+        }
+        let alertController = UIAlertController(title: "Change Workout Name", message: "Change the name of your workout, then confirm by clicking the tick button", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.not3.text = self.exerTextField3?.text
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addTextField { (textField) -> Void in
+            self.exerTextField3 = textField
+            self.exerTextField3?.placeholder = "Type Workout Name"
+        }
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func conf3(_ sender: Any) {
+        let banner = NotificationBanner(title: "Success, Workout Name Saved 🏋️‍♀️", style: .success)
+        banner.show()
+        if exerTextField3?.text != "" {
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 3": self.exerTextField3?.text])
+        }
+    }
+    
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
         
          notes1.layer.cornerRadius = 22.0
          notes2.layer.cornerRadius = 22.0
@@ -30,6 +120,32 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
                 }
             })
 }
+        if Auth.auth().currentUser?.uid != nil {
+            Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    self.not1.text = dict["notes 1"] as? String
+                    
+                }
+            })
+        }
+        
+        if Auth.auth().currentUser?.uid != nil {
+            Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    self.not2.text = dict["notes 2"] as? String
+                    
+                }
+            })
+        }
+        
+        if Auth.auth().currentUser?.uid != nil {
+            Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    self.not3.text = dict["notes 3"] as? String
+                    
+                }
+            })
+        }
         
     }
     

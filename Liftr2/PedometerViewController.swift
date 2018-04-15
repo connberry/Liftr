@@ -8,6 +8,7 @@ import CoreMotion
 import Dispatch
 import Firebase
 import UserNotifications
+import NotificationBannerSwift
 
 class PedometerViewController: UIViewController {
     
@@ -57,13 +58,14 @@ class PedometerViewController: UIViewController {
         }
     
     @IBAction func Save(_ sender: Any) {
+        let banner = NotificationBanner(title: "Steps Saved, Keep Going! 👟", style: .success)
+        banner.show()
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        let date = Date()
-        let key = ref.child("user").child(user).child("pedometer").child(getDate()).updateChildValues(["steps": stepNumberVule])
+        ref.child("user").child(user).child("pedometer").updateChildValues(["\(getDate())": stepNumberVule])
 
     }
     
@@ -230,6 +232,14 @@ extension PedometerViewController {
     // NHS button pressed
     @IBAction func WhyImportantPressed(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.nhs.uk/Livewell/getting-started-guides/Pages/getting-started-walking.aspx")! as URL, options: [:], completionHandler: nil)
 }
+    @IBAction func Map(_ sender: UIButton) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
+    }
+    @IBAction func Steps(_ sender: UIButton) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
 
 
+}
 }

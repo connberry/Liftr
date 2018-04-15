@@ -7,23 +7,25 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import UserNotifications
+import NotificationBannerSwift
     
     class Challange2ViewController: UIViewController {
         
         var currentState:Bool = true
-        var situpNumberVule: Int = 0 //Number of situps to display on the screen
-        var squatNumberVule: Int = 0 //Number of pressups to display on the screen
-        var lungeNumberVule: Int = 0 //Number of starjumps to display on the screen
-        var lastDate: String! //unused
-        var catchGetDateError: Bool = false //catch any errors so that it'll show error
-        var rewardInArray: NSArray = [] //Would hold the three medals in an array
-        var bruteforceDate: Bool = false //Used to change the date to test
-        var bronze: Int = 0 //Used for adding to the bronze total - YAH is a personal term
-        var silver: Int = 0 //Used for adding to the silver total
-        var gold: Int = 0 //Used for adding to the gold medal total
-        var currDate: String = "" //Getting the current date
-        var newLastDate: String = "1/1/1970" //Getting the last date that someone used the application
-        var currentDate: String = "" //Also getting the current date
+        var situpNumberVule: Int = 0
+        var squatNumberVule: Int = 0
+        var lungeNumberVule: Int = 0
+        var lastDate: String!
+        var catchGetDateError: Bool = false
+        var rewardInArray: NSArray = []
+        var bruteforceDate: Bool = false
+        var bronze: Int = 0
+        var silver: Int = 0
+        var gold: Int = 0
+        var total: Int = 0
+        var currDate: String = ""
+        var newLastDate: String = "1/1/1970"
+        var currentDate: String = ""
         
         //Connect the text labels on the UI to the code, can be called by names.
         @IBOutlet weak var squatValue: UILabel!
@@ -59,7 +61,7 @@ import UserNotifications
                 let gold = value?["gold reward"] as? Int ?? -1
                 let silver = value?["silver reward"] as? Int ?? -1
                 let bronze = value?["bronze reward"] as? Int ?? -1
-                let total = value?["total"] as? Int ?? -1
+                _ = value?["total"] as? Int ?? -1
                 //set the gathered data to variables
                 self.bronze = bronze
                 self.silver = silver
@@ -150,22 +152,20 @@ import UserNotifications
             }
             
             savedChangesText.text = "Completed! Restart and let your ring reset. Well done! 👏🏻"
-            let alert = UIAlertController(title: "Check your rewards from yesterday!", message: "It's a fresh new challange! Press the reset button then start your challange and do better than yesterday! 🏆", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+            let banner = NotificationBanner(title: "Reward Time!", subtitle: "Press reset, then go to rewards to see your challange rewards 🏆", style: .success)
+            banner.show()
             
-            let currentAmounts = getCurrentReward()
+            _ = getCurrentReward()
             print("Bronze: \(self.bronze)")
             print(giveBronze)
-            var newBronze: Int = self.bronze + giveBronze
-            var newSilver: Int = self.silver + giveSilver // add the current medals + new medals
-            var newGold: Int = self.gold + giveGold
+            let newBronze: Int = self.bronze + giveBronze
+            let newSilver: Int = self.silver + giveSilver // add the current medals + new medals
+            let newGold: Int = self.gold + giveGold
             print("Here are the new value:\n__\(newBronze)")
             var ref: DatabaseReference!
             ref = Database.database().reference()
             let user = Auth.auth().currentUser!.uid
-            let key = ref.child("user").child(user).child("challenge").child("dates")
+           ref.child("user").child(user).child("challenge").child("dates")
             ref.child("user/\(user)/challenge/\(getDate())/rewards/bronze reward").setValue(newBronze)
             ref.child("user/\(user)/challenge/\(getDate())/rewards/silver reward").setValue(newSilver) // put the new scores into the database
             ref.child("user/\(user)/challenge/\(getDate())/rewards/gold reward").setValue(newGold)
@@ -191,10 +191,8 @@ import UserNotifications
             let user = Auth.auth().currentUser!.uid
             ref.child("user/\(user)/challenge/dates/lastSaveDate").setValue("1/1/1970")
             savedChangesText.text = ""
-            let alert = UIAlertController(title: "Well Done!", message: "Submission Recieved! Go to your ring percentage then come back to view your rewards! 🏆", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+            let banner = NotificationBanner(title: "Submitted!", subtitle: "Return to your ring so the challenge resets 🕛", style: .success)
+            banner.show()
         }
         
         func saveCurrentDate() {
@@ -249,26 +247,6 @@ import UserNotifications
         @IBOutlet weak var lungeMinus: UIButton!
         
         
-        //Navigation Bar Outlets
-        @IBOutlet weak var editButton: UIBarButtonItem!
-        
-        
-        @IBAction func editButtonFunction(_ sender: Any) {
-            //This is a complex function which will be in three parts
-            
-            //First part - change the title of the button
-            changeEditButtonText()
-            
-            //Second part - enabling the plus and minus buttons if edit is pressed
-            if !checkIfButtonIsEdit() {
-                //This will be inverted, so using ! will ask for the not value - negating the effect
-                enableTheButtons()
-            } else {
-                disableTheButtons()
-            }
-            
-        }
-        
         func enableTheButtons() { //enable all six of the buttons
             self.situpAddition.isEnabled = true
             self.situpMinus.isEnabled = true
@@ -285,16 +263,6 @@ import UserNotifications
             self.squatMinus.isEnabled = false
             self.lungeAddition.isEnabled = false
             self.lungeMinus.isEnabled = false
-        }
-        
-        
-        func changeEditButtonText() {
-            //Changes the edit button title between two states.
-            if checkIfButtonIsEdit() {
-                self.editButton.title = "Save Changes"
-            } else {
-                self.editButton.title = "Edit"
-            }
         }
         
         func checkIfButtonIsEdit() -> Bool {
@@ -348,7 +316,7 @@ import UserNotifications
             var ref: DatabaseReference!
             ref = Database.database().reference()
             let user = Auth.auth().currentUser!.uid
-            let key = ref.child("user").child(user).child("challenge").child(getDate())
+            ref.child("user").child(user).child("challenge").child(getDate())
             ref.child("user/\(user)/challenge/\(getDate())/situp").setValue(self.situpNumberVule)
             ref.child("user/\(user)/challenge/\(getDate())/squat").setValue(self.squatNumberVule)
             ref.child("user/\(user)/challenge/\(getDate())/lunge").setValue(self.lungeNumberVule)

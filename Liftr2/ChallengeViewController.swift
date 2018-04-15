@@ -28,7 +28,7 @@ class ChallangeViewController: UIViewController {
          day and puts it into a ring progression which is a visual representation of the progress
          for the day
          */
-        var testValue:Int = 0
+        var _:Int = 0
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid

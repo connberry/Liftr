@@ -5,6 +5,7 @@
 
 import UIKit
 import Firebase
+import NotificationBannerSwift
 
 class BicepViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
@@ -27,18 +28,14 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
         if mesView.text != "" {
             ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("bicep").child("\(getDate())").setValue(mesView.text)
             mesView.text = ""
-            let alertController = UIAlertController(title: "Nice One!", message: "Your bicep has been stored. If you want to amend, just enter a new weight and it will be overwritten for today. 💪", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            let banner = NotificationBanner(title: "Success, Biceps has been saved 🤙", style: .success)
+            banner.show()
         }
         else
             // Alert if nothing is entered
             if mesView.text == "" {
-                let alertController = UIAlertController(title: "Oh dear...", message: "You can't submit nothing😳", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                present(alertController, animated: true, completion: nil)
+                let banner = NotificationBanner(title: "You've Entered Nothing 😳", style: .danger)
+                banner.show()
         }
     }
     // Table returns number of exercises
@@ -56,6 +53,9 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mesView.layer.cornerRadius = 25.0
+        mesView.frame.origin.y -= view.bounds.width
         
         
         // Adds target to add measurement type
@@ -142,6 +142,7 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func How(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.wikihow.com/Measure-Biceps")! as URL, options: [:], completionHandler: nil)
     }
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+            self.mesView.frame.origin.y = self.view.bounds.width - 290
+        }, completion: nil )}
 }
