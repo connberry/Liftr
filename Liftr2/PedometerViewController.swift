@@ -30,12 +30,8 @@ class PedometerViewController: UIViewController {
     @IBOutlet weak var activityTypeLabel: UILabel!
     
     @IBAction func Info(_ sender: UIButton) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
-        let alertController = UIAlertController(title: "Don't Kill Me!", message: "If you force quit the app you lose your steps.🏃‍♀️", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+        let banner = NotificationBanner(title: "Don't Kill Us... 🏃‍♀️", subtitle: "Killing the app will delete your daily steps!", style: .danger)
+        banner.show()
     }
     
     private func updateStepCounterValue(_ numberOfSteps: NSNumber) {
@@ -65,8 +61,15 @@ class PedometerViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        ref.child("user").child(user).child("pedometer").updateChildValues(["\(getDate())": stepNumberVule])
+        ref.child("user").child(user).child("pedometer").setValue(["\(getDate())": stepNumberVule])
 
+    }
+    
+    @IBAction func Map(_ sender: Any) {
+    }
+    @IBAction func Steps(_ sender: Any) {
+        
+    
     }
     
     func getDate() -> String {
@@ -231,15 +234,5 @@ extension PedometerViewController {
     }
     // NHS button pressed
     @IBAction func WhyImportantPressed(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.nhs.uk/Livewell/getting-started-guides/Pages/getting-started-walking.aspx")! as URL, options: [:], completionHandler: nil)
-}
-    @IBAction func Map(_ sender: UIButton) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
-    }
-    @IBAction func Steps(_ sender: UIButton) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
-
-
 }
 }

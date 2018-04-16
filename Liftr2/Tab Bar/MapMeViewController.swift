@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+import NotificationBannerSwift
+
 
 class MapMeViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -32,10 +34,8 @@ class MapMeViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func Info(_ sender: UIButton) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.warning)
-        let alertController = UIAlertController(title: "Map Me!", message: "This map shows you where you currently are, to guide you on your walks! 🗺", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
+        let banner = NotificationBanner(title: "Map Me! 🗺", subtitle: "Map Me shows your current location, to guide your walks!", style: .success)
+        banner.show()
     }
     
     override func viewDidLoad() {

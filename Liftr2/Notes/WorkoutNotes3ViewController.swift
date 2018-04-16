@@ -27,16 +27,16 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var stop: UILabel!
     
     @IBAction func reset(_ sender: Any) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
+        let banner = StatusBarNotificationBanner(title: "Reset \(navigationItem.title!) Workout! ⏰", style: .danger)
+        banner.show()
         timer.invalidate()
         time = 0
         stop.text = ("0:00:00")
     }
     
     @IBAction func go(_ sender: Any) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+        let banner = StatusBarNotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
+        banner.show()
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.timerView.frame.origin.y = self.view.bounds.width - 350
             
@@ -65,7 +65,7 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         generator.notificationOccurred(.warning)
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 3").child("completed workouts").updateChildValues(["date": "\(getDate())"])
+        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 3").child("completed workouts").childByAutoId().setValue("\(getDate())")
         
         timer.invalidate()
         time = 0
@@ -78,7 +78,7 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         let alertController = UIAlertController(title: "Great Workout!", message: "Good going! Your data has been saved. Check it out along with your previous workouts. 💪", preferredStyle: .actionSheet)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)
-        let work1 = UIAlertAction(title: "Completed \(navigationItem.title) Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp3", sender: self)})
+        let work1 = UIAlertAction(title: "Completed \(navigationItem.title!) Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp3", sender: self)})
         alertController.addAction(work1)
         self.present(alertController, animated: true, completion: nil)
     }
@@ -167,7 +167,8 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         let when = DispatchTime.now() + 1
         DispatchQueue.main.asyncAfter(deadline: when, execute: {
             self.ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 3").child(self.keyArray[indexPath.row]).removeValue()
-                
+            let banner = NotificationBanner(title: "Exercise deleted! 🗑", style: .danger)
+            banner.show()
         self.addExer.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         self.keyArray = []
@@ -200,8 +201,12 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            let banner = StatusBarNotificationBanner(title: "Exercise Incomplete! 😔", style: .danger)
+            banner.show()
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark }
+        let banner = StatusBarNotificationBanner(title: "Exercise Complete! 🙌", style: .success)
+        banner.show()
     }
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {

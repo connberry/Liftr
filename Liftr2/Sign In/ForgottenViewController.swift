@@ -8,8 +8,8 @@ import Firebase
 
 class ForgottenViewController: UIViewController, UITextFieldDelegate {
     
+    // Storyboard connections and variables
     var animationHasBeenShown = false
-    // Storyboard connections
     @IBOutlet weak var EmailAddressTextField: UITextField!
     
     // Do any additional setup after loading the view.
@@ -31,7 +31,7 @@ class ForgottenViewController: UIViewController, UITextFieldDelegate {
         if let error = error {
         print(error) } else {
         print("Password Reset Sent") }
-        }
+}
         if EmailAddressTextField.text == "" {
             let alertController = UIAlertController(title: "Oh dear...", message: "Come on! Enter your email! 🙄", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -42,18 +42,13 @@ class ForgottenViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+    // Animate email address in
         if !animationHasBeenShown {
         UIView.animate(withDuration: 0.7, delay: 0.0, options: [.curveEaseOut], animations: {
             self.EmailAddressTextField.center.x += self.view.bounds.width
         }, completion: nil)
         animationHasBeenShown = true
         }
-}
-    // Dispose of any resources that can be recreated.
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
 }
     // End of hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,6 +57,5 @@ class ForgottenViewController: UIViewController, UITextFieldDelegate {
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         EmailAddressTextField.resignFirstResponder()
-        return true
-    }
+        return true }
 }

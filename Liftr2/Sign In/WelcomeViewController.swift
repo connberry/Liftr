@@ -18,17 +18,16 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Sentence4: UILabel!
     @IBOutlet weak var SignInButton: UIButton!
     @IBOutlet weak var SignInText: UILabel!
-    
     // Video background declaration
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
     
-    // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        LogInImage.layer.cornerRadius = 30.0
-        SignInButton.layer.cornerRadius = 25.0
+    
+    // Item shapes
+    LogInImage.layer.cornerRadius = 30.0
+    SignInButton.layer.cornerRadius = 25.0
         
     // Makes storyboard items invisible for animations
     LiftrLogo.alpha = 0
@@ -54,7 +53,6 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     self.Player?.play()
     }
 }
-    // Do additional tasks associated with presenting the view
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
         

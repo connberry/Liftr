@@ -52,7 +52,7 @@ class ShouldersViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mesView.layer.cornerRadius = 25.0
+        mesView.layer.cornerRadius = 15.0
         mesView.frame.origin.y -= view.bounds.width
         
         // Adds target to add measurement type
@@ -98,7 +98,8 @@ class ShouldersViewController: UIViewController, UITableViewDataSource, UITableV
             let when = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
                 self.ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("shoulders").child(self.keyArray[indexPath.row]).removeValue()
-                
+                let banner = NotificationBanner(title: "Entry deleted! 🗑", style: .danger)
+                banner.show()
                 self.addMes.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 self.keyArray = []

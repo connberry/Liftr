@@ -6,6 +6,7 @@
 import Foundation
 import UIKit
 import Firebase
+import NotificationBannerSwift
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
@@ -13,29 +14,30 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var EmailAddressTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
-    // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    // Start of hide keyboard
+    // Start of hide keyboard and delegates
     self.EmailAddressTextField.delegate = self
-        
     EmailAddressTextField.delegate = self
     PasswordTextField.delegate = self
 }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
     
+    // Log in button function
     @IBAction func LogInButton(_ sender: Any) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
+    // Email Address and Password fields must match that of the Firebase database
         if (EmailAddressTextField.text != "" && PasswordTextField.text != ""){
         Auth.auth().signIn(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!) { user, error in
-        if error == nil { 
+        if error == nil {
+        let banner = NotificationBanner(title: "Success, Welcome back to Liftr 🏃‍♀️", style: .success)
+        banner.show()
         self.performSegue(withIdentifier: "LogInSegue", sender: nil) } else {
+    // If incorrect show this alert
         let alert = UIAlertController(title: "Oh dear...", message: "You've gone and entered incorrect details, try harder next time! 🤦‍♀️", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
@@ -49,14 +51,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Try to find next responder
+    // Try to find next responder (textfields)
         if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
-            // Not found, so remove keyboard.
+    // Not found, so remove keyboard from view
             textField.resignFirstResponder()
         }
-        // Do not add a line break
+    // Do not add a line break
         return false
     }
 }

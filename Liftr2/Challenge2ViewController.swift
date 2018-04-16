@@ -300,6 +300,8 @@ import NotificationBannerSwift
         @IBAction func saveButton(_ sender: Any) {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.warning)
+            let banner = NotificationBanner(title: "Progress Saved, Keep Going! 😃", style: .success)
+            banner.show()
             
             let content = UNMutableNotificationContent()
             content.title = "Complete your challange!"
@@ -411,6 +413,8 @@ import NotificationBannerSwift
                     self.savedChangesText.text = "Please press update day"
                     self.giveRewardsAndSetScoresToZero()
                 } else {
+                    let banner = StatusBarNotificationBanner(title: "You haven't completed today's challange! 👟", style: .danger)
+                    banner.show()
                     print("is not a new day.")
                     self.savedChangesText.text = ""
                 }
@@ -446,7 +450,6 @@ import NotificationBannerSwift
         submit.center = add.center
         star.center = add.center
         
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func addClicked(_ sender: UIButton) {

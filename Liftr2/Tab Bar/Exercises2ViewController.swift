@@ -4,6 +4,7 @@
 //  Copyright © 2018 Connor Berry. All rights reserved.
 
 import UIKit
+import Firebase
 
 class Exercises2ViewController: UIViewController {
     
@@ -35,6 +36,7 @@ class Exercises2ViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     exerciseImage.alpha = 0
     

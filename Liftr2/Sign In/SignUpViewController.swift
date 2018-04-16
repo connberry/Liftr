@@ -5,6 +5,7 @@
 
 import UIKit
 import Firebase
+import NotificationBannerSwift
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -15,7 +16,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var picker = UIPickerView()
 
     // Storyboard connections
-    
     @IBOutlet weak var FirstNameTextField: UITextField!
     @IBOutlet weak var LastNameTextField: UITextField!
     @IBOutlet weak var EmailAddressTextField: UITextField!
@@ -24,12 +24,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func WhatisLiftr(_ sender: Any) {
 }
     
-    // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
 
     // Storyboard delegates and datasources
-    
     EmailAddressTextField.delegate = self
     PasswordTextField.delegate = self
     FirstNameTextField.delegate = self
@@ -37,7 +35,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     ExperienceTextField.inputView = picker
     picker.delegate = self
     picker.dataSource = self
-    
     // Start of hide keyboard
     self.FirstNameTextField.delegate = self
 }
@@ -47,7 +44,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) { ExperienceTextField.text = data[row] }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? { return data[row] }
     
-    // Do additional tasks associated with presenting the view
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     // Once signed in user goes straight to Profile
@@ -60,6 +56,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         generator.notificationOccurred(.success)
         Auth.auth().createUser(withEmail: EmailAddressTextField.text!, password: PasswordTextField.text!, completion: { (user: User?, error: Error?) in
             if error != nil {
+                let banner = NotificationBanner(title: "Success, Welcome to Liftr 🏃‍♀️", style: .success)
+                banner.show()
                 return }
             let email = self.EmailAddressTextField.text
             Auth.auth().currentUser?.sendEmailVerification { error in
@@ -103,7 +101,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         alertController.addAction(defaultAction)
     present(alertController, animated: true, completion: nil)
 }
-        // Lastname validation - text needs to be evident
+    // Lastname validation - text needs to be evident
     if LastNameTextField.text == "" {
     let alertController = UIAlertController(title: "Oh dear...", message: "You have a name surely? 🧐", preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -133,14 +131,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 }
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Try to find next responder
+    // Try to find next responder (textfields)
         if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
-            // Not found, so remove keyboard.
+    // Not found, so remove keyboard from view
             textField.resignFirstResponder()
         }
-        // Do not add a line break
+    // Do not add a line break
         return false
         }
     

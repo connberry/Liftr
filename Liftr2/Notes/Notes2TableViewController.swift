@@ -9,8 +9,28 @@
 import UIKit
 import Firebase
 
-class Notes2TableViewController: UIViewController {
-
+class Notes2TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // Declarations of Database and Added Exercise
+    var addStep:[String] = []
+    var handle: DatabaseHandle?
+    var ref: DatabaseReference?
+    
+    // Storyboard connections
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Table returns number of exercises
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return addStep.count
+    }
+    //     Cell textLabel equals exercise entered
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = addStep[indexPath.row]
+        return cell
+    }
+    
+    // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         if Auth.auth().currentUser?.uid != nil {
@@ -21,24 +41,27 @@ class Notes2TableViewController: UIViewController {
                 }
             })
         }
-
-        // Do any additional setup after loading the view.
+        
+        
+        // Database Reference
+        ref = Database.database().reference()
+        
+        // Adds notes child
+        handle = ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 2").child("completed workouts").observe(.childAdded, with: { (snapshot) in
+            if let steps = snapshot.value as? String
+            {
+                
+                self.addStep.append(steps)
+                self.tableView.reloadData()
+            }
+        })
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

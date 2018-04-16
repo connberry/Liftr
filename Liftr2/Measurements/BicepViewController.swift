@@ -54,7 +54,7 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mesView.layer.cornerRadius = 25.0
+        mesView.layer.cornerRadius = 15.0
         mesView.frame.origin.y -= view.bounds.width
         
         
@@ -101,7 +101,8 @@ class BicepViewController: UIViewController, UITableViewDataSource, UITableViewD
             let when = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
                 self.ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("bicep").child(self.keyArray[indexPath.row]).removeValue()
-                
+                let banner = NotificationBanner(title: "Entry deleted! 🗑", style: .danger)
+                banner.show()
                 self.addMes.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 self.keyArray = []

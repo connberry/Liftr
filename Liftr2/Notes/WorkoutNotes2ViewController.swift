@@ -5,6 +5,7 @@
 
 import UIKit
 import Firebase
+import NotificationBannerSwift
 
 class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
@@ -14,9 +15,81 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
     var ref: DatabaseReference?
     var keyArray: [String] = []
     
+    //timer
+    var timer = Timer()
+    var time: Int = 0
+    let watch = Stopwatch()
+    
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exerView: UITextField!
+    @IBOutlet weak var timerView: UIView!
+    @IBOutlet weak var stop: UILabel!
+    
+    @IBAction func reset(_ sender: Any) {
+        let banner = StatusBarNotificationBanner(title: "Reset \(navigationItem.title!) Workout! ⏰", style: .danger)
+        banner.show()
+        timer.invalidate()
+        time = 0
+        stop.text = ("0:00:00")
+    }
+    
+    @IBAction func go(_ sender: Any) {
+        let banner = StatusBarNotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
+        banner.show()
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+            self.timerView.frame.origin.y = self.view.bounds.width - 350
+            
+        }, completion: nil )
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: true)
+        watch.start()
+    }
+    
+    @objc func updateLabel (timer: Timer)
+    {
+        if watch.isRunning
+        {
+            let hours = Int(watch.elapsedTime) / 3600
+            let minutes = Int(watch.elapsedTime) / 60
+            let seconds = Int(watch.elapsedTime) % 60
+            stop.text = String(format: "%02d:%02d:%d", hours, minutes, seconds)
+        }
+        else{
+            timer.invalidate()
+        }
+    }
+    
+    
+    @IBAction func completeWorkout(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 2").child("completed workouts").childByAutoId().setValue("\(getDate())")
+        
+        timer.invalidate()
+        time = 0
+        stop.text = ("0:00:00")
+        
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+            self.timerView.center.y -= self.view.bounds.height - 100
+        }, completion: nil )
+        
+        let alertController = UIAlertController(title: "Great Workout!", message: "Good going! Your data has been saved. Check it out along with your previous workouts. 💪", preferredStyle: .actionSheet)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        let work1 = UIAlertAction(title: "Completed \(navigationItem.title!) Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp2", sender: self)})
+        alertController.addAction(work1)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
+        return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+        
+    }
     @IBAction func inputButton(_ sender: Any) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
@@ -25,14 +98,14 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
     if exerView.text != "" {
             ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 2").childByAutoId().setValue(exerView.text)
             exerView.text = ""
+        let banner = NotificationBanner(title: "Success, Exercise has been saved 🏃‍♀️", style: .success)
+        banner.show()
         }
     else
     // Alert if nothing is entered
     if exerView.text == "" {
-    let alertController = UIAlertController(title: "Oh dear...", message: "You can't lift nothing 😑", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                present(alertController, animated: true, completion: nil)
+        let banner = NotificationBanner(title: "You've Entered Nothing 😳", style: .danger)
+        banner.show()
         }
 }
     // Table returns number of exercises
@@ -50,8 +123,19 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if Auth.auth().currentUser?.uid != nil {
+            Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    self.navigationItem.title = dict["notes 2"] as? String
+                    
+                }
+            })
+        }
+        
         exerView.layer.cornerRadius = 20.0
         exerView.frame.origin.y -= view.bounds.width
+        timerView.layer.cornerRadius = 20.0
+        timerView.frame.origin.y -= view.bounds.width
         
     tableView.allowsMultipleSelectionDuringEditing = true
         
@@ -83,7 +167,8 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
         let when = DispatchTime.now() + 1
         DispatchQueue.main.asyncAfter(deadline: when, execute: {
         self.ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 2").child(self.keyArray[indexPath.row]).removeValue()
-                
+            let banner = NotificationBanner(title: "Exercise deleted! 🗑", style: .danger)
+            banner.show()
         self.addExer.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         self.keyArray = []
@@ -116,12 +201,16 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            let banner = StatusBarNotificationBanner(title: "Exercise Incomplete! 😔", style: .danger)
+            banner.show()
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark }
+        let banner = StatusBarNotificationBanner(title: "Exercise Complete! 🙌", style: .success)
+        banner.show()
     }
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
-            self.exerView.frame.origin.y = self.view.bounds.width - 320
+            self.exerView.frame.origin.y = self.view.bounds.width - 290
         }, completion: nil )}
     
 }
