@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     @IBAction func conf1(_ sender: Any) {
         let banner = NotificationBanner(title: "Success, Workout Name Saved 🏋️‍♀️", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
         if exerTextField1?.text != "" {
             ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 1": self.exerTextField1?.text]) }
     }
@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     @IBAction func conf2(_ sender: Any) {
         let banner = NotificationBanner(title: "Success, Workout Name Saved 🏋️‍♀️", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
         if exerTextField2?.text != "" {
             ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 2": self.exerTextField2?.text]) }
     }
@@ -92,7 +92,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func conf3(_ sender: Any) {
         let banner = NotificationBanner(title: "Success, Workout Name Saved 🏋️‍♀️", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
         if exerTextField3?.text != "" {
             ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").updateChildValues(["notes 3": self.exerTextField3?.text])
         }

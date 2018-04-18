@@ -28,7 +28,7 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBAction func reset(_ sender: Any) {
         let banner = StatusBarNotificationBanner(title: "Reset \(navigationItem.title!) Workout! ⏰", style: .danger)
-        banner.show()
+        banner.show(queuePosition: .front)
         timer.invalidate()
         time = 0
         stop.text = ("0:00:00")
@@ -36,7 +36,7 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBAction func go(_ sender: Any) {
         let banner = StatusBarNotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.timerView.frame.origin.y = self.view.bounds.width - 350
             
@@ -99,13 +99,13 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 3").childByAutoId().setValue(exerView.text)
             exerView.text = ""
         let banner = NotificationBanner(title: "Success, Exercise has been saved 🏃‍♀️", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
         }
         else
         // Alert if nothing is entered
         if exerView.text == "" {
         let banner = NotificationBanner(title: "You've Entered Nothing 😳", style: .danger)
-        banner.show()
+        banner.show(queuePosition: .front)
         }
 }
     // Table returns number of exercises
@@ -168,7 +168,7 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         DispatchQueue.main.asyncAfter(deadline: when, execute: {
             self.ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 3").child(self.keyArray[indexPath.row]).removeValue()
             let banner = NotificationBanner(title: "Exercise deleted! 🗑", style: .danger)
-            banner.show()
+            banner.show(queuePosition: .front)
         self.addExer.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         self.keyArray = []
@@ -202,11 +202,12 @@ class WorkoutNotes3ViewController: UIViewController, UITableViewDataSource, UITa
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
             let banner = StatusBarNotificationBanner(title: "Exercise Incomplete! 😔", style: .danger)
-            banner.show()
+            banner.haptic = .none
+            banner.show(queuePosition: .front)
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark }
         let banner = StatusBarNotificationBanner(title: "Exercise Complete! 🙌", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
     }
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {

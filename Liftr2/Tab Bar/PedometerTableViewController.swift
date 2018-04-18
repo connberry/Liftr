@@ -25,8 +25,9 @@ class PedometerTableViewController: UIViewController, UITableViewDataSource, UIT
     }
 //     Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = addStep[indexPath.row]
+        cell.detailTextLabel?.text = getDate()
         return cell
     }
     

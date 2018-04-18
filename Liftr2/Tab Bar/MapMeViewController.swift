@@ -35,7 +35,7 @@ class MapMeViewController: UIViewController, CLLocationManagerDelegate {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.warning)
         let banner = NotificationBanner(title: "Map Me! 🗺", subtitle: "Map Me shows your current location, to guide your walks!", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
     }
     
     override func viewDidLoad() {

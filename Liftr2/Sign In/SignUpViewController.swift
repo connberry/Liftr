@@ -12,7 +12,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     // Gym picker view declarations
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1 }
-    var data = ["I know nothing 🤷‍♂️", "I know something 👀", "I know everything 💪"]
+    var data = ["Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪"]
     var picker = UIPickerView()
 
     // Storyboard connections
@@ -70,7 +70,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     // print(usersReference.description()) : https://iosliftr.firebaseio.com/users
     let uid = user?.uid
     let newUserRef = usersReference.child(uid!)
-    newUserRef.setValue(["email": self.EmailAddressTextField.text!, "first name": self.FirstNameTextField.text!, "last name": self.LastNameTextField.text!])
+            newUserRef.setValue(["email": self.EmailAddressTextField.text!, "first name": self.FirstNameTextField.text!, "last name": self.LastNameTextField.text!, "experience": self.ExperienceTextField.text!])
     print("description \(newUserRef.description())")
 })
     // Email validation - text needs to be evident
@@ -123,7 +123,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     return  returnValue }
     let isEmailAddressValid = isValidEmailAddress(emailAddressString: providedEmail!)
     if isEmailAddressValid { print("Valid") } else { print("not valid")
-    displayAlert(messageToDisplay: "We all know thats not a real email 📩") }
+    displayAlert(messageToDisplay: "We all know thats not a real email 📩")
+}
+    // Lastname validation - text needs to be evident
+    if ExperienceTextField.text == "" {
+    let alertController = UIAlertController(title: "Oh dear...", message: "Enter your experience... 🤦‍♂️", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    alertController.addAction(defaultAction)
+    present(alertController, animated: true, completion: nil)
+    }
 }
     // End of hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

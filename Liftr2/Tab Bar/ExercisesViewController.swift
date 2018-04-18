@@ -4,6 +4,8 @@
 //  Copyright © 2018 Connor Berry. All rights reserved.
 
 import UIKit
+import Firebase
+import NotificationBannerSwift
 
 // Variables for preloaded exercise information
 var exercises = ["Ab Roller",
@@ -34,6 +36,8 @@ var exercises = ["Ab Roller",
                  "Good Morning",
                  "Press Up",
                  "Squat"]
+
+var experience = ["Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️"]
 var why = [
     "Example",
     "Example",
@@ -204,6 +208,8 @@ var myIndex = 0
 
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var ref: DatabaseReference!
+    
     // Return number of exercises
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exercises.count
@@ -213,6 +219,7 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = exercises[indexPath.row]
+        cell.detailTextLabel?.text = experience[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         print(indexPath.row)
         return cell
@@ -222,6 +229,8 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     myIndex = indexPath.row
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = exercises[indexPath.row]
     performSegue(withIdentifier: "ExercisesSegue", sender: exercises[indexPath.row])
     }
     // Let the heading be that of the name of the exercise selected
@@ -233,13 +242,42 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var TableView: UITableView!
     
     
+    @IBAction func Exp(_ sender: Any) {
+        
+ref.child("user").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+    let value = snapshot.value as? NSDictionary
+    let experience = value?["experience"] as? String ?? ""
+    let banner = NotificationBanner(title: "\(experience)", subtitle: "As a \(experience) character, we suggest you select the exercises that match your experience!", style: .success)
+    banner.show(queuePosition: .front)
+}) { (error) in
+    print(error.localizedDescription)
+        }
+    }
+    
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = Database.database().reference()
+        
+        
     // Storyboard delegates and datasources
     TableView.delegate = self
     TableView.dataSource = self
-}
+    }
+    
+    @IBAction func Change(_ sender: AnyObject) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
+        let ChangeVC = UIStoryboard(name: "Tab Bar", bundle: nil).instantiateViewController(withIdentifier: "Change") as! ChangeExperienceViewController
+        self.addChildViewController(ChangeVC)
+        self.view.addSubview(ChangeVC.view)
+        ChangeVC.didMove(toParentViewController: self)
+    // Change experience button tapped
+        
+    }
+    
+
 
 }

@@ -68,13 +68,12 @@ class ChallangeViewController: UIViewController {
          ring progress to show on the screen
          */
         CATransaction.begin()
-        CATransaction.setAnimationDuration(2.0)
+        CATransaction.setAnimationDuration(3.5)
         ringProgress.progress = setDailyProgressPercentage()
         CATransaction.commit()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         drawRingProgress()
 
         UIView.animate(withDuration: 0.6, delay: 1, options: [.curveEaseOut], animations: {

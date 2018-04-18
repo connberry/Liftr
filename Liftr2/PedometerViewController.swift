@@ -31,7 +31,7 @@ class PedometerViewController: UIViewController {
     
     @IBAction func Info(_ sender: UIButton) {
         let banner = NotificationBanner(title: "Don't Kill Us... 🏃‍♀️", subtitle: "Killing the app will delete your daily steps!", style: .danger)
-        banner.show()
+       banner.show(queuePosition: .front)
     }
     
     private func updateStepCounterValue(_ numberOfSteps: NSNumber) {
@@ -55,13 +55,13 @@ class PedometerViewController: UIViewController {
     
     @IBAction func Save(_ sender: Any) {
         let banner = NotificationBanner(title: "Steps Saved, Keep Going! 👟", style: .success)
-        banner.show()
+        banner.show(queuePosition: .front)
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        ref.child("user").child(user).child("pedometer").setValue(["\(getDate())": stepNumberVule])
+        ref.child("user").child(user).child("pedometer").setValue(["\(getDate())": "\(stepNumberVule)"])
 
     }
     

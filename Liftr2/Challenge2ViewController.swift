@@ -301,7 +301,7 @@ import NotificationBannerSwift
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.warning)
             let banner = NotificationBanner(title: "Progress Saved, Keep Going! 😃", style: .success)
-            banner.show()
+            banner.show(queuePosition: .front)
             
             let content = UNMutableNotificationContent()
             content.title = "Complete your challange!"
@@ -414,7 +414,8 @@ import NotificationBannerSwift
                     self.giveRewardsAndSetScoresToZero()
                 } else {
                     let banner = StatusBarNotificationBanner(title: "You haven't completed today's challange! 👟", style: .danger)
-                    banner.show()
+                    banner.haptic = .none
+                    banner.show(queuePosition: .front)
                     print("is not a new day.")
                     self.savedChangesText.text = ""
                 }

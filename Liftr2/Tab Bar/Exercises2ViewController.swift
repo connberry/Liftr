@@ -5,6 +5,7 @@
 
 import UIKit
 import Firebase
+import NotificationBannerSwift
 
 class Exercises2ViewController: UIViewController {
     
@@ -19,11 +20,21 @@ class Exercises2ViewController: UIViewController {
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(.success)
     let alert = UIAlertController(title: "Which Workout?", message: "Choose a workout to add this exercise!", preferredStyle: .actionSheet)
-    let work1 = UIAlertAction(title: "Notes 1", style: .default, handler: { action in self.performSegue(withIdentifier: "note1", sender: self)})
+    let work1 = UIAlertAction(title: "Notes 1", style: .default, handler: { action in self.performSegue(withIdentifier: "note1", sender: self)
+        let banner = StatusBarNotificationBanner(title: "Exercise copied, just paste and go! 🏋️‍♀️ ", style: .success)
+        banner.show(queuePosition: .front)
+
+    })
     alert.addAction(work1)
-    let work2 = UIAlertAction(title: "Notes 2", style: .default, handler: { action in self.performSegue(withIdentifier: "note2", sender: self)})
+    let work2 = UIAlertAction(title: "Notes 2", style: .default, handler: { action in self.performSegue(withIdentifier: "note2", sender: self)
+        let banner = StatusBarNotificationBanner(title: "Exercise copied, just paste and go! 🏋️‍♀️ ", style: .success)
+        banner.show(queuePosition: .front)
+    })
     alert.addAction(work2)
-    let work3 = UIAlertAction(title: "Notes 3", style: .default, handler: { action in self.performSegue(withIdentifier: "note3", sender: self)})
+    let work3 = UIAlertAction(title: "Notes 3", style: .default, handler: { action in self.performSegue(withIdentifier: "note3", sender: self)
+        let banner = StatusBarNotificationBanner(title: "Exercise copied, just paste and go! 🏋️‍♀️ ", style: .success)
+        banner.show(queuePosition: .front)
+    })
     alert.addAction(work3)
         let Canaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(Canaction)
@@ -36,6 +47,7 @@ class Exercises2ViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
     exerciseImage.alpha = 0
