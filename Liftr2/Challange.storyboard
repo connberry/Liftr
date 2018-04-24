@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Progression-->
+        <!--challenge-->
         <scene sceneID="vGw-BE-uaV">
             <objects>
-                <viewController storyboardIdentifier="Challange" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EuW-jn-OHE" customClass="ChallangeViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="challenge" title="challenge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EuW-jn-OHE" customClass="ChallangeViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sg3-4X-lpc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Challenge" id="wsN-Hq-XsY">
                             <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="Jdv-k5-xtw" kind="show" id="I1h-JH-tae"/>
+                                <segue destination="Jdv-k5-xtw" kind="show" identifier="" id="I1h-JH-tae"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="-4479.1999999999998" y="1792.6108374384237"/>
         </scene>
-        <!--Challenge-->
+        <!--Challenge2-->
         <scene sceneID="dV6-rN-rYc">
             <objects>
-                <viewController id="Jdv-k5-xtw" customClass="Challange2ViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Challenge2" id="Jdv-k5-xtw" customClass="Challange2ViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJ1-gS-Q50">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

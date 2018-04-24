@@ -31,7 +31,7 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
         banner.show(queuePosition: .front)
         timer.invalidate()
         time = 0
-        stop.text = ("0:00:00")
+        stop.text = ("00:00:0")
     }
     
     @IBAction func go(_ sender: Any) {
@@ -65,11 +65,12 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
         generator.notificationOccurred(.warning)
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 2").child("completed workouts").childByAutoId().setValue("\(getDate())")
+        let dict = (["workout": self.navigationItem.title!, "date": self.getDate()])
+        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("completed workouts").childByAutoId().setValue(dict)
         
         timer.invalidate()
         time = 0
-        stop.text = ("0:00:00")
+        stop.text = ("00:00:0")
         
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.timerView.center.y -= self.view.bounds.height - 100
@@ -78,7 +79,7 @@ class WorkoutNotes2ViewController: UIViewController, UITableViewDataSource, UITa
         let alertController = UIAlertController(title: "Great Workout!", message: "Good going! Your data has been saved. Check it out along with your previous workouts. 💪", preferredStyle: .actionSheet)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)
-        let work1 = UIAlertAction(title: "Completed \(navigationItem.title!) Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp2", sender: self)})
+        let work1 = UIAlertAction(title: "Completed \(navigationItem.title!) and Other Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp2", sender: self)})
         alertController.addAction(work1)
         self.present(alertController, animated: true, completion: nil)
     }

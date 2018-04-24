@@ -10,7 +10,7 @@ import NotificationBannerSwift
 class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     // Declarations of Database and Added Exercise
-    var addMes:[String] = []
+    var addMes = [Measurement]()
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
@@ -24,7 +24,8 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Current user insert of exercise
         if mesView.text != "" {
-            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("calf").child("\(getDate())").setValue(mesView.text)
+            let dict = (["measure": self.mesView.text!, "date": self.getDate()])
+            ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("calf").child("\(getDate())").setValue(dict)
             mesView.text = ""
             let banner = NotificationBanner(title: "Success, Calves have been saved 🤙", style: .success)
             banner.show()
@@ -43,8 +44,9 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        cell.textLabel?.text = addMes[indexPath.row]
-        cell.detailTextLabel?.text = getDate()
+        let test = addMes[indexPath.row]
+        cell.textLabel?.text = test.measure
+        cell.detailTextLabel?.text = test.date
         return cell
     }
     
@@ -69,11 +71,12 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Adds notes child
         handle = ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("calf").observe(.childAdded, with: { (snapshot) in
-            if let item = snapshot.value as? String
-            {
-                self.addMes.append(item)
-                self.tableView.reloadData()
-            }
+            let results = snapshot.value as? [String : AnyObject]
+            let measure = results?["measure"]
+            let date = results?["date"]
+            let data = Measurement(measure: measure as! String?, date: date as! String?)
+            self.addMes.append(data)
+            self.tableView.reloadData()
         })
         
     }

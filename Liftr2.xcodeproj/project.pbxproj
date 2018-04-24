@@ -17,6 +17,10 @@
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
 		B327C4FD207A4A2F007206CF /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327C4FC207A4A2F007206CF /* ScaleSegue.swift */; };
+		B33DE5FD208FB84600DA130A /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE5FC208FB84500DA130A /* Measurement.swift */; };
+		B33DE5FF208FBE6100DA130A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE5FE208FBE6100DA130A /* Workout.swift */; };
+		B33DE601208FD6A600DA130A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE600208FD6A600DA130A /* Notes.swift */; };
+		B33DE603208FE0A600DA130A /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE602208FE0A600DA130A /* Exercises.swift */; };
 		B33FEE9420867E6500D48DAE /* ChangeExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33FEE9320867E6500D48DAE /* ChangeExperienceViewController.swift */; };
 		B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3481CA6202AF0C90097101C /* AppDelegate.swift */; };
 		B3481CAC202AF0CA0097101C /* Tab Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3481CAA202AF0CA0097101C /* Tab Bar.storyboard */; };
@@ -41,7 +45,7 @@
 		B38E91012077BBDA00D00932 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F92077BBDA00D00932 /* RAMBounceAnimation.swift */; };
 		B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */; };
 		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
-		B39E1C4E207D264500D52207 /* PedometerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1C4D207D264500D52207 /* PedometerTableViewController.swift */; };
+		B3A69655208740CE0010B2C7 /* PedometerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1C4D207D264500D52207 /* PedometerTableViewController.swift */; };
 		B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */; };
 		B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A96393202E1FCF00FC9292 /* WelcomeViewController.swift */; };
 		B3B7CE8720789CB000873D04 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7CE8620789CAF00873D04 /* LaunchViewController.swift */; };
@@ -108,6 +112,10 @@
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B327C4FC207A4A2F007206CF /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
+		B33DE5FC208FB84500DA130A /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		B33DE5FE208FBE6100DA130A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		B33DE600208FD6A600DA130A /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		B33DE602208FE0A600DA130A /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		B33FEE9320867E6500D48DAE /* ChangeExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeExperienceViewController.swift; sourceTree = "<group>"; };
 		B3481CA3202AF0C90097101C /* Liftr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3481CA6202AF0C90097101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -397,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */,
+				B33DE600208FD6A600DA130A /* Notes.swift */,
 				B3D2A1FA20838B1400FC51DE /* Stopwatch.swift */,
 				B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */,
 				B3CEEF122054793F00F1921B /* WorkoutNotes2ViewController.swift */,
@@ -404,6 +413,8 @@
 				B3D2A1FC2083C5CD00FC51DE /* Notes1TableViewController.swift */,
 				B3D2A1FE2083CA1000FC51DE /* Notes2TableViewController.swift */,
 				B3D2A2002083CA1F00FC51DE /* Notes3TableViewController.swift */,
+				B33DE5FE208FBE6100DA130A /* Workout.swift */,
+				B33DE602208FE0A600DA130A /* Exercises.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -422,6 +433,7 @@
 				B3CEEF20205479F900F1921B /* ShouldersViewController.swift */,
 				B3CEEF2620547A2500F1921B /* ThighViewController.swift */,
 				B3CEEF2A20547A4500F1921B /* CalfViewController.swift */,
+				B33DE5FC208FB84500DA130A /* Measurement.swift */,
 			);
 			path = Measurements;
 			sourceTree = "<group>";
@@ -658,8 +670,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/ConfettiView/ConfettiView.framework",
+				"${BUILT_PRODUCTS_DIR}/ExpandableTableViewController/ExpandableTableViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
@@ -674,8 +686,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ConfettiView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableTableViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
@@ -709,14 +721,15 @@
 				B3A96394202E1FCF00FC9292 /* WelcomeViewController.swift in Sources */,
 				B33FEE9420867E6500D48DAE /* ChangeExperienceViewController.swift in Sources */,
 				B3CEEF2F20548ABC00F1921B /* ForgottenViewController.swift in Sources */,
+				B3A69655208740CE0010B2C7 /* PedometerTableViewController.swift in Sources */,
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B306E53F20567F0E006C1E77 /* ChallengeViewController.swift in Sources */,
 				B3CEEF21205479F900F1921B /* ShouldersViewController.swift in Sources */,
 				B3CEEF1F205479EC00F1921B /* BicepViewController.swift in Sources */,
-				B39E1C4E207D264500D52207 /* PedometerTableViewController.swift in Sources */,
 				B31CD2992068F1F900734B7C /* PopUpViewController.swift in Sources */,
 				B327C4FD207A4A2F007206CF /* ScaleSegue.swift in Sources */,
+				B33DE603208FE0A600DA130A /* Exercises.swift in Sources */,
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */,
 				B3CEEF132054793F00F1921B /* WorkoutNotes2ViewController.swift in Sources */,
@@ -729,6 +742,7 @@
 				B3D2A1FF2083CA1000FC51DE /* Notes2TableViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3DB13422057D1A800330BEC /* RewardsViewController.swift in Sources */,
+				B33DE5FD208FB84600DA130A /* Measurement.swift in Sources */,
 				B38E90FE2077BBDA00D00932 /* RAMFrameItemAnimation.swift in Sources */,
 				B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */,
 				B38E91002077BBDA00D00932 /* RAMRotationAnimation.swift in Sources */,
@@ -740,11 +754,13 @@
 				B3481CA7202AF0C90097101C /* AppDelegate.swift in Sources */,
 				B3D2A1FD2083C5CD00FC51DE /* Notes1TableViewController.swift in Sources */,
 				B38E90FF2077BBDA00D00932 /* RAMTransitionItemAnimations.swift in Sources */,
+				B33DE5FF208FBE6100DA130A /* Workout.swift in Sources */,
 				B3E4A813205274EC000C650E /* PedometerViewController.swift in Sources */,
 				B38E90FC2077BBDA00D00932 /* RAMItemAnimationProtocol.swift in Sources */,
 				B3D2A1FB20838B1400FC51DE /* Stopwatch.swift in Sources */,
 				B38E90FD2077BBDA00D00932 /* RAMFumeAnimation.swift in Sources */,
 				B3CEEF152054798500F1921B /* WorkoutNotes3ViewController.swift in Sources */,
+				B33DE601208FD6A600DA130A /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,13 +7,73 @@ import UIKit
 import Firebase
 import NotificationBannerSwift
 
-class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    @IBOutlet weak var add: UIButton!
+    @IBAction func name1(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        if exerTextField1?.text != "" {
+        
+        let alertController = UIAlertController(title: "Add Exercise", message: "Add a custom exercise to your workout! 💪", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Add", style: .default, handler: { action in
+            self.exerView.text = self.exerTextField1?.text
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addTextField { (textField) -> Void in
+            self.exerTextField1 = textField
+            self.exerTextField1?.placeholder = "Add Exercise"
+
+        }
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+        self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
     // Declarations of Database and Added Exercise
-    var addExer:[String] = []
+    var exerTextField1: UITextField?
+    var addExer = [Exercises]()
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var keyArray: [String] = []
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1 }
+    var data = ["Ab Roller",
+                "Arnold Dumbbell Press",
+                "Back Extension",
+                "Bench Press",
+                "Bench Press (Dumbbell)",
+                "Bent Over Row",
+                "Bicep Curl",
+                "Box Squat",
+                "Bulgarian Split Squat",
+                "Cable Tucks",
+                "Cable Crossover",
+                "Calf Raise",
+                "Chest Fly",
+                "Chest Press",
+                "Chest Press (Dumbbell)",
+                "Chin Up",
+                "Clean",
+                "Clean and Jerk",
+                "Cross Leg Crunch",
+                "Crunch",
+                "Deadlift",
+                "Decline Crunch",
+                "Diamond Press Up",
+                "Exercise Ball Crunch",
+                "Front Raise",
+                "Good Morning",
+                "Press Up",
+                "Squat"]
+    var picker = UIPickerView()
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int { return 1 }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { return data.count }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) { exerView.text = data[row] }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? { return data[row] }
     
     //timer
     var timer = Timer()
@@ -23,6 +83,8 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     // Storyboard connections
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exerView: UITextField!
+    @IBOutlet weak var repView: UITextField!
+    @IBOutlet weak var setView: UITextField!
     @IBOutlet weak var timerView: UIView!
     @IBOutlet weak var stop: UILabel!
     
@@ -31,7 +93,7 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         banner.show(queuePosition: .front)
         timer.invalidate()
         time = 0
-        stop.text = ("0:00:00")
+        stop.text = ("00:00:0")
     }
     
     @IBAction func go(_ sender: Any) {
@@ -65,11 +127,12 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         generator.notificationOccurred(.warning)
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 1").child("completed workouts").childByAutoId().setValue("\(getDate())")
+        let dict = (["workout": self.navigationItem.title!, "date": self.getDate()])
+        ref.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("completed workouts").childByAutoId().setValue(dict)
         
         timer.invalidate()
         time = 0
-        stop.text = ("0:00:00")
+        stop.text = ("00:00:0")
        
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.timerView.center.y -= self.view.bounds.height - 100
@@ -78,7 +141,7 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         let alertController = UIAlertController(title: "Great Workout!", message: "Good going! Your data has been saved. Check it out along with your previous workouts. 💪", preferredStyle: .actionSheet)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)
-        let work1 = UIAlertAction(title: "Completed \(navigationItem.title!) Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp1", sender: self)})
+        let work1 = UIAlertAction(title: "Completed \(navigationItem.title!) and Other Workouts", style: .default, handler: { action in self.performSegue(withIdentifier: "comp1", sender: self)})
         alertController.addAction(work1)
         self.present(alertController, animated: true, completion: nil)
     }
@@ -89,7 +152,8 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
      
     // Current user insert of exercise
     if exerView.text != "" {
-        ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 1").childByAutoId().setValue(exerView.text)
+        let dict = (["exercises": self.exerView.text!, "reps": self.repView.text!, "sets": self.setView.text!])
+        ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 1").childByAutoId().setValue(dict)
             exerView.text = ""
         let banner = NotificationBanner(title: "Success, Exercise has been saved 🏃‍♀️", style: .success)
         banner.show(queuePosition: .front)
@@ -107,14 +171,23 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     }
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = addExer[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCustomTableViewCell
+        let test = addExer[indexPath.row]
+        cell.exercise?.text = test.exercises
+        cell.reps?.text = test.reps
+        cell.sets?.text = test.sets
+        
         return cell
     }
 
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        exerView.inputView = picker
+        picker.delegate = self
+        picker.dataSource = self
+        
         
         if Auth.auth().currentUser?.uid != nil {
             Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -125,8 +198,12 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
             })
         }
         
+        repView.layer.cornerRadius = 20.0
+        setView.layer.cornerRadius = 20.0
         exerView.layer.cornerRadius = 20.0
         exerView.frame.origin.y -= view.bounds.width
+        setView.frame.origin.y -= view.bounds.width
+        repView.frame.origin.y -= view.bounds.width
         timerView.layer.cornerRadius = 20.0
         timerView.frame.origin.y -= view.bounds.width
         
@@ -140,11 +217,13 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
      
     // Adds notes child
     handle = ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 1").observe(.childAdded, with: { (snapshot) in
-        if let item = snapshot.value as? String
-        {
-            self.addExer.append(item)
-            self.tableView.reloadData()
-        }
+        let results = snapshot.value as? [String : AnyObject]
+        let exercises = results?["exercises"]
+        let reps = results?["reps"]
+        let sets = results?["sets"]
+        let data = Exercises(exercises: exercises as! String?, reps: reps as! String?, sets: sets as! String?)
+        self.addExer.append(data)
+        self.tableView.reloadData()
         })
         
 }
@@ -217,6 +296,14 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.exerView.frame.origin.y = self.view.bounds.width - 290
+        }, completion: nil )
+        
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+            self.setView.frame.origin.y = self.view.bounds.width - 230
+        }, completion: nil )
+        
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+            self.repView.frame.origin.y = self.view.bounds.width - 230
         }, completion: nil )}
-    
-}
+    }
+
