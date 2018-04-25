@@ -87,6 +87,7 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var stop: UILabel!
     
     @IBAction func reset(_ sender: Any) {
+        timerView.backgroundColor = UIColor(red:0.88, green:0.32, blue:0.29, alpha:1.0)
         let banner = StatusBarNotificationBanner(title: "Reset \(navigationItem.title!) Workout! ⏰", style: .danger)
         banner.show(queuePosition: .front)
         timer.invalidate()
@@ -94,6 +95,8 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         stop.text = ("00:00:0")
     }
     @IBAction func go(_ sender: Any) {
+       
+        timerView.backgroundColor = UIColor(red:0.28, green:0.79, blue:0.48, alpha:1.0)
         let banner = StatusBarNotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
         banner.show(queuePosition: .front)
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
@@ -298,5 +301,22 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.repView.frame.origin.y = self.view.bounds.width - 230
         }, completion: nil )}
+    
+    @IBAction func superset(_ sender: UIButton) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+            let banner = StatusBarNotificationBanner(title: "Supersetting Exersize!🔝", style: .success)
+            banner.show(queuePosition: .front)
+        
+        if sender.currentImage == #imageLiteral(resourceName: "Superset Off") {
+        toggle(button: sender, onImage: #imageLiteral(resourceName: "Superset On"), offImage: #imageLiteral(resourceName: "Superset Off"))
     }
-
+}
+    func toggle (button: UIButton, onImage: UIImage, offImage: UIImage) {
+        if button.currentImage == offImage {
+            button.setImage(onImage, for: .normal)
+        } else {
+            button.setImage(offImage, for: .normal)
+        }
+    }
+}

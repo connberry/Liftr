@@ -26,6 +26,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     // Storyboard delegates and datasources
     EmailAddressTextField.delegate = self
@@ -73,6 +74,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             newUserRef.setValue(["email": self.EmailAddressTextField.text!, "first name": self.FirstNameTextField.text!, "last name": self.LastNameTextField.text!, "experience": self.ExperienceTextField.text!])
     print("description \(newUserRef.description())")
 })
+        
     // Email validation - text needs to be evident
     if EmailAddressTextField.text == "" {
     let alertController = UIAlertController(title: "Oh dear...", message: "Come on! Your email is wrong 🙄", preferredStyle: .alert)
@@ -108,6 +110,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     alertController.addAction(defaultAction)
     present(alertController, animated: true, completion: nil)
 }
+    // Lastname validation - text needs to be evident
+    if ExperienceTextField.text == "" {
+    let alertController = UIAlertController(title: "Oh dear...", message: "Enter your experience... 🤦‍♂️", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    alertController.addAction(defaultAction)
+    present(alertController, animated: true, completion: nil)
+        }
     // Email validation - email is correct format e.g. user@email.com
     let providedEmail = EmailAddressTextField.text
     func isValidEmailAddress(emailAddressString: String) -> Bool {
@@ -125,13 +134,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     if isEmailAddressValid { print("Valid") } else { print("not valid")
     displayAlert(messageToDisplay: "We all know thats not a real email 📩")
 }
-    // Lastname validation - text needs to be evident
-    if ExperienceTextField.text == "" {
-    let alertController = UIAlertController(title: "Oh dear...", message: "Enter your experience... 🤦‍♂️", preferredStyle: .alert)
-    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-    alertController.addAction(defaultAction)
-    present(alertController, animated: true, completion: nil)
-    }
 }
     // End of hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
