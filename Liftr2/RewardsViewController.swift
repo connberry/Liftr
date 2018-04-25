@@ -73,6 +73,7 @@ class RewardsViewController: UIViewController {
                                    animations: {
                     self.goldRewardLabel.frame.origin.y += self.view.bounds.height - 200
                     }, completion: nil)
+                    animationHasBeenShown = true
                 }
             }
             }

@@ -61,7 +61,8 @@ class PedometerViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let user = Auth.auth().currentUser!.uid
-        ref.child("user").child(user).child("pedometer").updateChildValues(["\(getDate())": "\(stepNumberVule)"])
+        let dict = (["steps": "\(stepNumberVule)", "date": self.getDate()])
+        ref.child("user").child(user).child("pedometer").child(getDate()).updateChildValues(dict)
 
     }
     

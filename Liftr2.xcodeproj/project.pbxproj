@@ -17,6 +17,7 @@
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
 		B327C4FD207A4A2F007206CF /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327C4FC207A4A2F007206CF /* ScaleSegue.swift */; };
+		B3291BED2090644200E49766 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3291BEC2090644200E49766 /* Steps.swift */; };
 		B33DE5FD208FB84600DA130A /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE5FC208FB84500DA130A /* Measurement.swift */; };
 		B33DE5FF208FBE6100DA130A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE5FE208FBE6100DA130A /* Workout.swift */; };
 		B33DE601208FD6A600DA130A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE600208FD6A600DA130A /* Notes.swift */; };
@@ -69,8 +70,6 @@
 		B3CEEF2F20548ABC00F1921B /* ForgottenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEEF2E20548ABC00F1921B /* ForgottenViewController.swift */; };
 		B3D2A1FB20838B1400FC51DE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D2A1FA20838B1400FC51DE /* Stopwatch.swift */; };
 		B3D2A1FD2083C5CD00FC51DE /* Notes1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D2A1FC2083C5CD00FC51DE /* Notes1TableViewController.swift */; };
-		B3D2A1FF2083CA1000FC51DE /* Notes2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D2A1FE2083CA1000FC51DE /* Notes2TableViewController.swift */; };
-		B3D2A2012083CA1F00FC51DE /* Notes3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D2A2002083CA1F00FC51DE /* Notes3TableViewController.swift */; };
 		B3D8A1AD205FFA71008B4FC5 /* Measurements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */; };
 		B3D8A1B020600172008B4FC5 /* Challange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8A1AA205FFA51008B4FC5 /* Challange.storyboard */; };
 		B3D8A1B12060032C008B4FC5 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */; };
@@ -112,6 +111,7 @@
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B327C4FC207A4A2F007206CF /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
+		B3291BEC2090644200E49766 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		B33DE5FC208FB84500DA130A /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		B33DE5FE208FBE6100DA130A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		B33DE600208FD6A600DA130A /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
@@ -170,8 +170,6 @@
 		B3CEEF2E20548ABC00F1921B /* ForgottenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenViewController.swift; sourceTree = "<group>"; };
 		B3D2A1FA20838B1400FC51DE /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		B3D2A1FC2083C5CD00FC51DE /* Notes1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes1TableViewController.swift; sourceTree = "<group>"; };
-		B3D2A1FE2083CA1000FC51DE /* Notes2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes2TableViewController.swift; sourceTree = "<group>"; };
-		B3D2A2002083CA1F00FC51DE /* Notes3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes3TableViewController.swift; sourceTree = "<group>"; };
 		B3D8A1AA205FFA51008B4FC5 /* Challange.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Challange.storyboard; sourceTree = "<group>"; };
 		B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Measurements.storyboard; sourceTree = "<group>"; };
@@ -395,6 +393,7 @@
 				B3A844A720402AF6003E9CD6 /* MeasurementsViewController.swift */,
 				B3E4A812205274EC000C650E /* PedometerViewController.swift */,
 				B39E1C4D207D264500D52207 /* PedometerTableViewController.swift */,
+				B3291BEC2090644200E49766 /* Steps.swift */,
 				B304F4A72079649B007D9F8D /* MapMeViewController.swift */,
 				B31CD2982068F1F900734B7C /* PopUpViewController.swift */,
 			);
@@ -405,14 +404,12 @@
 			isa = PBXGroup;
 			children = (
 				B3D8A1AB205FFA51008B4FC5 /* Notes.storyboard */,
-				B33DE600208FD6A600DA130A /* Notes.swift */,
-				B3D2A1FA20838B1400FC51DE /* Stopwatch.swift */,
 				B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */,
 				B3CEEF122054793F00F1921B /* WorkoutNotes2ViewController.swift */,
 				B3CEEF142054798500F1921B /* WorkoutNotes3ViewController.swift */,
 				B3D2A1FC2083C5CD00FC51DE /* Notes1TableViewController.swift */,
-				B3D2A1FE2083CA1000FC51DE /* Notes2TableViewController.swift */,
-				B3D2A2002083CA1F00FC51DE /* Notes3TableViewController.swift */,
+				B33DE600208FD6A600DA130A /* Notes.swift */,
+				B3D2A1FA20838B1400FC51DE /* Stopwatch.swift */,
 				B33DE5FE208FBE6100DA130A /* Workout.swift */,
 				B33DE602208FE0A600DA130A /* Exercises.swift */,
 			);
@@ -733,13 +730,12 @@
 				B3C82AA9203A370900B10AC9 /* Exercises2ViewController.swift in Sources */,
 				B3CEEF2B20547A4500F1921B /* CalfViewController.swift in Sources */,
 				B3CEEF132054793F00F1921B /* WorkoutNotes2ViewController.swift in Sources */,
+				B3291BED2090644200E49766 /* Steps.swift in Sources */,
 				B38E90FB2077BBDA00D00932 /* RAMBadge.swift in Sources */,
 				B3B7CE8720789CB000873D04 /* LaunchViewController.swift in Sources */,
-				B3D2A2012083CA1F00FC51DE /* Notes3TableViewController.swift in Sources */,
 				B3CEEF2720547A2500F1921B /* ThighViewController.swift in Sources */,
 				B38E90FA2077BBDA00D00932 /* RAMAnimatedTabBarController.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */,
-				B3D2A1FF2083CA1000FC51DE /* Notes2TableViewController.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3DB13422057D1A800330BEC /* RewardsViewController.swift in Sources */,
 				B33DE5FD208FB84600DA130A /* Measurement.swift in Sources */,

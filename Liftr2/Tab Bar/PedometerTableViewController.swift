@@ -14,7 +14,7 @@ import NotificationBannerSwift
 class PedometerTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Declarations of Database and Added Exercise
-    var addStep:[String] = []
+    var addStep = [Steps]()
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     
@@ -28,8 +28,9 @@ class PedometerTableViewController: UIViewController, UITableViewDataSource, UIT
 //     Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        cell.textLabel?.text = addStep[indexPath.row]
-        cell.detailTextLabel?.text = getDate()
+        let test = addStep[indexPath.row]
+        cell.textLabel?.text = test.steps
+        cell.detailTextLabel?.text = test.date
         return cell
     }
     
@@ -43,12 +44,12 @@ class PedometerTableViewController: UIViewController, UITableViewDataSource, UIT
     
         // Adds notes child
         handle = ref?.child("user").child(Auth.auth().currentUser!.uid).child("pedometer").observe(.childAdded, with: { (snapshot) in
-            if let steps = snapshot.value as? String
-            {
-            
-                self.addStep.append(steps)
-                self.tableView.reloadData()
-                }
+            let results = snapshot.value as? [String : AnyObject]
+            let steps = results?["steps"]
+            let date = results?["date"]
+            let data = Steps(steps: steps as! String?, date: date as! String?)
+            self.addStep.append(data)
+            self.tableView.reloadData()
         })
         
     }
@@ -62,8 +63,9 @@ class PedometerTableViewController: UIViewController, UITableViewDataSource, UIT
     // Adds checkmark functionality
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let myString1 = addStep[indexPath.row]
-        let myInt1 = Int(myString1)
+        let test = addStep[indexPath.row]
+        let myString1 = test.steps
+        let myInt1 = Int(myString1!)
         if myInt1! > 0 && myInt1! < 1000 {
             let banner = NotificationBanner(title: "Not good... 😔", subtitle: "The daily recommended is 10,000! You've only hit under 10% of that...", style: .danger)
             banner.show(queuePosition: .front)

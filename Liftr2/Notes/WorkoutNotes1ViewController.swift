@@ -14,7 +14,6 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         if exerTextField1?.text != "" {
-        
         let alertController = UIAlertController(title: "Add Exercise", message: "Add a custom exercise to your workout! 💪", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Add", style: .default, handler: { action in
             self.exerView.text = self.exerTextField1?.text
@@ -23,7 +22,6 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         alertController.addTextField { (textField) -> Void in
             self.exerTextField1 = textField
             self.exerTextField1?.placeholder = "Add Exercise"
-
         }
         alertController.addAction(ok)
         alertController.addAction(cancel)
@@ -95,18 +93,15 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         time = 0
         stop.text = ("00:00:0")
     }
-    
     @IBAction func go(_ sender: Any) {
         let banner = StatusBarNotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
         banner.show(queuePosition: .front)
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.timerView.frame.origin.y = self.view.bounds.width - 350
-            
         }, completion: nil )
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: true)
         watch.start()
     }
-    
     @objc func updateLabel (timer: Timer)
     {
         if watch.isRunning
@@ -120,8 +115,6 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
             timer.invalidate()
         }
     }
-
-
     @IBAction func completeWorkout(_ sender: Any) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.warning)
