@@ -72,7 +72,6 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { return data.count }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) { exerView.text = data[row] }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? { return data[row] }
-    
     //timer
     var timer = Timer()
     var time: Int = 0
@@ -88,8 +87,8 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBAction func reset(_ sender: Any) {
         timerView.backgroundColor = UIColor(red:0.88, green:0.32, blue:0.29, alpha:1.0)
-        let banner = StatusBarNotificationBanner(title: "Reset \(navigationItem.title!) Workout! ⏰", style: .danger)
-        banner.show(queuePosition: .front)
+        let banner = NotificationBanner(title: "Reset \(navigationItem.title!) Workout! ⏰", style: .danger)
+        banner.show(bannerPosition: .bottom)
         timer.invalidate()
         time = 0
         stop.text = ("00:00:0")
@@ -97,10 +96,10 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     @IBAction func go(_ sender: Any) {
        
         timerView.backgroundColor = UIColor(red:0.28, green:0.79, blue:0.48, alpha:1.0)
-        let banner = StatusBarNotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
-        banner.show(queuePosition: .front)
+        let banner = NotificationBanner(title: "Started \(navigationItem.title!) Workout! ⏰", style: .success)
+        banner.show(bannerPosition: .bottom)
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
-            self.timerView.frame.origin.y = self.view.bounds.width - 350
+            self.timerView.frame.origin.y = self.view.bounds.width - 365
         }, completion: nil )
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: true)
         watch.start()
@@ -151,14 +150,14 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         let dict = (["exercises": self.exerView.text!, "reps": self.repView.text!, "sets": self.setView.text!])
         ref?.child("user").child(Auth.auth().currentUser!.uid).child("workout notes").child("notes 1").childByAutoId().setValue(dict)
             exerView.text = ""
-        let banner = NotificationBanner(title: "Success, Exercise has been saved 🏃‍♀️", style: .success)
-        banner.show(queuePosition: .front)
+        let banner = NotificationBanner(title: "Success, Exercise has been saved 🏃‍♀️", subtitle: "Tap to dismiss me!", style: .success)
+        banner.show(bannerPosition: .bottom)
 }
     else
     // Alert if nothing is entered
     if exerView.text == "" {
-        let banner = NotificationBanner(title: "You've Entered Nothing 😳", style: .danger)
-        banner.show(queuePosition: .front)
+        let banner = NotificationBanner(title: "You've Entered Nothing 😳", subtitle: "Tap to dismiss me!", style: .danger)
+        banner.show(bannerPosition: .bottom)
         }
     }
     // Table returns number of exercises
@@ -279,9 +278,6 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-            let banner = StatusBarNotificationBanner(title: "Exercise Incomplete! 😔", style: .danger)
-            banner.haptic = .none
-            banner.show(queuePosition: .front)
         } else {
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
             let banner = StatusBarNotificationBanner(title: "Exercise Complete! 🙌", style: .success)
@@ -291,21 +287,21 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
-            self.exerView.frame.origin.y = self.view.bounds.width - 290
+            self.exerView.frame.origin.y = self.view.bounds.width - 315
         }, completion: nil )
         
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
-            self.setView.frame.origin.y = self.view.bounds.width - 230
+            self.setView.frame.origin.y = self.view.bounds.width - 260
         }, completion: nil )
         
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
-            self.repView.frame.origin.y = self.view.bounds.width - 230
+            self.repView.frame.origin.y = self.view.bounds.width - 260
         }, completion: nil )}
     
     @IBAction func superset(_ sender: UIButton) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
-            let banner = StatusBarNotificationBanner(title: "Supersetting Exersize!🔝", style: .success)
+            let banner = StatusBarNotificationBanner(title: "Supersetting Exercise!🔝", style: .success)
             banner.show(queuePosition: .front)
         
         if sender.currentImage == #imageLiteral(resourceName: "Superset Off") {

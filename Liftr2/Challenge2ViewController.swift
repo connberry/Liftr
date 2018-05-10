@@ -152,8 +152,9 @@ import NotificationBannerSwift
             }
             
             savedChangesText.text = "Completed! Restart and let your ring reset. Well done! 👏🏻"
-            let banner = NotificationBanner(title: "Reward Time!", subtitle: "Press reset, then go to rewards to see your challange rewards 🏆", style: .success)
-            banner.show()
+            let banner = NotificationBanner(title: "Rewards!", subtitle: "Hit reset and go see your rewards! 🏆" , style: .success)
+            banner.show(bannerPosition: .bottom)
+
             
             _ = getCurrentReward()
             print("Bronze: \(self.bronze)")

@@ -8,7 +8,6 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import MKRingProgressView
-import TextFieldEffects
 
 class ChallangeViewController: UIViewController {
     
@@ -17,7 +16,6 @@ class ChallangeViewController: UIViewController {
     var lungeNumberVule: Int = 0
     
     @IBOutlet var ringProgress: MKRingProgressView!
-    
     @IBOutlet weak var numberProgress: UILabel!
     @IBOutlet weak var textView: UIView!
     @IBOutlet weak var textView2: UIView!

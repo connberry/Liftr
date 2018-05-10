@@ -1,6 +1,5 @@
 //
 //  ClassViewController.swift
-//  CollapsibleTableSectionViewController
 //
 //  Created by Connor Berry on 24/04/2018.
 //

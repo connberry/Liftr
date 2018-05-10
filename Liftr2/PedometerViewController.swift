@@ -37,6 +37,11 @@ class PedometerViewController: UIViewController {
     private func updateStepCounterValue(_ numberOfSteps: NSNumber) {
         stepNumberVule = numberOfSteps.intValue
         stepsCountLabel.text = numberOfSteps.stringValue
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let user = Auth.auth().currentUser!.uid
+        let dict = (["steps": "\(stepNumberVule)", "date": self.getDate()])
+        ref.child("user").child(user).child("pedometer").child(getDate()).updateChildValues(dict)
     }
    
     func getPedValue() {
@@ -52,20 +57,7 @@ class PedometerViewController: UIViewController {
             print(error.localizedDescription)
         }
         }
-    
-    @IBAction func Save(_ sender: Any) {
-        let banner = NotificationBanner(title: "Steps Saved, Keep Going! 👟", style: .success)
-        banner.show(queuePosition: .front)
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        let user = Auth.auth().currentUser!.uid
-        let dict = (["steps": "\(stepNumberVule)", "date": self.getDate()])
-        ref.child("user").child(user).child("pedometer").child(getDate()).updateChildValues(dict)
 
-    }
-    
     @IBAction func Map(_ sender: Any) {
     }
     @IBAction func Steps(_ sender: Any) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezM-WP-lKb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezM-WP-lKb">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -342,30 +342,22 @@
                         <viewLayoutGuide key="safeArea" id="zTD-ng-yLE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pedometer" id="U4K-rk-fPt">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Steps" style="done" id="Rt7-zA-G38">
+                        <barButtonItem key="leftBarButtonItem" title="Map" image="Map" id="n7K-TH-U2O">
+                            <connections>
+                                <action selector="Map:" destination="BYz-li-986" id="Pat-Vg-fhJ"/>
+                                <segue destination="3kz-qw-Ycj" kind="show" id="icV-H0-MUb"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Steps" style="plain" id="Rt7-zA-G38">
                                 <connections>
                                     <action selector="Steps:" destination="BYz-li-986" id="gHi-gb-Ceh"/>
                                     <segue destination="rLw-Tv-ZTl" kind="show" id="AdK-ES-jYe"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Map" image="Map" id="n7K-TH-U2O">
-                                <connections>
-                                    <action selector="Map:" destination="BYz-li-986" id="Pat-Vg-fhJ"/>
-                                    <segue destination="3kz-qw-Ycj" kind="show" id="icV-H0-MUb"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Save" style="done" id="0My-Ub-2eb">
-                                <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="Save:" destination="BYz-li-986" id="L53-Dq-2a4"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem style="plain" id="4J6-bb-mjo">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Kgc-cE-JaM">
-                                    <rect key="frame" x="290.33333333333331" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="285" y="11" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <connections>
                                         <action selector="Info:" destination="BYz-li-986" eventType="touchUpInside" id="eW8-i7-Ihq"/>
@@ -425,7 +417,7 @@
         <!--Step History-->
         <scene sceneID="uTL-rG-HuI">
             <objects>
-                <viewController id="rLw-Tv-ZTl" customClass="PedometerTableViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stephistory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rLw-Tv-ZTl" customClass="PedometerTableViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6V8-bA-QM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1283,8 +1275,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="ohh-R5-vJ3"/>
         <segue reference="ajo-2D-plG"/>
-        <segue reference="Poj-mk-NUZ"/>
-        <segue reference="WDo-e5-cQG"/>
+        <segue reference="Wha-Gh-Sjy"/>
+        <segue reference="6kL-K4-FYp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

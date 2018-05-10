@@ -16,8 +16,14 @@
 		B31CD2992068F1F900734B7C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CD2982068F1F900734B7C /* PopUpViewController.swift */; };
 		B3230206202EE95E008DF62D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230205202EE95E008DF62D /* SignUpViewController.swift */; };
 		B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3230207202EF7C0008DF62D /* ProfileViewController.swift */; };
+		B326DFA820A35A9500DE6F75 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326DFA720A35A9500DE6F75 /* BMIViewController.swift */; };
+		B326DFAA20A35ABE00DE6F75 /* BodyFatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326DFA920A35ABE00DE6F75 /* BodyFatViewController.swift */; };
+		B326DFAC20A35AD700DE6F75 /* StepKcalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326DFAB20A35AD700DE6F75 /* StepKcalViewController.swift */; };
+		B326DFAE20A35B6C00DE6F75 /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326DFAD20A35B6C00DE6F75 /* Calc.swift */; };
+		B326DFB020A35FAE00DE6F75 /* CalcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326DFAF20A35FAE00DE6F75 /* CalcCell.swift */; };
 		B327C4FD207A4A2F007206CF /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327C4FC207A4A2F007206CF /* ScaleSegue.swift */; };
 		B3291BED2090644200E49766 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3291BEC2090644200E49766 /* Steps.swift */; };
+		B32BDAA9209C6E5E0079B60E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BDAA8209C6E5E0079B60E /* CalculatorViewController.swift */; };
 		B33DE5FD208FB84600DA130A /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE5FC208FB84500DA130A /* Measurement.swift */; };
 		B33DE5FF208FBE6100DA130A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE5FE208FBE6100DA130A /* Workout.swift */; };
 		B33DE601208FD6A600DA130A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DE600208FD6A600DA130A /* Notes.swift */; };
@@ -110,8 +116,15 @@
 		B31CD2982068F1F900734B7C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		B3230205202EE95E008DF62D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3230207202EF7C0008DF62D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B326DFA720A35A9500DE6F75 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BMIViewController.swift; path = /Users/Connor/Documents/Liftr/Liftr2/Liftr2/Measurements/BMIViewController.swift; sourceTree = "<absolute>"; };
+		B326DFA920A35ABE00DE6F75 /* BodyFatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFatViewController.swift; sourceTree = "<group>"; };
+		B326DFAB20A35AD700DE6F75 /* StepKcalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepKcalViewController.swift; sourceTree = "<group>"; };
+		B326DFAD20A35B6C00DE6F75 /* Calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc.swift; sourceTree = "<group>"; };
+		B326DFAF20A35FAE00DE6F75 /* CalcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalcCell.swift; path = Liftr2/Measurements/CalcCell.swift; sourceTree = SOURCE_ROOT; };
 		B327C4FC207A4A2F007206CF /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		B3291BEC2090644200E49766 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		B32BDAA6209C66E20079B60E /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32BDAA8209C6E5E0079B60E /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		B33DE5FC208FB84500DA130A /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		B33DE5FE208FBE6100DA130A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		B33DE600208FD6A600DA130A /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
@@ -276,6 +289,7 @@
 		B3692DA6202F6A7E00408D27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B32BDAA6209C66E20079B60E /* MarqueeLabel.framework */,
 				B304F4A52079641D007D9F8D /* CoreLocation.framework */,
 				B387D9DD20401C770003EC01 /* CoreGraphics.framework */,
 				B363D738203F407700E2A137 /* QuartzCore.framework */,
@@ -420,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */,
+				B32BDAA8209C6E5E0079B60E /* CalculatorViewController.swift */,
 				B3CEEF18205479BB00F1921B /* WeightViewController.swift */,
 				B3CEEF0C2054546300F1921B /* HeightViewController.swift */,
 				B3CEEF1A205479C700F1921B /* WaistViewController.swift */,
@@ -431,6 +446,11 @@
 				B3CEEF2620547A2500F1921B /* ThighViewController.swift */,
 				B3CEEF2A20547A4500F1921B /* CalfViewController.swift */,
 				B33DE5FC208FB84500DA130A /* Measurement.swift */,
+				B326DFAD20A35B6C00DE6F75 /* Calc.swift */,
+				B326DFAF20A35FAE00DE6F75 /* CalcCell.swift */,
+				B326DFA720A35A9500DE6F75 /* BMIViewController.swift */,
+				B326DFA920A35ABE00DE6F75 /* BodyFatViewController.swift */,
+				B326DFAB20A35AD700DE6F75 /* StepKcalViewController.swift */,
 			);
 			path = Measurements;
 			sourceTree = "<group>";
@@ -668,7 +688,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Liftr2/Pods-Liftr2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ConfettiView/ConfettiView.framework",
-				"${BUILT_PRODUCTS_DIR}/ExpandableTableViewController/ExpandableTableViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
@@ -676,8 +695,6 @@
 				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
-				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -685,7 +702,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ConfettiView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableTableViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
@@ -693,8 +709,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -711,6 +725,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B326DFB020A35FAE00DE6F75 /* CalcCell.swift in Sources */,
 				B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */,
 				B306E54120568113006C1E77 /* Challenge2ViewController.swift in Sources */,
 				B3CEEF1B205479C700F1921B /* WaistViewController.swift in Sources */,
@@ -724,6 +739,7 @@
 				B3481CAF202AF0CA0097101C /* Liftr2.xcdatamodeld in Sources */,
 				B384594C203A23C200787335 /* ExercisesViewController.swift in Sources */,
 				B306E53F20567F0E006C1E77 /* ChallengeViewController.swift in Sources */,
+				B326DFAC20A35AD700DE6F75 /* StepKcalViewController.swift in Sources */,
 				B3CEEF21205479F900F1921B /* ShouldersViewController.swift in Sources */,
 				B3CEEF1F205479EC00F1921B /* BicepViewController.swift in Sources */,
 				B31CD2992068F1F900734B7C /* PopUpViewController.swift in Sources */,
@@ -735,9 +751,12 @@
 				B3291BED2090644200E49766 /* Steps.swift in Sources */,
 				B38E90FB2077BBDA00D00932 /* RAMBadge.swift in Sources */,
 				B3B7CE8720789CB000873D04 /* LaunchViewController.swift in Sources */,
+				B326DFAA20A35ABE00DE6F75 /* BodyFatViewController.swift in Sources */,
 				B3CEEF2720547A2500F1921B /* ThighViewController.swift in Sources */,
 				B38E90FA2077BBDA00D00932 /* RAMAnimatedTabBarController.swift in Sources */,
+				B32BDAA9209C6E5E0079B60E /* CalculatorViewController.swift in Sources */,
 				B3A844A820402AF6003E9CD6 /* MeasurementsViewController.swift in Sources */,
+				B326DFAE20A35B6C00DE6F75 /* Calc.swift in Sources */,
 				B3230208202EF7C0008DF62D /* ProfileViewController.swift in Sources */,
 				B3DB13422057D1A800330BEC /* RewardsViewController.swift in Sources */,
 				B33DE5FD208FB84600DA130A /* Measurement.swift in Sources */,
@@ -753,6 +772,7 @@
 				B3D2A1FD2083C5CD00FC51DE /* Notes1TableViewController.swift in Sources */,
 				B38E90FF2077BBDA00D00932 /* RAMTransitionItemAnimations.swift in Sources */,
 				B33DE5FF208FBE6100DA130A /* Workout.swift in Sources */,
+				B326DFA820A35A9500DE6F75 /* BMIViewController.swift in Sources */,
 				B3E4A813205274EC000C650E /* PedometerViewController.swift in Sources */,
 				B38E90FC2077BBDA00D00932 /* RAMItemAnimationProtocol.swift in Sources */,
 				B3D2A1FB20838B1400FC51DE /* Stopwatch.swift in Sources */,
@@ -940,7 +960,10 @@
 				);
 				INFOPLIST_FILE = Liftr2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -971,7 +994,10 @@
 				);
 				INFOPLIST_FILE = Liftr2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -989,7 +1015,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1007,7 +1037,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1024,7 +1058,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1041,7 +1079,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AKTB587G8;
 				INFOPLIST_FILE = Liftr2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Liftr.Liftr2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
