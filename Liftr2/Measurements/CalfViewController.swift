@@ -1,8 +1,3 @@
-//  CalfViewController.swift
-//  Liftr2
-//  Created by Connor Berry on 10/03/2018.
-//  Copyright © 2018 Connor Berry. All rights reserved.
-
 import UIKit
 import Firebase
 import NotificationBannerSwift
@@ -34,13 +29,14 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
             // Alert if nothing is entered
             if mesView.text == "" {
                 let banner = NotificationBanner(title: "You've Entered Nothing 😳", style: .danger)
-                banner.show()
-        }
+                banner.show() }
     }
+    
     // Table returns number of exercises
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addMes.count
     }
+    
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
@@ -50,7 +46,6 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,23 +71,21 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let date = results?["date"]
             let data = Measurement(measure: measure as! String?, date: date as! String?)
             self.addMes.append(data)
-            self.tableView.reloadData()
-        })
-        
+            self.tableView.reloadData() })
     }
+    
     // Adds measurement
     @objc func textFieldDidChange(textfield: UITextField) {
-        
         var text = mesView.text?.replacingOccurrences(of: "cm", with: "")
         text = text! + "cm"
         mesView.text = text
-        
-        print("Text changed")
     }
+    
     // Allows editing of cell
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     // Delete cell
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         print(indexPath.row)
@@ -105,34 +98,34 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 banner.show()
                 self.addMes.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
-                self.keyArray = []
-            })
+                self.keyArray = [] })
         }
-        
     }
+    
     // Retrieves all keys from Firebase
     func GetAllKeys() {
         ref?.child("user").child(Auth.auth().currentUser!.uid).child("measurements").child("calf").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
                 let key = snap.key
-                self.keyArray.append(key)
-            }
+                self.keyArray.append(key) }
         })
     }
     // End of hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         mesView.resignFirstResponder()
         return true
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    { tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
+    
     func getDate() -> String {
         let date = Date()
         let calendar = Calendar.current
@@ -142,6 +135,7 @@ class CalfViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // How button pressed
     @IBAction func How(_ sender: Any) { UIApplication.shared.open(URL(string: "https://www.wikihow.com/Take-Body-Measurements")! as URL, options: [:], completionHandler: nil)
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.mesView.frame.origin.y = self.view.bounds.width - 290

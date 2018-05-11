@@ -434,7 +434,6 @@
 			isa = PBXGroup;
 			children = (
 				B3D8A1AC205FFA52008B4FC5 /* Measurements.storyboard */,
-				B32BDAA8209C6E5E0079B60E /* CalculatorViewController.swift */,
 				B3CEEF18205479BB00F1921B /* WeightViewController.swift */,
 				B3CEEF0C2054546300F1921B /* HeightViewController.swift */,
 				B3CEEF1A205479C700F1921B /* WaistViewController.swift */,
@@ -446,6 +445,7 @@
 				B3CEEF2620547A2500F1921B /* ThighViewController.swift */,
 				B3CEEF2A20547A4500F1921B /* CalfViewController.swift */,
 				B33DE5FC208FB84500DA130A /* Measurement.swift */,
+				B32BDAA8209C6E5E0079B60E /* CalculatorViewController.swift */,
 				B326DFAD20A35B6C00DE6F75 /* Calc.swift */,
 				B326DFAF20A35FAE00DE6F75 /* CalcCell.swift */,
 				B326DFA720A35A9500DE6F75 /* BMIViewController.swift */,

@@ -1,8 +1,3 @@
-//  GlutesViewController.swift
-//  Liftr2
-//  Created by Connor Berry on 10/03/2018.
-//  Copyright © 2018 Connor Berry. All rights reserved.
-
 import UIKit
 import Firebase
 import NotificationBannerSwift

@@ -1598,7 +1598,7 @@
         <scene sceneID="GHu-2m-leT">
             <objects>
                 <navigationController storyboardIdentifier="Start Navigation" title="Measurements Navigation" automaticallyAdjustsScrollViewInsets="NO" id="kgp-fB-tJQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Measurements" image="Measurements" selectedImage="Measurements" id="6Mr-SN-gpw" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="Measure" image="Measurements" selectedImage="Measurements" id="6Mr-SN-gpw" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="KoJ-Rc-E9x">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>

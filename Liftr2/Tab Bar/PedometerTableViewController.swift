@@ -67,15 +67,15 @@ class PedometerTableViewController: UIViewController, UITableViewDataSource, UIT
         let myString1 = test.steps
         let myInt1 = Int(myString1!)
         if myInt1! > 0 && myInt1! < 1000 {
-            let banner = NotificationBanner(title: "Not good... 😔", subtitle: "The daily recommended is 10,000! You've only hit under 10% of that...", style: .danger)
+            let banner = NotificationBanner(title: "Not good... 😔", subtitle: "Only 10% of the 10,000 recommended.", style: .danger)
             banner.show(queuePosition: .front)
         }
         if myInt1! > 1001 && myInt1! < 3000 {
-            let banner = NotificationBanner(title: "Getting there 🏃‍♀️", subtitle: "The daily recommended is 10,000! You've hit 10-30% of that...", style: .danger)
+            let banner = NotificationBanner(title: "Getting there 🏃‍♀️", subtitle: "You've only hit 10-30% of the recommended!", style: .danger)
             banner.show(queuePosition: .front)
         }
         if myInt1! > 3001 && myInt1! < 4999 {
-            let banner = NotificationBanner(title: "Getting there 🏃‍♀️", subtitle: "The daily recommended is 10,000! You've only hit 30-50% of that...", style: .warning)
+            let banner = NotificationBanner(title: "Getting there 🏃‍♀️", subtitle: "You've hit 30-50% of recommened!", style: .warning)
             banner.show(queuePosition: .front)
         }
         if myInt1! > 5000 && myInt1! < 6000 {
@@ -91,7 +91,7 @@ class PedometerTableViewController: UIViewController, UITableViewDataSource, UIT
             banner.show(queuePosition: .front)
         }
         if myInt1! > 10000 && myInt1! < 25000 {
-            let banner = NotificationBanner(title: "YOU'VE DONE IT! 🎉", subtitle: "The daily recommended allowance is complete! But that doesn't mean you stop going right?", style: .success)
+            let banner = NotificationBanner(title: "YOU'VE DONE IT! 🎉", subtitle: "The daily recommended allowance is complete!", style: .success)
             banner.show(queuePosition: .front)
         }
     }

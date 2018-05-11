@@ -111,7 +111,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         
     // Fetches users first name from Firebase to display as heading
     if Auth.auth().currentUser?.uid != nil {
-    Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+    Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).child("user details").observeSingleEvent(of: .value, with: { (snapshot) in
     if let dict = snapshot.value as? [String: AnyObject] {
     self.navigationItem.title = dict["first name"] as? String
                 

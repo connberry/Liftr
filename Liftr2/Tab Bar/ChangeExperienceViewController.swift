@@ -38,7 +38,7 @@ class ChangeExperienceViewController: UIViewController, UITextFieldDelegate, UIP
     @IBAction func Conf(_ sender: Any) {
     var ref: DatabaseReference!
     ref = Database.database().reference()
-ref.child("user").child(Auth.auth().currentUser!.uid).child("experience").setValue(self.ExperienceTextField.text)
+ref.child("user").child(Auth.auth().currentUser!.uid).child("user details").child("experience").setValue(self.ExperienceTextField.text)
         // Lastname validation - text needs to be evident
         if ExperienceTextField.text == "" {
             let banner = NotificationBanner(title: "You failed to enter your experience! 😔", subtitle: "Go back and fix it!", style: .danger)

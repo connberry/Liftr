@@ -190,22 +190,6 @@ var muscleUsed = [
     "Muscles Used: Example"]
 var myIndex = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var ref: DatabaseReference!
@@ -244,11 +228,11 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func Exp(_ sender: Any) {
         
-ref.child("user").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+ref.child("user").child(Auth.auth().currentUser!.uid).child("user details").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
     let value = snapshot.value as? NSDictionary
     let experience = value?["experience"] as? String ?? ""
-    let banner = NotificationBanner(title: "\(experience)", subtitle: "As a \(experience) character, we suggest you select the exercises that match your experience!", style: .success)
+    let banner = NotificationBanner(title: "\(experience)", subtitle: "As a \(experience), it's suggested you select the exercises that match your experience!", style: .success)
     banner.show(queuePosition: .front)
 }) { (error) in
     print(error.localizedDescription)

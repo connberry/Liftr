@@ -70,7 +70,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     let usersReference = ref.child("user")
     // print(usersReference.description()) : https://iosliftr.firebaseio.com/users
     let uid = user?.uid
-    let newUserRef = usersReference.child(uid!)
+    let newUserRef = usersReference.child(uid!).child("user details")
             newUserRef.setValue(["email": self.EmailAddressTextField.text!, "first name": self.FirstNameTextField.text!, "last name": self.LastNameTextField.text!, "experience": self.ExperienceTextField.text!])
     print("description \(newUserRef.description())")
 })
