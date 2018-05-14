@@ -17,10 +17,11 @@ class StepKcalViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     // Cell textLabel equals exercise entered
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCustomTableViewCell1
         let test = addCalc[indexPath.row]
-        cell.textLabel?.text = test.calc
-        cell.detailTextLabel?.text = test.date
+        cell.calc.text = test.calc
+        cell.subtitle.text = "kcal"
+        cell.date.text = test.date
         return cell
     }
     
@@ -45,5 +46,31 @@ class StepKcalViewController: UIViewController, UITableViewDataSource, UITableVi
         let calendar = Calendar.current
         // hours + min:  -\(calendar.component(.hour, from: date))-\(calendar.component(.minute, from: date))
         return "\(calendar.component(.year, from: date))-\(calendar.component(.month, from: date))-\(calendar.component(.day, from: date))"
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let test = addCalc[indexPath.row]
+        let myString1 = test.calc
+        let myInt1 = Double(myString1!)
+        if myInt1! > 0 && myInt1! < 100 {
+            let banner = NotificationBanner(title: "Not that many kcal...", subtitle: "Walk more to burn the calories!", style: .danger)
+            banner.show(queuePosition: .front)
+        }
+        if myInt1! > 101 && myInt1! < 200 {
+             let banner = NotificationBanner(title: "Not that many kcal...", subtitle: "Walk more to burn the calories!", style: .danger)
+            banner.show(queuePosition: .front)
+        }
+        if myInt1! > 201 && myInt1! < 300 {
+            let banner = NotificationBanner(title: "Solid effort", subtitle: "Over 200 kcal burned, keep it up!", style: .warning)
+            banner.show(queuePosition: .front)
+        }
+        if myInt1! > 301 && myInt1! < 400 {
+            let banner = NotificationBanner(title: "Solid effort", subtitle: "Over 300 kcal burned, keep it up!", style: .success)
+            banner.show(queuePosition: .front)
+        }
+        if myInt1! > 401 && myInt1! < 1000 {
+            let banner = NotificationBanner(title: "Amazing", subtitle: "The calories are burning fast!", style: .success)
+            banner.show(queuePosition: .front)
+        }
     }
 }

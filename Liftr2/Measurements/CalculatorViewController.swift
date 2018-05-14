@@ -37,7 +37,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             formatter.minimumFractionDigits = 1
             formatter.maximumFractionDigits = 2
             formatter.string(from: NSNumber(value: bmi))
-            self.total.text = formatter.string(from: NSNumber(value: bmi))! + " BMI"
+            self.total.text = formatter.string(from: NSNumber(value: bmi))!
             let banner = StatusBarNotificationBanner(title: "Calculation Done! Submit to save. ✅", style: .warning)
             banner.show(queuePosition: .front) }
         }
@@ -60,7 +60,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             formatter.minimumFractionDigits = 1
             formatter.maximumFractionDigits = 2
             formatter.string(from: NSNumber(value: bmi))
-            self.total1.text = formatter.string(from: NSNumber(value: bmi))! + "%"
+            self.total1.text = formatter.string(from: NSNumber(value: bmi))!
             let banner = StatusBarNotificationBanner(title: "Calculation Done! Submit to save. ✅", style: .warning)
             banner.show(queuePosition: .front) }
         }
@@ -83,7 +83,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             formatter.minimumFractionDigits = 0
             formatter.maximumFractionDigits = 0
             formatter.string(from: NSNumber(value: bmi))
-            self.total2.text = formatter.string(from: NSNumber(value: bmi))! + " kcal"
+            self.total2.text = formatter.string(from: NSNumber(value: bmi))!
             let banner = StatusBarNotificationBanner(title: "Calculation Done! Submit to save. ✅", style: .warning)
             banner.show(queuePosition: .front) }
         }

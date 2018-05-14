@@ -858,7 +858,7 @@
         <scene sceneID="mAC-e0-fxf">
             <objects>
                 <navigationController storyboardIdentifier="Profile Navigation" title="Profile Navigation" automaticallyAdjustsScrollViewInsets="NO" id="NBJ-RM-bWm" customClass="NavigationViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="M7G-N7-hrk" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="Profile" id="M7G-N7-hrk" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="dqK-br-Bsd">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>

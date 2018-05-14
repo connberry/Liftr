@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EuW-jn-OHE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EuW-jn-OHE">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -375,11 +375,11 @@
             </objects>
             <point key="canvasLocation" x="-3271" y="2057"/>
         </scene>
-        <!--Challenge-->
+        <!--Navigation Controller-->
         <scene sceneID="l5v-B1-aCZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="06v-aD-OYJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Challenge" image="Challenge" id="EW9-4v-B2e" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="Challenge" id="EW9-4v-B2e" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="iSA-dn-kcJ">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>

@@ -506,7 +506,7 @@
         <scene sceneID="Ctm-aE-zm1">
             <objects>
                 <navigationController storyboardIdentifier="Profile Navigation" title="Profile Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Wcx-7N-hrD" customClass="NavigationViewController" customModule="Liftr2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="X7M-Vm-MQU" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="" image="Profile" id="X7M-Vm-MQU" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
                         <connections>
                             <outlet property="animation" destination="4el-Td-h0h" id="1N0-J7-67O"/>
                         </connections>
@@ -629,7 +629,7 @@
         <scene sceneID="w82-cX-PqM">
             <objects>
                 <navigationController storyboardIdentifier="Start Navigation" title="Measurements Navigation" automaticallyAdjustsScrollViewInsets="NO" id="h3J-mj-W5X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Measure" image="Measurements" selectedImage="Measurements" id="pfh-vh-kF8" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="" image="Measurements" selectedImage="Measurements" id="pfh-vh-kF8" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
                         <connections>
                             <outlet property="animation" destination="wAg-pC-nm6" id="KJ6-SY-GLa"/>
                         </connections>
@@ -669,7 +669,7 @@
         <scene sceneID="pic-YP-Y8t">
             <objects>
                 <navigationController storyboardIdentifier="Pedometer Navigation" title="Pedometer Navigation" automaticallyAdjustsScrollViewInsets="NO" id="YNN-fs-hsy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pedometer" image="Pedometer" selectedImage="Pedometer" id="9LB-QS-1kO" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="" image="Pedometer" selectedImage="Pedometer" id="9LB-QS-1kO" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
                         <connections>
                             <outlet property="animation" destination="Lns-ip-FBy" id="4LS-j7-97v"/>
                         </connections>
@@ -709,7 +709,7 @@
         <scene sceneID="wi7-KX-Ptr">
             <objects>
                 <navigationController title="Exercises Navigation" automaticallyAdjustsScrollViewInsets="NO" id="nLV-mu-SQ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exercises" image="Exercises" id="6Sc-l7-dqa" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="" image="Exercises" id="6Sc-l7-dqa" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
                         <color key="badgeColor" red="0.61530772050000004" green="0.3181537794" blue="0.86097818609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="animation" destination="fiw-bI-pCV" id="1Tu-Pu-hV5"/>
@@ -751,7 +751,7 @@
         <scene sceneID="fXX-Ge-5cD">
             <objects>
                 <navigationController title="Challange Navigation" automaticallyAdjustsScrollViewInsets="NO" id="dng-91-P3u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Challenge" image="Challenge" id="8fj-U2-QyL" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="" image="Challenge" id="8fj-U2-QyL" customClass="RAMAnimatedTabBarItem" customModule="Liftr2" customModuleProvider="target">
                         <connections>
                             <outlet property="animation" destination="Ozs-wu-K8g" id="Ygg-Uv-6Lq"/>
                         </connections>
