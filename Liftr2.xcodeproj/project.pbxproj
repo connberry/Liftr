@@ -50,6 +50,30 @@
 		B38E90FF2077BBDA00D00932 /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F52077BBDA00D00932 /* RAMTransitionItemAnimations.swift */; };
 		B38E91002077BBDA00D00932 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F72077BBDA00D00932 /* RAMRotationAnimation.swift */; };
 		B38E91012077BBDA00D00932 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38E90F92077BBDA00D00932 /* RAMBounceAnimation.swift */; };
+		B394323120AACF6B003EF5A6 /* Arnold Dumbbell Press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394322D20AACF69003EF5A6 /* Arnold Dumbbell Press.jpg */; };
+		B394323220AACF6B003EF5A6 /* Ab Roller.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394322E20AACF6A003EF5A6 /* Ab Roller.jpg */; };
+		B394323320AACF6B003EF5A6 /* Bench Press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394322F20AACF6A003EF5A6 /* Bench Press.jpg */; };
+		B394323420AACF6B003EF5A6 /* Back Extension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323020AACF6B003EF5A6 /* Back Extension.jpg */; };
+		B394323820AAD91A003EF5A6 /* Decline Crunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323520AAD919003EF5A6 /* Decline Crunch.jpg */; };
+		B394323920AAD91A003EF5A6 /* Good Morning.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323620AAD919003EF5A6 /* Good Morning.jpg */; };
+		B394323A20AAD91A003EF5A6 /* Front Raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323720AAD91A003EF5A6 /* Front Raise.jpg */; };
+		B394323D20AAD925003EF5A6 /* Cross Leg Crunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323B20AAD925003EF5A6 /* Cross Leg Crunch.jpg */; };
+		B394323E20AAD925003EF5A6 /* Chest Press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323C20AAD925003EF5A6 /* Chest Press.jpg */; };
+		B394324220AAD931003EF5A6 /* Chest Fly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394323F20AAD930003EF5A6 /* Chest Fly.jpg */; };
+		B394324320AAD931003EF5A6 /* Calf Raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324020AAD931003EF5A6 /* Calf Raise.jpg */; };
+		B394324420AAD931003EF5A6 /* Cable Tucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324120AAD931003EF5A6 /* Cable Tucks.jpg */; };
+		B394324920AAD93F003EF5A6 /* Bench Press (Dumbbell).jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324520AAD93E003EF5A6 /* Bench Press (Dumbbell).jpg */; };
+		B394324A20AAD93F003EF5A6 /* Bent Over Row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324620AAD93E003EF5A6 /* Bent Over Row.jpg */; };
+		B394324B20AAD93F003EF5A6 /* Bicep Curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324720AAD93E003EF5A6 /* Bicep Curl.jpg */; };
+		B394324C20AAD93F003EF5A6 /* Cable Crossover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324820AAD93F003EF5A6 /* Cable Crossover.jpg */; };
+		B394325120AAD986003EF5A6 /* Clean and Jerk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324D20AAD984003EF5A6 /* Clean and Jerk.jpg */; };
+		B394325220AAD986003EF5A6 /* Deadlift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324E20AAD985003EF5A6 /* Deadlift.jpg */; };
+		B394325320AAD986003EF5A6 /* Clean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394324F20AAD986003EF5A6 /* Clean.jpg */; };
+		B394325420AAD986003EF5A6 /* Exercise Ball Crunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394325020AAD986003EF5A6 /* Exercise Ball Crunch.jpg */; };
+		B394325620AAD9A3003EF5A6 /* Crunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394325520AAD9A3003EF5A6 /* Crunch.jpg */; };
+		B394325A20AADA8D003EF5A6 /* Box Squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394325720AADA8C003EF5A6 /* Box Squat.jpg */; };
+		B394325B20AADA8D003EF5A6 /* Bulgarian Split Squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394325820AADA8C003EF5A6 /* Bulgarian Split Squat.jpg */; };
+		B394325C20AADA8D003EF5A6 /* Diamond Press Up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B394325920AADA8D003EF5A6 /* Diamond Press Up.jpg */; };
 		B396F33720513C2800B0340F /* WorkoutNotes1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */; };
 		B39AC8A8205003AC003D4CA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */; };
 		B3A69655208740CE0010B2C7 /* PedometerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1C4D207D264500D52207 /* PedometerTableViewController.swift */; };
@@ -157,6 +181,30 @@
 		B38E90F52077BBDA00D00932 /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
 		B38E90F72077BBDA00D00932 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
 		B38E90F92077BBDA00D00932 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		B394322D20AACF69003EF5A6 /* Arnold Dumbbell Press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arnold Dumbbell Press.jpg"; sourceTree = "<group>"; };
+		B394322E20AACF6A003EF5A6 /* Ab Roller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ab Roller.jpg"; sourceTree = "<group>"; };
+		B394322F20AACF6A003EF5A6 /* Bench Press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bench Press.jpg"; sourceTree = "<group>"; };
+		B394323020AACF6B003EF5A6 /* Back Extension.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Back Extension.jpg"; sourceTree = "<group>"; };
+		B394323520AAD919003EF5A6 /* Decline Crunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Decline Crunch.jpg"; sourceTree = "<group>"; };
+		B394323620AAD919003EF5A6 /* Good Morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Good Morning.jpg"; sourceTree = "<group>"; };
+		B394323720AAD91A003EF5A6 /* Front Raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Front Raise.jpg"; sourceTree = "<group>"; };
+		B394323B20AAD925003EF5A6 /* Cross Leg Crunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cross Leg Crunch.jpg"; sourceTree = "<group>"; };
+		B394323C20AAD925003EF5A6 /* Chest Press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chest Press.jpg"; sourceTree = "<group>"; };
+		B394323F20AAD930003EF5A6 /* Chest Fly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chest Fly.jpg"; sourceTree = "<group>"; };
+		B394324020AAD931003EF5A6 /* Calf Raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Calf Raise.jpg"; sourceTree = "<group>"; };
+		B394324120AAD931003EF5A6 /* Cable Tucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cable Tucks.jpg"; sourceTree = "<group>"; };
+		B394324520AAD93E003EF5A6 /* Bench Press (Dumbbell).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bench Press (Dumbbell).jpg"; sourceTree = "<group>"; };
+		B394324620AAD93E003EF5A6 /* Bent Over Row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bent Over Row.jpg"; sourceTree = "<group>"; };
+		B394324720AAD93E003EF5A6 /* Bicep Curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bicep Curl.jpg"; sourceTree = "<group>"; };
+		B394324820AAD93F003EF5A6 /* Cable Crossover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cable Crossover.jpg"; sourceTree = "<group>"; };
+		B394324D20AAD984003EF5A6 /* Clean and Jerk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Clean and Jerk.jpg"; sourceTree = "<group>"; };
+		B394324E20AAD985003EF5A6 /* Deadlift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Deadlift.jpg; sourceTree = "<group>"; };
+		B394324F20AAD986003EF5A6 /* Clean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clean.jpg; sourceTree = "<group>"; };
+		B394325020AAD986003EF5A6 /* Exercise Ball Crunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Exercise Ball Crunch.jpg"; sourceTree = "<group>"; };
+		B394325520AAD9A3003EF5A6 /* Crunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Crunch.jpg; sourceTree = "<group>"; };
+		B394325720AADA8C003EF5A6 /* Box Squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Box Squat.jpg"; sourceTree = "<group>"; };
+		B394325820AADA8C003EF5A6 /* Bulgarian Split Squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bulgarian Split Squat.jpg"; sourceTree = "<group>"; };
+		B394325920AADA8D003EF5A6 /* Diamond Press Up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Diamond Press Up.jpg"; sourceTree = "<group>"; };
 		B396F33620513C2800B0340F /* WorkoutNotes1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNotes1ViewController.swift; sourceTree = "<group>"; };
 		B39AC8A7205003AC003D4CA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B39E1C4D207D264500D52207 /* PedometerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PedometerTableViewController.swift; path = "Liftr2/Tab Bar/PedometerTableViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -458,9 +506,33 @@
 		B3E4A81B20529C11000C650E /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				B394324120AAD931003EF5A6 /* Cable Tucks.jpg */,
+				B394324520AAD93E003EF5A6 /* Bench Press (Dumbbell).jpg */,
+				B394324620AAD93E003EF5A6 /* Bent Over Row.jpg */,
+				B394324720AAD93E003EF5A6 /* Bicep Curl.jpg */,
+				B394324820AAD93F003EF5A6 /* Cable Crossover.jpg */,
+				B394324020AAD931003EF5A6 /* Calf Raise.jpg */,
+				B394325520AAD9A3003EF5A6 /* Crunch.jpg */,
+				B394323F20AAD930003EF5A6 /* Chest Fly.jpg */,
+				B394323520AAD919003EF5A6 /* Decline Crunch.jpg */,
+				B394323C20AAD925003EF5A6 /* Chest Press.jpg */,
+				B394323B20AAD925003EF5A6 /* Cross Leg Crunch.jpg */,
+				B394324D20AAD984003EF5A6 /* Clean and Jerk.jpg */,
+				B394324F20AAD986003EF5A6 /* Clean.jpg */,
+				B394324E20AAD985003EF5A6 /* Deadlift.jpg */,
+				B394325020AAD986003EF5A6 /* Exercise Ball Crunch.jpg */,
+				B394323720AAD91A003EF5A6 /* Front Raise.jpg */,
+				B394325720AADA8C003EF5A6 /* Box Squat.jpg */,
+				B394325820AADA8C003EF5A6 /* Bulgarian Split Squat.jpg */,
+				B394325920AADA8D003EF5A6 /* Diamond Press Up.jpg */,
+				B394323620AAD919003EF5A6 /* Good Morning.jpg */,
 				B3C4EDC9205536FE00D009AC /* Squat.jpg */,
 				B3C4EDC7205536F800D009AC /* Press Up.jpg */,
 				B366D5962055461800BBB7D1 /* Chin Up.jpg */,
+				B394322E20AACF6A003EF5A6 /* Ab Roller.jpg */,
+				B394322D20AACF69003EF5A6 /* Arnold Dumbbell Press.jpg */,
+				B394323020AACF6B003EF5A6 /* Back Extension.jpg */,
+				B394322F20AACF6A003EF5A6 /* Bench Press.jpg */,
 			);
 			name = Exercises;
 			path = Liftr2;
@@ -594,18 +666,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B394324920AAD93F003EF5A6 /* Bench Press (Dumbbell).jpg in Resources */,
+				B394323D20AAD925003EF5A6 /* Cross Leg Crunch.jpg in Resources */,
 				B3C88EEA2041708B000943D8 /* Launch Screen.storyboard in Resources */,
 				B3D8A1AD205FFA71008B4FC5 /* Measurements.storyboard in Resources */,
+				B394323820AAD91A003EF5A6 /* Decline Crunch.jpg in Resources */,
 				B366D5972055461900BBB7D1 /* Chin Up.jpg in Resources */,
 				B3BCB51D202DB95100A0BA73 /* Images in Resources */,
 				B3481CB1202AF0CA0097101C /* Assets.xcassets in Resources */,
+				B394325220AAD986003EF5A6 /* Deadlift.jpg in Resources */,
+				B394324420AAD931003EF5A6 /* Cable Tucks.jpg in Resources */,
 				B3481CAC202AF0CA0097101C /* Tab Bar.storyboard in Resources */,
+				B394324220AAD931003EF5A6 /* Chest Fly.jpg in Resources */,
 				B3D8A1B12060032C008B4FC5 /* Notes.storyboard in Resources */,
+				B394324B20AAD93F003EF5A6 /* Bicep Curl.jpg in Resources */,
 				B3C4EDC8205536F800D009AC /* Press Up.jpg in Resources */,
 				B35A2182204F1DBD00759F23 /* Video.mp4 in Resources */,
+				B394323220AACF6B003EF5A6 /* Ab Roller.jpg in Resources */,
+				B394324A20AAD93F003EF5A6 /* Bent Over Row.jpg in Resources */,
+				B394325120AAD986003EF5A6 /* Clean and Jerk.jpg in Resources */,
+				B394323120AACF6B003EF5A6 /* Arnold Dumbbell Press.jpg in Resources */,
+				B394325620AAD9A3003EF5A6 /* Crunch.jpg in Resources */,
+				B394325C20AADA8D003EF5A6 /* Diamond Press Up.jpg in Resources */,
+				B394323A20AAD91A003EF5A6 /* Front Raise.jpg in Resources */,
+				B394324C20AAD93F003EF5A6 /* Cable Crossover.jpg in Resources */,
+				B394324320AAD931003EF5A6 /* Calf Raise.jpg in Resources */,
 				B3485E3E20518DCE0097AB4C /* GoogleService-Info.plist in Resources */,
+				B394325A20AADA8D003EF5A6 /* Box Squat.jpg in Resources */,
+				B394325320AAD986003EF5A6 /* Clean.jpg in Resources */,
 				B3D8A1B020600172008B4FC5 /* Challange.storyboard in Resources */,
+				B394323920AAD91A003EF5A6 /* Good Morning.jpg in Resources */,
+				B394323E20AAD925003EF5A6 /* Chest Press.jpg in Resources */,
 				B3C4EDCA205536FF00D009AC /* Squat.jpg in Resources */,
+				B394325B20AADA8D003EF5A6 /* Bulgarian Split Squat.jpg in Resources */,
+				B394325420AAD986003EF5A6 /* Exercise Ball Crunch.jpg in Resources */,
+				B394323320AACF6B003EF5A6 /* Bench Press.jpg in Resources */,
+				B394323420AACF6B003EF5A6 /* Back Extension.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,6 @@ var exercises = ["Ab Roller",
                  "Calf Raise",
                  "Chest Fly",
                  "Chest Press",
-                 "Chest Press (Dumbbell)",
                  "Chin Up",
                  "Clean",
                  "Clean and Jerk",
@@ -39,7 +38,6 @@ var exercises = ["Ab Roller",
 
 var experience = ["Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️", "Skilled 👀", "Expert 💪", "Newbie 🤷‍♂️"]
 var why = [
-    "Example",
     "Example",
     "Example",
     "Example",
@@ -84,7 +82,6 @@ var step1 = [
     "1. Example",
     "1. Example",
     "1. Example",
-    "1. Example",
     "1. Put your hands on the bar with your palms facing your body.",
     "1. Example",
     "1. Example",
@@ -100,7 +97,6 @@ var step1 = [
     "1. Example"]
 
 var step2 = [
-    "2. Example",
     "2. Example",
     "2. Example",
     "2. Example",
@@ -144,7 +140,6 @@ var step3 = [
     "3. Example",
     "3. Example",
     "3. Example",
-    "3. Example",
     "3. Lower yourself back down. Using a slow, controlled motion, lower yourself until your arms are straight.",
     "3. Example",
     "3. Example",
@@ -160,7 +155,6 @@ var step3 = [
     "3. Example"]
 
 var muscleUsed = [
-    "Muscles Used: Example",
     "Muscles Used: Example",
     "Muscles Used: Example",
     "Muscles Used: Example",

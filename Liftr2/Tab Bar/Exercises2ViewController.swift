@@ -9,6 +9,7 @@ import NotificationBannerSwift
 
 class Exercises2ViewController: UIViewController {
     
+    var ref: DatabaseReference!
     // Storyboard connections
     @IBOutlet weak var Imp: UILabel!
     @IBOutlet weak var exerciseImage: UIImageView!
@@ -20,22 +21,37 @@ class Exercises2ViewController: UIViewController {
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(.success)
     let alert = UIAlertController(title: "Which Workout?", message: "Choose a workout to add this exercise!", preferredStyle: .actionSheet)
-    let work1 = UIAlertAction(title: "Notes 1", style: .default, handler: { action in self.performSegue(withIdentifier: "note1", sender: self)
+    
+    let userID = Auth.auth().currentUser?.uid
+    ref.child("user").child(userID!).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+        let value = snapshot.value as? NSDictionary
+        let note1 = value?["notes 1"] as? String ?? ""
+    let work1 = UIAlertAction(title: "\(note1)", style: .default, handler: { action in self.performSegue(withIdentifier: "note1", sender: self)
         let banner = StatusBarNotificationBanner(title: "Exercise copied, just paste and go! 🏋️‍♀️ ", style: .success)
         banner.show(queuePosition: .front)
-
+        })
+        alert.addAction(work1)
     })
-    alert.addAction(work1)
-    let work2 = UIAlertAction(title: "Notes 2", style: .default, handler: { action in self.performSegue(withIdentifier: "note2", sender: self)
+    
+    ref.child("user").child(userID!).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+        let value = snapshot.value as? NSDictionary
+        let note2 = value?["notes 2"] as? String ?? ""
+    let work2 = UIAlertAction(title: "\(note2)", style: .default, handler: { action in self.performSegue(withIdentifier: "note2", sender: self)
         let banner = StatusBarNotificationBanner(title: "Exercise copied, just paste and go! 🏋️‍♀️ ", style: .success)
         banner.show(queuePosition: .front)
     })
     alert.addAction(work2)
-    let work3 = UIAlertAction(title: "Notes 3", style: .default, handler: { action in self.performSegue(withIdentifier: "note3", sender: self)
+    })
+    
+    ref.child("user").child(userID!).child("workout notes").child("notes names").observeSingleEvent(of: .value, with: { (snapshot) in
+        let value = snapshot.value as? NSDictionary
+        let note3 = value?["notes 3"] as? String ?? ""
+    let work3 = UIAlertAction(title: "\(note3)", style: .default, handler: { action in self.performSegue(withIdentifier: "note3", sender: self)
         let banner = StatusBarNotificationBanner(title: "Exercise copied, just paste and go! 🏋️‍♀️ ", style: .success)
         banner.show(queuePosition: .front)
     })
     alert.addAction(work3)
+    })
         let Canaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(Canaction)
         self.present(alert, animated: true, completion: nil)
@@ -48,7 +64,7 @@ class Exercises2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        ref = Database.database().reference()
         
     exerciseImage.alpha = 0
     
