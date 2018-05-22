@@ -169,7 +169,7 @@
                         <viewLayoutGuide key="safeArea" id="RR9-7a-0rb"/>
                     </view>
                     <navigationItem key="navigationItem" id="kpG-kW-Q40">
-                        <barButtonItem key="rightBarButtonItem" title="Add to Notes" id="JRW-HY-wPY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JRW-HY-wPY">
                             <connections>
                                 <action selector="addWorkout:" destination="8Zd-Xf-dFs" id="bCv-1c-KfN"/>
                             </connections>

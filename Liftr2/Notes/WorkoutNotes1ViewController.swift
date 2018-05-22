@@ -52,7 +52,6 @@ class WorkoutNotes1ViewController: UIViewController, UITableViewDataSource, UITa
                 "Calf Raise",
                 "Chest Fly",
                 "Chest Press",
-                "Chest Press (Dumbbell)",
                 "Chin Up",
                 "Clean",
                 "Clean and Jerk",
